@@ -1,3 +1,4 @@
+
 import { Circle, Truck } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -39,7 +40,7 @@ const PartnersSection = () => {
           </div>
         </motion.div>
         
-        {/* Main Heading and Text - Updated heading text */}
+        {/* Main Heading and Text - Updated heading text format */}
         <motion.div 
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -48,7 +49,7 @@ const PartnersSection = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-            TRUSTED BY INDUSTRY LEADERS
+            Trusted by Industry Leaders
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto mb-8">
             Our expertise in mobile charging and service delivery is trusted by industry leaders. With over a million successful deliveries, we provide reliable and efficient charging solutions wherever they're needed.
