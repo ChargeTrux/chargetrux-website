@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 const ClientsSection = () => {
   const clients = [
-    { name: "Amazon", logo: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png" },
-    { name: "Hertz", logo: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png" },
-    { name: "FedEx", logo: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png" },
-    { name: "Avis", logo: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png" },
-    { name: "Port of Long Beach", logo: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png" },
-    { name: "LAX Valet", logo: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png" },
+    { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" },
+    { name: "Hertz", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Hertz_logo.svg/2560px-Hertz_logo.svg.png" },
+    { name: "FedEx", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/FedEx_logo.svg/2560px-FedEx_logo.svg.png" },
+    { name: "Avis", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Avis_logo.svg/2560px-Avis_logo.svg.png" },
+    { name: "Port of Long Beach", logo: "https://www.polb.com/wp-content/uploads/2019/11/logo.svg" },
+    { name: "LAX Valet", logo: "https://www.laxvalet.com/wp-content/uploads/2019/03/laxvalet.png" },
   ];
 
   return (
@@ -33,7 +33,7 @@ const ClientsSection = () => {
           {clients.map((client, index) => (
             <motion.div 
               key={index}
-              className="client-logo w-24 md:w-32 h-16 flex flex-col items-center justify-center"
+              className="client-logo w-32 md:w-40 h-20 flex items-center justify-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -42,9 +42,8 @@ const ClientsSection = () => {
               <img 
                 src={client.logo} 
                 alt={`${client.name} logo`} 
-                className="max-h-12 max-w-full"
+                className="max-h-14 max-w-full object-contain"
               />
-              <span className="text-xs mt-2 text-gray-600 font-medium">{client.name}</span>
             </motion.div>
           ))}
         </div>
