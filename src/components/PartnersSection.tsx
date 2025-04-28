@@ -17,26 +17,26 @@ const PartnersSection = () => {
       <div className="container mx-auto px-4">
         {/* Icon Section */}
         <motion.div 
-          className="flex justify-center mb-12"
+          className="flex justify-center mb-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
           <div className="relative">
-            {/* Truck icon with glowing effect */}
+            {/* Truck icon with glowing effect - increased size */}
             <div className="relative">
               <img 
                 src="/lovable-uploads/1b8e6e18-42ba-4a33-907e-e3dbcf43bf82.png" 
                 alt="Electric delivery truck" 
-                className="w-32 h-32 mx-auto object-contain"
+                className="w-48 h-48 mx-auto object-contain"
               />
               <div className="absolute inset-0 bg-chargetrux-green opacity-20 rounded-full blur-md"></div>
             </div>
             
-            {/* Concentric circles */}
-            <Circle className="w-24 h-24 mx-auto absolute top-4 left-1/2 -translate-x-1/2 text-chargetrux-blue opacity-30" strokeWidth={1} />
-            <Circle className="w-28 h-28 mx-auto absolute top-2 left-1/2 -translate-x-1/2 text-chargetrux-blue opacity-20" strokeWidth={1} />
+            {/* Concentric circles - increased size to match the truck */}
+            <Circle className="w-40 h-40 mx-auto absolute top-4 left-1/2 -translate-x-1/2 text-chargetrux-blue opacity-30" strokeWidth={1} />
+            <Circle className="w-44 h-44 mx-auto absolute top-2 left-1/2 -translate-x-1/2 text-chargetrux-blue opacity-20" strokeWidth={1} />
           </div>
         </motion.div>
         
