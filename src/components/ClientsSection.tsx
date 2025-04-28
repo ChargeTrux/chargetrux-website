@@ -24,13 +24,16 @@ const ClientsSection = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-chargetrux-darkblue">
             Trusted by Industry Leaders
           </h2>
+          <p className="text-gray-600 mt-2 text-lg">
+            Amazon | Hertz | FedEx | Avis | Port of Long Beach | LAX Valet
+          </p>
         </motion.div>
         
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
           {clients.map((client, index) => (
             <motion.div 
               key={index}
-              className="client-logo w-24 md:w-32 h-16 flex items-center justify-center"
+              className="client-logo w-24 md:w-32 h-16 flex flex-col items-center justify-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -41,6 +44,7 @@ const ClientsSection = () => {
                 alt={`${client.name} logo`} 
                 className="max-h-12 max-w-full"
               />
+              <span className="text-xs mt-2 text-gray-600 font-medium">{client.name}</span>
             </motion.div>
           ))}
         </div>
