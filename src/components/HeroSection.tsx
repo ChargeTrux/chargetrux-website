@@ -41,7 +41,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 md:px-6 z-10">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <motion.div 
-            className="w-full md:w-3/5 text-white space-y-6 md:pr-12 mb-8 md:mb-0"
+            className="w-full md:w-1/2 text-white space-y-6 md:pr-8 mb-8 md:mb-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -98,42 +98,39 @@ const HeroSection = () => {
           </motion.div>
           
           <motion.div 
-            className="w-full md:w-2/5 hidden md:block"
+            className="w-full md:w-1/2 flex justify-center items-center"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            <div className="relative">
-              <div className="absolute -inset-4 rounded-full bg-chargetrux-blue/20 blur-xl animate-pulse"></div>
-              <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 shadow-xl">
-                <h3 className="text-chargetrux-green font-bold text-xl mb-4">Fast Charging Features</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-3">
-                    <div className="bg-chargetrux-green/20 p-1.5 rounded-md">
-                      <Zap className="h-4 w-4 text-chargetrux-green" />
-                    </div>
-                    <span className="text-white">Level 3 DC Fast Charging</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="bg-chargetrux-green/20 p-1.5 rounded-md">
-                      <Zap className="h-4 w-4 text-chargetrux-green" />
-                    </div>
-                    <span className="text-white">Multi-vehicle support</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="bg-chargetrux-green/20 p-1.5 rounded-md">
-                      <Zap className="h-4 w-4 text-chargetrux-green" />
-                    </div>
-                    <span className="text-white">24/7 mobile availability</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="bg-chargetrux-green/20 p-1.5 rounded-md">
-                      <Zap className="h-4 w-4 text-chargetrux-green" />
-                    </div>
-                    <span className="text-white">Fleet management software</span>
-                  </li>
-                </ul>
-              </div>
+            {/* ChargeTrux Truck Image */}
+            <div className="relative w-full max-w-lg">
+              {/* Glow effect behind the truck */}
+              <div className="absolute -inset-4 rounded-2xl bg-chargetrux-blue/20 blur-xl animate-pulse"></div>
+              
+              {/* The truck image */}
+              <motion.div 
+                className="relative rounded-2xl overflow-hidden shadow-2xl"
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <img 
+                  src="/public/lovable-uploads/1ff94a4b-5ae5-46ba-a96a-9574796883ad.png" 
+                  alt="ChargeTrux Mobile Charging Truck" 
+                  className="w-full h-auto rounded-2xl"
+                />
+                
+                {/* Subtle overlay to match site theme */}
+                <div className="absolute inset-0 bg-gradient-to-t from-chargetrux-darkblue/30 to-transparent"></div>
+                
+                {/* Info badge */}
+                <div className="absolute bottom-4 right-4 bg-chargetrux-darkblue/80 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium border border-chargetrux-green/30 shadow-lg">
+                  <div className="flex items-center gap-2">
+                    <Zap className="text-chargetrux-green h-4 w-4" />
+                    <span>Mobile Level 3 Charging</span>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>

@@ -85,6 +85,10 @@
   filter: brightness(1.1) contrast(1.1);
 }
 
+.chargetrux-truck-shadow {
+  filter: drop-shadow(0px 10px 20px rgba(0, 102, 255, 0.4));
+}
+
 .chargetrux-map {
   position: relative;
 }
