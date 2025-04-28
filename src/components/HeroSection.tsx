@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Car, BatteryCharging, Plug } from "lucide-react";
+import { Car, BatteryCharging, Plug, CarFront, Battery, Zap } from "lucide-react";
 
 const FloatingIcon = ({ children, initialX, initialY, duration }: { 
   children: React.ReactNode; 
@@ -46,6 +46,15 @@ const HeroSection = () => {
       </FloatingIcon>
       <FloatingIcon initialX={600} initialY={250} duration={4.5}>
         <Car size={48} />
+      </FloatingIcon>
+      <FloatingIcon initialX={300} initialY={300} duration={5.5}>
+        <CarFront size={44} />
+      </FloatingIcon>
+      <FloatingIcon initialX={500} initialY={100} duration={5}>
+        <Battery size={38} />
+      </FloatingIcon>
+      <FloatingIcon initialX={150} initialY={250} duration={6.5}>
+        <Zap size={42} />
       </FloatingIcon>
       
       <div className="container mx-auto px-4 md:px-6 z-10">
