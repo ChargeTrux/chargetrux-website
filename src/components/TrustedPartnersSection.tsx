@@ -31,9 +31,9 @@ const TrustedPartnersSection = () => {
   ];
 
   return (
-    <div className="py-16 bg-gray-50 relative overflow-hidden">
+    <div className="py-16 bg-chargetrux-darkblue relative overflow-hidden">
       {/* Background overlay with the charging truck image */}
-      <div className="absolute inset-0 opacity-10 mix-blend-multiply">
+      <div className="absolute inset-0 opacity-10 mix-blend-screen">
         <img 
           src="/lovable-uploads/0086d727-a12f-4882-96eb-437b6649527f.png" 
           alt="ChargeTrux Network" 
@@ -50,10 +50,10 @@ const TrustedPartnersSection = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-chargetrux-darkblue mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Trusted by Industry Leaders
           </h2>
-          <p className="text-chargetrux-darkblue max-w-2xl mx-auto mb-8">
+          <p className="text-gray-300 max-w-2xl mx-auto mb-8">
             Our mobile charging solutions power the operations of leading companies across transportation, logistics, and service industries.
           </p>
           
@@ -62,9 +62,9 @@ const TrustedPartnersSection = () => {
             {partners.map((partner, index) => (
               <motion.div 
                 key={index}
-                className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center h-24 transition-all hover:shadow-lg"
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center h-24 transition-all hover:bg-white/20"
                 style={{
-                  boxShadow: "0 4px 15px rgba(0, 0, 0, 0.05)"
+                  boxShadow: "0 4px 15px rgba(255, 255, 255, 0.05)"
                 }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ const TrustedPartnersSection = () => {
                 <img 
                   src={partner.logo} 
                   alt={`${partner.name} logo`} 
-                  className="max-h-12 max-w-full object-contain opacity-70 hover:opacity-100 transition-all"
+                  className="max-h-12 max-w-full object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-all"
                 />
               </motion.div>
             ))}
@@ -96,11 +96,11 @@ const TrustedPartnersSection = () => {
               alt="ChargeTrux Network" 
               className="w-full h-auto"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
-            <div className="absolute bottom-0 left-0 w-full p-4 md:p-6 bg-gradient-to-t from-white to-transparent">
-              <div className="backdrop-blur-sm bg-white/50 p-4 rounded-lg inline-block">
+            <div className="absolute inset-0 bg-gradient-to-t from-chargetrux-darkblue via-transparent to-transparent"></div>
+            <div className="absolute bottom-0 left-0 w-full p-4 md:p-6 bg-gradient-to-t from-chargetrux-darkblue to-transparent">
+              <div className="backdrop-blur-sm bg-chargetrux-darkblue/50 p-4 rounded-lg inline-block">
                 <h3 className="text-chargetrux-green text-xl md:text-2xl font-bold">Mobile Fleet Charging Network</h3>
-                <p className="text-chargetrux-darkblue text-sm md:text-base">ChargeTrux vehicles delivering power where and when it's needed</p>
+                <p className="text-white text-sm md:text-base">ChargeTrux vehicles delivering power where and when it's needed</p>
               </div>
             </div>
           </div>
@@ -141,10 +141,10 @@ const TrustedPartnersSection = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-chargetrux-darkblue mb-3">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
               MOBILITY ENABLED
             </h2>
-            <p className="text-chargetrux-darkblue max-w-2xl mx-auto">
+            <p className="text-gray-300 max-w-2xl mx-auto">
               Our expertise in mobile charging and service delivery is trusted by industry leaders. With over a million successful deliveries, we provide reliable and efficient charging solutions wherever they're needed.
             </p>
           </motion.div>
@@ -162,18 +162,18 @@ const TrustedPartnersSection = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-xl p-6 border border-gray-100 shadow-lg"
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 shadow-lg"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5, backgroundColor: "rgba(255,255,255,1)" }}
+                whileHover={{ y: -5, backgroundColor: "rgba(255,255,255,0.1)" }}
               >
-                <div className="bg-gray-50 rounded-lg p-4 inline-block mb-4">
+                <div className="bg-chargetrux-darkblue/60 rounded-lg p-4 inline-block mb-4">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-bold text-chargetrux-darkblue mb-3">{benefit.title}</h3>
-                <p className="text-chargetrux-darkblue/80">{benefit.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
           </div>

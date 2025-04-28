@@ -57,7 +57,7 @@
   }
   
   ::selection {
-    @apply bg-chargetrux-blue/30 text-chargetrux-darkblue;
+    @apply bg-chargetrux-blue/30 text-white;
   }
 }
 
@@ -69,7 +69,7 @@
 }
 
 .bg-hero-pattern {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.85)),
+  background-image: linear-gradient(rgba(10, 25, 48, 0.9), rgba(10, 25, 48, 0.85)),
     url('/public/lovable-uploads/4be88438-65d5-414b-afb0-eef6bf5ec809.png');
   background-size: cover;
   background-position: center;
@@ -77,16 +77,6 @@
 
 .bg-california-road {
   background-image: linear-gradient(rgba(10, 25, 48, 0.75), rgba(10, 25, 48, 0.85)),
-    url('/lovable-uploads/231e6195-f611-4186-994a-51bd373d1ff3.png');
-  background-size: cover;
-  background-position: center 30%;
-  background-repeat: no-repeat;
-  transform: scale(1.05);
-  filter: brightness(1.1) contrast(1.1);
-}
-
-.bg-california-road-lighter {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.75)),
     url('/lovable-uploads/231e6195-f611-4186-994a-51bd373d1ff3.png');
   background-size: cover;
   background-position: center 30%;
@@ -159,9 +149,9 @@
 
 .glass {
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
 }
 
 .blue-overlay {
@@ -175,7 +165,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(0, 102, 255, 0.2));
+  background: linear-gradient(180deg, rgba(10, 25, 48, 0.4), rgba(0, 102, 255, 0.3));
   mix-blend-mode: overlay;
   z-index: 1;
 }
@@ -203,7 +193,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #0A1930;
 }
 
 ::-webkit-scrollbar-thumb {
