@@ -6,7 +6,12 @@ const HeroSection = () => {
   return (
     <div className="relative min-h-[80vh] bg-chargetrux-darkblue flex items-center">
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="bg-california-road absolute inset-0 bg-fixed"></div>
+        <div className="bg-california-road absolute inset-0 bg-fixed">
+          <div className="absolute bottom-8 right-8 bg-chargetrux-green text-white p-3 rounded-lg shadow-lg z-20">
+            <p className="font-bold">Up to 440kW</p>
+            <p className="text-sm">Charging Power</p>
+          </div>
+        </div>
       </div>
       
       <div className="container mx-auto px-4 md:px-6 z-10">
@@ -32,25 +37,6 @@ const HeroSection = () => {
               <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
                 Fleet Overview PDF
               </Button>
-            </div>
-          </motion.div>
-          
-          <motion.div 
-            className="w-full md:w-1/2"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <div className="relative">
-              <img 
-                src="/lovable-uploads/dfd350d4-2c2c-4203-9ef6-db635efcfa6c.png" 
-                alt="ChargeTrux mobile charging unit" 
-                className="rounded-lg shadow-2xl"
-              />
-              <div className="absolute -bottom-3 -right-3 bg-chargetrux-green text-white p-3 rounded-lg shadow-lg">
-                <p className="font-bold">Up to 440kW</p>
-                <p className="text-sm">Charging Power</p>
-              </div>
             </div>
           </motion.div>
         </div>
