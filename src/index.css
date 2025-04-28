@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -86,6 +85,27 @@
   filter: brightness(1.1) contrast(1.1);
 }
 
+.chargetrux-map {
+  position: relative;
+}
+
+.chargetrux-map::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(10, 25, 48, 0.7), rgba(0, 102, 255, 0.3));
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.chargetrux-map img {
+  filter: saturate(1.2) contrast(1.1);
+  transition: all 0.5s ease;
+}
+
 .client-logo {
   filter: grayscale(100%);
   opacity: 0.7;
@@ -127,7 +147,6 @@
   padding: 1rem;
 }
 
-/* Modern glass effect for cards and sections */
 .glass {
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.05);
@@ -135,7 +154,22 @@
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
 }
 
-/* Animated gradient backgrounds */
+.blue-overlay {
+  position: relative;
+}
+
+.blue-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(10, 25, 48, 0.4), rgba(0, 102, 255, 0.3));
+  mix-blend-mode: overlay;
+  z-index: 1;
+}
+
 .animated-gradient {
   background: linear-gradient(-45deg, #0066FF, #004CBD, #00CC66, #009F51);
   background-size: 400% 400%;
@@ -154,7 +188,6 @@
   }
 }
 
-/* Modern scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
