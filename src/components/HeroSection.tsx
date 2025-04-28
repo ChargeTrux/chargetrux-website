@@ -1,13 +1,52 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Car, BatteryCharging, Plug } from "lucide-react";
+
+const FloatingIcon = ({ children, initialX, initialY, duration }: { 
+  children: React.ReactNode; 
+  initialX: number; 
+  initialY: number;
+  duration: number;
+}) => (
+  <motion.div
+    initial={{ x: initialX, y: initialY, opacity: 0 }}
+    animate={{ 
+      x: [initialX, initialX + 20, initialX],
+      y: [initialY, initialY - 20, initialY],
+      opacity: 1 
+    }}
+    transition={{ 
+      duration: duration,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }}
+    className="absolute text-chargetrux-green/30"
+  >
+    {children}
+  </motion.div>
+);
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-[80vh] bg-chargetrux-darkblue flex items-center">
+    <div className="relative min-h-[80vh] bg-chargetrux-darkblue flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="bg-california-road absolute inset-0 bg-fixed"></div>
       </div>
+      
+      {/* Floating Icons */}
+      <FloatingIcon initialX={50} initialY={100} duration={4}>
+        <Car size={40} />
+      </FloatingIcon>
+      <FloatingIcon initialX={200} initialY={200} duration={5}>
+        <BatteryCharging size={32} />
+      </FloatingIcon>
+      <FloatingIcon initialX={400} initialY={150} duration={6}>
+        <Plug size={36} />
+      </FloatingIcon>
+      <FloatingIcon initialX={600} initialY={250} duration={4.5}>
+        <Car size={48} />
+      </FloatingIcon>
       
       <div className="container mx-auto px-4 md:px-6 z-10">
         <div className="flex flex-col md:flex-row items-center gap-8">
