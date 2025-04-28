@@ -1,5 +1,4 @@
-
-import { Circle, Zap, Truck, Menu } from "lucide-react";
+import { Circle, Truck } from "lucide-react";
 import { motion } from "framer-motion";
 
 const PartnersSection = () => {
@@ -15,7 +14,7 @@ const PartnersSection = () => {
   return (
     <div className="py-16 bg-[#0c2340]">
       <div className="container mx-auto px-4">
-        {/* Icon Section */}
+        {/* Icon Section - Now using the truck icon as the primary icon */}
         <motion.div 
           className="flex justify-center mb-8"
           initial={{ opacity: 0 }}
@@ -24,19 +23,23 @@ const PartnersSection = () => {
           viewport={{ once: true }}
         >
           <div className="relative">
-            {/* Central circle with concentric circles */}
-            <Circle className="w-16 h-16 mx-auto text-chargetrux-blue opacity-80" strokeWidth={1} />
-            <Circle className="w-16 h-16 mx-auto absolute top-0 text-chargetrux-blue opacity-50" strokeWidth={1} style={{ transform: 'scale(1.2)' }} />
-            <Circle className="w-16 h-16 mx-auto absolute top-0 text-chargetrux-blue opacity-30" strokeWidth={1} style={{ transform: 'scale(1.4)' }} />
+            {/* We'll use the truck as the main icon with a glowing effect */}
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/1b8e6e18-42ba-4a33-907e-e3dbcf43bf82.png" 
+                alt="Electric delivery truck" 
+                className="w-32 h-32 mx-auto object-contain"
+              />
+              <div className="absolute inset-0 bg-chargetrux-green opacity-20 rounded-full blur-md"></div>
+            </div>
             
-            {/* Accent icons */}
-            <Zap className="w-8 h-8 absolute -top-4 -right-4 text-chargetrux-green" />
-            <Truck className="w-8 h-8 absolute bottom-0 -right-8 text-chargetrux-green" />
-            <Menu className="w-8 h-8 absolute -left-8 top-4 text-chargetrux-green" />
+            {/* Keep the circle styling for consistency */}
+            <Circle className="w-24 h-24 mx-auto absolute top-4 left-1/2 -translate-x-1/2 text-chargetrux-blue opacity-30" strokeWidth={1} />
+            <Circle className="w-28 h-28 mx-auto absolute top-2 left-1/2 -translate-x-1/2 text-chargetrux-blue opacity-20" strokeWidth={1} />
           </div>
         </motion.div>
         
-        {/* Main Heading and Text */}
+        {/* Main Heading and Text - Updated heading text */}
         <motion.div 
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -45,7 +48,7 @@ const PartnersSection = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-            MOBILITY ENABLED
+            TRUSTED BY INDUSTRY LEADERS
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto mb-8">
             Our expertise in mobile charging and service delivery is trusted by industry leaders. With over a million successful deliveries, we provide reliable and efficient charging solutions wherever they're needed.
