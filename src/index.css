@@ -71,7 +71,8 @@
   background-position: center;
 }
 
-.bg-california-road {
+/* We're not using this class anymore since we're applying the background directly in the component */
+/* .bg-california-road {
   background-image: linear-gradient(rgba(10, 25, 48, 0.75), rgba(10, 25, 48, 0.85)),
     url('/lovable-uploads/d34d3758-1bd6-4d7b-ac65-e8520521bd43.png');
   background-size: cover;
@@ -79,7 +80,7 @@
   background-repeat: no-repeat;
   transform: scale(1.05);
   filter: brightness(1.1) contrast(1.1);
-}
+} */
 
 .client-logo {
   filter: grayscale(100%);

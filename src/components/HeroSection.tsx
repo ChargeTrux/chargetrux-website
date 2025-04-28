@@ -4,9 +4,16 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-screen bg-chargetrux-darkblue flex items-center">
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="bg-california-road absolute inset-0 bg-fixed"></div>
+    <div className="relative min-h-screen flex items-center">
+      {/* Background container with the California road image */}
+      <div className="absolute inset-0 z-0">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `linear-gradient(rgba(10, 25, 48, 0.65), rgba(10, 25, 48, 0.75)), url('/lovable-uploads/d34d3758-1bd6-4d7b-ac65-e8520521bd43.png')`,
+            backgroundAttachment: 'fixed'
+          }}
+        />
       </div>
       
       <div className="container mx-auto px-4 md:px-6 z-10">
