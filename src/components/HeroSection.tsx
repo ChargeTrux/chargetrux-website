@@ -1,20 +1,21 @@
-
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Car, BatteryCharging, Plug } from "lucide-react";
+import { Car, BatteryCharging, Plug, ChargingStation, CarFront } from "lucide-react";
 
-const FloatingIcon = ({ children, initialX, initialY, duration }: { 
+const FloatingIcon = ({ children, initialX, initialY, duration, scale = 1 }: { 
   children: React.ReactNode; 
   initialX: number; 
   initialY: number;
   duration: number;
+  scale?: number;
 }) => (
   <motion.div
-    initial={{ x: initialX, y: initialY, opacity: 0 }}
+    initial={{ x: initialX, y: initialY, opacity: 0, scale }}
     animate={{ 
-      x: [initialX, initialX + 20, initialX],
-      y: [initialY, initialY - 20, initialY],
-      opacity: 1 
+      x: [initialX, initialX + 30, initialX - 20, initialX],
+      y: [initialY, initialY - 30, initialY + 20, initialY],
+      opacity: 1,
+      scale: [scale, scale * 1.1, scale]
     }}
     transition={{ 
       duration: duration,
@@ -35,17 +36,29 @@ const HeroSection = () => {
       </div>
       
       {/* Floating Icons */}
-      <FloatingIcon initialX={50} initialY={100} duration={4}>
-        <Car size={40} />
+      <FloatingIcon initialX={50} initialY={100} duration={4} scale={1.5}>
+        <Car size={60} />
       </FloatingIcon>
-      <FloatingIcon initialX={200} initialY={200} duration={5}>
-        <BatteryCharging size={32} />
+      <FloatingIcon initialX={200} initialY={200} duration={5} scale={1.3}>
+        <BatteryCharging size={52} />
       </FloatingIcon>
-      <FloatingIcon initialX={400} initialY={150} duration={6}>
-        <Plug size={36} />
+      <FloatingIcon initialX={400} initialY={150} duration={6} scale={1.4}>
+        <Plug size={56} />
       </FloatingIcon>
-      <FloatingIcon initialX={600} initialY={250} duration={4.5}>
-        <Car size={48} />
+      <FloatingIcon initialX={600} initialY={250} duration={4.5} scale={1.6}>
+        <Car size={68} />
+      </FloatingIcon>
+      <FloatingIcon initialX={150} initialY={300} duration={5.5} scale={1.3}>
+        <ChargingStation size={54} />
+      </FloatingIcon>
+      <FloatingIcon initialX={500} initialY={100} duration={4.8} scale={1.5}>
+        <CarFront size={62} />
+      </FloatingIcon>
+      <FloatingIcon initialX={300} initialY={50} duration={5.2} scale={1.4}>
+        <BatteryCharging size={58} />
+      </FloatingIcon>
+      <FloatingIcon initialX={700} initialY={150} duration={4.2} scale={1.3}>
+        <ChargingStation size={50} />
       </FloatingIcon>
       
       <div className="container mx-auto px-4 md:px-6 z-10">
