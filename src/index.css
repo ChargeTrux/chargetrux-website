@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -70,6 +69,14 @@
     url('/public/lovable-uploads/4be88438-65d5-414b-afb0-eef6bf5ec809.png');
   background-size: cover;
   background-position: center;
+}
+
+.bg-california-road {
+  background-image: linear-gradient(rgba(10, 25, 48, 0.85), rgba(10, 25, 48, 0.9)),
+    url('/lovable-uploads/d34d3758-1bd6-4d7b-ac65-e8520521bd43.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .client-logo {
