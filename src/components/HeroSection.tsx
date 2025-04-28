@@ -8,12 +8,12 @@ const HeroSection = () => {
     <div className="relative min-h-[90vh] bg-white flex items-center overflow-hidden">
       {/* Modern Background with Electric Vehicle Imagery */}
       <div className="absolute inset-0 z-0">
-        <div className="bg-california-road-light absolute inset-0 bg-fixed">
+        <div className="bg-california-road-lighter absolute inset-0 bg-fixed">
           {/* Overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-white/80 to-white/60"></div>
           
           {/* Background texture overlay */}
-          <div className="absolute inset-0 opacity-20 mix-blend-overlay">
+          <div className="absolute inset-0 opacity-20 mix-blend-multiply">
             <img 
               src="/lovable-uploads/0086d727-a12f-4882-96eb-437b6649527f.png" 
               alt="ChargeTrux Network Background" 
@@ -31,7 +31,7 @@ const HeroSection = () => {
               <Zap className="text-chargetrux-green h-6 w-6" />
               <div>
                 <p className="font-bold text-lg">Up to 440kW</p>
-                <p className="text-sm text-gray-600">Charging Power</p>
+                <p className="text-sm text-chargetrux-darkblue">Charging Power</p>
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@ const HeroSection = () => {
               <span className="text-chargetrux-green"> Delivered.</span>
             </h1>
             
-            {/* Opal City subtitle */}
+            {/* Added subtitle with Opal City */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -71,17 +71,17 @@ const HeroSection = () => {
               <p className="text-lg text-chargetrux-green font-medium">Opal City • Powering the Future</p>
             </motion.div>
             
-            <p className="text-xl text-gray-700 max-w-2xl">
+            <p className="text-xl text-chargetrux-darkblue max-w-2xl">
               Fleet charging when and where you need it. Up to 450 kWh per session. 
               4 vehicles at once. No infrastructure investment required.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md">
-              <div className="flex items-center gap-2 text-gray-700">
+              <div className="flex items-center gap-2 text-chargetrux-darkblue">
                 <Battery className="text-chargetrux-green h-5 w-5" />
                 <span>Zero installation costs</span>
               </div>
-              <div className="flex items-center gap-2 text-gray-700">
+              <div className="flex items-center gap-2 text-chargetrux-darkblue">
                 <Zap className="text-chargetrux-green h-5 w-5" />
                 <span>Rapid deployment</span>
               </div>
@@ -105,7 +105,7 @@ const HeroSection = () => {
           >
             <div className="relative">
               <div className="absolute -inset-4 rounded-full bg-chargetrux-blue/20 blur-xl animate-pulse"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm border border-chargetrux-green/20 rounded-xl p-6 shadow-xl">
+              <div className="relative bg-white/70 backdrop-blur-sm border border-chargetrux-green/20 rounded-xl p-6 shadow-xl">
                 <h3 className="text-chargetrux-green font-bold text-xl mb-4">Fast Charging Features</h3>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3">
