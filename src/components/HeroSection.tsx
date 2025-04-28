@@ -12,6 +12,15 @@ const HeroSection = () => {
           {/* Overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-chargetrux-darkblue/90 to-chargetrux-darkblue/70"></div>
           
+          {/* Background texture overlay */}
+          <div className="absolute inset-0 opacity-15 mix-blend-overlay">
+            <img 
+              src="/lovable-uploads/0086d727-a12f-4882-96eb-437b6649527f.png" 
+              alt="ChargeTrux Network Background" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
           {/* Modern animated elements */}
           <div className="absolute top-1/4 left-1/3 w-24 h-24 rounded-full bg-chargetrux-green/10 animate-pulse"></div>
           <div className="absolute bottom-1/3 right-1/4 w-32 h-32 rounded-full bg-chargetrux-blue/10 animate-pulse" style={{ animationDelay: "1s" }}></div>
@@ -50,6 +59,17 @@ const HeroSection = () => {
               Mobile Level 3 Charging.
               <span className="text-chargetrux-green"> Delivered.</span>
             </h1>
+            
+            {/* Added subtitle with Opal City */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="flex items-center gap-2 mt-1 mb-3"
+            >
+              <div className="h-0.5 w-8 bg-chargetrux-green"></div>
+              <p className="text-lg text-chargetrux-green font-medium">Opal City • Powering the Future</p>
+            </motion.div>
             
             <p className="text-xl text-gray-300 max-w-2xl">
               Fleet charging when and where you need it. Up to 450 kWh per session. 
