@@ -29,14 +29,14 @@ const PartnersSection = () => {
               <img 
                 src="/lovable-uploads/1b8e6e18-42ba-4a33-907e-e3dbcf43bf82.png" 
                 alt="Electric delivery truck" 
-                className="w-32 h-32 mx-auto object-contain"
+                className="w-48 h-48 mx-auto object-contain" // Increased from w-32 h-32 to w-48 h-48
               />
               <div className="absolute inset-0 bg-chargetrux-green opacity-20 rounded-full blur-md"></div>
             </div>
             
-            {/* Keep the circle styling for consistency */}
-            <Circle className="w-24 h-24 mx-auto absolute top-4 left-1/2 -translate-x-1/2 text-chargetrux-blue opacity-30" strokeWidth={1} />
-            <Circle className="w-28 h-28 mx-auto absolute top-2 left-1/2 -translate-x-1/2 text-chargetrux-blue opacity-20" strokeWidth={1} />
+            {/* Increase the circle sizes to match the larger truck icon */}
+            <Circle className="w-36 h-36 mx-auto absolute top-6 left-1/2 -translate-x-1/2 text-chargetrux-blue opacity-30" strokeWidth={1} /> {/* Increased from w-24 h-24 */}
+            <Circle className="w-42 h-42 mx-auto absolute top-3 left-1/2 -translate-x-1/2 text-chargetrux-blue opacity-20" strokeWidth={1} /> {/* Increased from w-28 h-28 */}
           </div>
         </motion.div>
         
