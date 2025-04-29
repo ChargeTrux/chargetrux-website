@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -49,9 +50,9 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <div className="text-2xl font-bold text-chargetrux-blue">
-            <span className="text-chargetrux-blue">Charge</span>
-            <span className="text-chargetrux-green">Trux</span>
+          <div className="text-2xl font-bold">
+            <span className={`${isScrolled ? "text-chargetrux-blue" : "text-white"}`}>Charge</span>
+            <span className={`${isScrolled ? "text-chargetrux-green" : "text-chargetrux-green"}`}>Trux</span>
           </div>
         </Link>
 

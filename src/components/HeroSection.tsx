@@ -5,7 +5,7 @@ import { ArrowRight, Battery, Zap } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <div className="relative bg-gray-50 flex items-center overflow-hidden py-12 md:py-20">
+    <div className="relative bg-chargetrux-lightgray flex items-center overflow-hidden py-12 md:py-20">
       {/* Modern Background with Animated Elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0">
