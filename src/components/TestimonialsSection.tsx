@@ -20,7 +20,7 @@ const TestimonialsSection = () => {
       position: "Sustainability Officer",
       company: "FastShip Logistics",
       logo: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png",
-      avatar: "/lovable-uploads/21e4d5ac-17d0-4544-90a0-46cce2b49080.png",
+      avatar: "/lovable-uploads/b9d1e12a-aee1-4df9-8930-7c01638b7227.png",
     },
     {
       quote: "When our fixed charging infrastructure went down, ChargeTrux had us back up and running within hours instead of days.",
