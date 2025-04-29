@@ -1,23 +1,11 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,61 +22,21 @@ const Navbar = () => {
     };
   }, []);
 
-  const menuItems = [
+  const navLinks = [
     {
-      title: "Home",
-      path: "/",
-      submenu: []
+      title: "Solutions",
+      submenu: ["Mobile Charging", "FSaaS", "On-Demand", "Site Backup"],
+      path: "/solutions",
     },
     {
-      title: "How It Works",
-      path: "/how-it-works",
-      submenu: [
-        { title: "Fleet Support-as-a-Service", path: "/fsaas" },
-        { title: "Our Hardware", path: "/hardware" },
-        { title: "Service Models", path: "/service-models" },
-        { title: "Fleet Integration", path: "/fleet-integration" },
-      ]
-    },
-    {
-      title: "Industries We Serve",
+      title: "Industries",
+      submenu: ["Rental Fleet", "Last-Mile Delivery", "Ports & Industrial", "Valet & Events"],
       path: "/industries",
-      submenu: [
-        { title: "Rental Fleet Operators", path: "/industries#rental-fleet" },
-        { title: "Last-Mile Delivery", path: "/industries#last-mile" },
-        { title: "Ports & Industrial Zones", path: "/industries#ports-industrial" },
-        { title: "Valet, Hospitality & Events", path: "/industries#valet-events" },
-        { title: "Charging Infrastructure Developers", path: "/industries#infrastructure" },
-      ]
     },
-    {
-      title: "Technology",
-      path: "/technology",
-      submenu: [
-        { title: "Power Platform", path: "/technology#power-platform" },
-        { title: "Roadmap", path: "/technology#roadmap" },
-        { title: "Reliability & Efficiency", path: "/technology#reliability" },
-      ]
-    },
-    {
-      title: "Pricing",
-      path: "/pricing",
-      submenu: []
-    },
-    {
-      title: "ESG & Case Studies",
-      path: "/sustainability",
-      submenu: [
-        { title: "Carbon-Free Charging", path: "/sustainability#carbon-free" },
-        { title: "Data-Backed Reporting", path: "/sustainability#reporting" },
-        { title: "Success Stories", path: "/sustainability#success-stories" },
-      ]
-    },
-    {
-      title: "Contact",
-      path: "/contact",
-      submenu: []
-    }
+    { title: "Technology", path: "/technology" },
+    { title: "Pricing", path: "/pricing" },
+    { title: "About", path: "/about" },
+    { title: "Contact", path: "/contact" },
   ];
 
   return (
@@ -100,100 +48,89 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        {/* Logo */}
         <Link to="/" className="flex items-center">
-          <div className="text-2xl font-bold">
-            <span className={isScrolled ? "text-chargetrux-blue" : "text-white"}>Fleet</span>
-            <span className={isScrolled ? "text-chargetrux-green" : "text-chargetrux-green"}>Spark</span>
+          <div className="text-2xl font-bold text-chargetrux-blue">
+            <span className="text-chargetrux-blue">Charge</span>
+            <span className="text-chargetrux-green">Trux</span>
           </div>
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-x-1">
-          <NavigationMenu>
-            <NavigationMenuList>
-              {menuItems.map((item, index) => (
-                <NavigationMenuItem key={index}>
-                  {item.submenu.length > 0 ? (
-                    <>
-                      <NavigationMenuTrigger 
-                        className={`${isScrolled ? "text-gray-700" : "text-white"} hover:text-chargetrux-green`}
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center space-x-1">
+          {navLinks.map((link, index) => (
+            <div key={index} className="relative group">
+              <Link
+                to={link.path}
+                className={`px-3 py-2 rounded-md text-sm font-medium flex items-center ${
+                  isScrolled ? "text-gray-700" : "text-white"
+                } hover:text-chargetrux-green transition-colors`}
+              >
+                {link.title}
+                {link.submenu && (
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                )}
+              </Link>
+              {link.submenu && (
+                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div className="py-1">
+                    {link.submenu.map((subItem, subIndex) => (
+                      <Link
+                        key={subIndex}
+                        to="#"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
-                        {item.title}
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <ul className="grid w-[400px] gap-3 p-4">
-                          {item.submenu.map((subItem, subIndex) => (
-                            <li key={subIndex}>
-                              <NavigationMenuLink asChild>
-                                <Link
-                                  to={subItem.path}
-                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                >
-                                  <div className="text-sm font-medium leading-none">{subItem.title}</div>
-                                </Link>
-                              </NavigationMenuLink>
-                            </li>
-                          ))}
-                        </ul>
-                      </NavigationMenuContent>
-                    </>
-                  ) : (
-                    <Link
-                      to={item.path}
-                      className={`${navigationMenuTriggerStyle()} ${
-                        isScrolled ? "text-gray-700" : "text-white"
-                      } hover:text-chargetrux-green`}
-                    >
-                      {item.title}
-                    </Link>
-                  )}
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
-          <Button className="ml-4 bg-chargetrux-green hover:bg-chargetrux-green/80">
-            Request Quote
+                        {subItem}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className="hidden md:block">
+          <Button variant="default" className="bg-chargetrux-blue text-white hover:bg-chargetrux-blue/80">
+            Schedule a Demo
           </Button>
         </div>
 
         {/* Mobile menu button */}
-        <div className="lg:hidden flex items-center">
-          <Button
-            variant="ghost"
-            size="icon"
-            aria-label="Toggle Menu"
+        <div className="md:hidden flex items-center">
+          <button
             onClick={() => setIsOpen(!isOpen)}
-            className={isScrolled ? "text-gray-700" : "text-white"}
+            className={`p-2 rounded-md ${
+              isScrolled ? "text-gray-700" : "text-white"
+            }`}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-white border-t overflow-y-auto max-h-[70vh]">
-          <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
-            {menuItems.map((item, index) => (
-              <div key={index} className="py-1">
+        <div className="md:hidden bg-white border-t">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {navLinks.map((link, index) => (
+              <div key={index}>
                 <Link
-                  to={item.path}
+                  to={link.path}
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
-                  onClick={() => item.submenu.length === 0 && setIsOpen(false)}
+                  onClick={() => setIsOpen(false)}
                 >
-                  {item.title}
+                  {link.title}
                 </Link>
-                {item.submenu.length > 0 && (
+                {link.submenu && (
                   <div className="pl-4 space-y-1">
-                    {item.submenu.map((subItem, subIndex) => (
+                    {link.submenu.map((subItem, subIndex) => (
                       <Link
                         key={subIndex}
-                        to={subItem.path}
+                        to="#"
                         className="block px-3 py-2 rounded-md text-base font-medium text-gray-500"
                         onClick={() => setIsOpen(false)}
                       >
-                        {subItem.title}
+                        {subItem}
                       </Link>
                     ))}
                   </div>
@@ -201,8 +138,11 @@ const Navbar = () => {
               </div>
             ))}
             <div className="pt-4">
-              <Button className="w-full bg-chargetrux-green hover:bg-chargetrux-green/80">
-                Request Quote
+              <Button
+                variant="default"
+                className="w-full bg-chargetrux-blue text-white hover:bg-chargetrux-blue/80"
+              >
+                Schedule a Demo
               </Button>
             </div>
           </div>
