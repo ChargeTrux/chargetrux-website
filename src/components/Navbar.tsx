@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -23,19 +24,20 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
+    { title: "Home", path: "/" },
     {
-      title: "Solutions",
-      submenu: ["Mobile Charging", "FSaaS", "On-Demand", "Site Backup"],
-      path: "/solutions",
+      title: "How It Works",
+      submenu: ["FS-as-a-Service"],
+      path: "/fsaas",
     },
     {
-      title: "Industries",
+      title: "Industries We Serve",
       submenu: ["Rental Fleet", "Last-Mile Delivery", "Ports & Industrial", "Valet & Events"],
       path: "/industries",
     },
     { title: "Technology", path: "/technology" },
     { title: "Pricing", path: "/pricing" },
-    { title: "About", path: "/about" },
+    { title: "ESG & Sustainability", path: "/sustainability" },
     { title: "Contact", path: "/contact" },
   ];
 
