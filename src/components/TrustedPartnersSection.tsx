@@ -22,7 +22,7 @@ const TrustedPartnersSection = () => {
     },
     { 
       name: "Port of Long Beach", 
-      logo: "/lovable-uploads/b30d0fbc-35fd-4da3-8dae-db69c558ebe5.png" 
+      logo: "/lovable-uploads/5d79c23d-6b8e-4fdd-bf11-2daaa841828f.png" 
     },
     { 
       name: "Los Angeles World Airports", 
