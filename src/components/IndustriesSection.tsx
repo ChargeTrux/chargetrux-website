@@ -7,7 +7,7 @@ const IndustriesSection = () => {
     {
       title: "Rental Fleet Operators",
       description: "Keep your rental EVs charged and ready for customers without expensive infrastructure.",
-      image: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png",
+      image: "/lovable-uploads/6742cfd5-4f71-43e7-96d0-3011a6d531f5.png",
     },
     {
       title: "Last-Mile Delivery",
