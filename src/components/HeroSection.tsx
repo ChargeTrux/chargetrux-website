@@ -5,7 +5,7 @@ import { ArrowRight, Battery, Zap, MapPin, TrendingUp } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-chargetrux-darkblue py-16 overflow-hidden">
+    <section className="relative bg-chargetrux-darkblue py-24 overflow-hidden">
       {/* Background with subtle patterns */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-hero-pattern">
@@ -22,9 +22,9 @@ const HeroSection = () => {
       </div>
       
       <div className="container mx-auto px-4 md:px-6 z-10 relative">
-        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-12">
           <motion.div 
-            className="w-full md:w-1/2 text-white space-y-4 md:pr-6 mb-6 md:mb-0"
+            className="w-full md:w-1/2 text-white space-y-6 md:pr-6 mb-6 md:mb-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -33,7 +33,7 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="inline-block bg-chargetrux-green/20 backdrop-blur-sm px-4 py-1 rounded-full text-chargetrux-green text-sm font-medium mb-1"
+              className="inline-block bg-chargetrux-green/20 backdrop-blur-sm px-4 py-1 rounded-full text-chargetrux-green text-sm font-medium"
             >
               Next Generation EV Fleet Charging
             </motion.div>
@@ -58,7 +58,7 @@ const HeroSection = () => {
               4 vehicles at once. No infrastructure investment required.
             </p>
             
-            <div className="grid grid-cols-2 gap-3 max-w-md pt-2">
+            <div className="grid grid-cols-2 gap-4 max-w-md pt-2">
               <div className="flex items-center gap-2 text-white/80 bg-white/5 p-2 rounded-lg backdrop-blur-sm">
                 <Battery className="text-chargetrux-green h-5 w-5 flex-shrink-0" />
                 <span className="text-sm">Zero installation costs</span>
