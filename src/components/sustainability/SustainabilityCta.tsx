@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const SustainabilityCta = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-chargetrux-darkblue to-chargetrux-blue text-white">
+    <section className="py-20 bg-gradient-to-br from-chargetrux-darkblue to-chargetrux-blue text-white">
       <div className="container mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -14,16 +14,16 @@ const SustainabilityCta = () => {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto"
         >
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Transform Your Fleet Operations?</h2>
-          <div className="w-20 h-1 bg-white mx-auto mb-6"></div>
-          <p className="text-lg mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Fleet Operations?</h2>
+          <div className="w-20 h-1 bg-white mx-auto mb-8"></div>
+          <p className="text-lg mb-10 leading-relaxed">
             Discover how ChargeTrux's mobile Level 3 charging solutions can support your organization's operational efficiency and sustainability goals.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-chargetrux-green hover:bg-chargetrux-green/80 text-white px-8">
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <Button size="lg" className="bg-chargetrux-green hover:bg-chargetrux-green/80 text-white px-8 py-6 text-lg">
               Schedule a Consultation
             </Button>
-            <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
+            <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10 px-8 py-6 text-lg">
               Download Sustainability Guide
             </Button>
           </div>
