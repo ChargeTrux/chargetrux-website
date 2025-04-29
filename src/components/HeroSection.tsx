@@ -5,9 +5,9 @@ import { ArrowRight, Battery, Zap } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <div className="relative bg-chargetrux-lightgray flex items-center overflow-hidden py-12 md:py-20">
+    <div className="relative bg-gradient-to-b from-chargetrux-lightgray to-gray-100 flex items-center overflow-hidden py-12 md:py-20">
       {/* Modern Background with Animated Elements */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      <div className="absolute inset-0 z-0 overflow-hidden pattern-bg">
         <div className="absolute inset-0">
           {/* Background texture overlay */}
           <div className="absolute inset-0 opacity-10 mix-blend-overlay">
@@ -112,7 +112,7 @@ const HeroSection = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <img 
-                  src="/public/lovable-uploads/1ff94a4b-5ae5-46ba-a96a-9574796883ad.png" 
+                  src="/lovable-uploads/1ff94a4b-5ae5-46ba-a96a-9574796883ad.png" 
                   alt="ChargeTrux Mobile Charging Truck" 
                   className="w-full h-auto rounded-2xl"
                 />
