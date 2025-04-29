@@ -1,0 +1,9 @@
+
+/* Import base styles with Tailwind directives */
+@import "./base.css";
+
+/* Import functional CSS categories */
+@import "./backgrounds.css";
+@import "./animations.css";
+@import "./components.css";
+@import "./utilities.css";

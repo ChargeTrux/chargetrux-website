@@ -1,0 +1,42 @@
+
+.bg-hero-pattern {
+  background-image: linear-gradient(rgba(10, 25, 48, 0.9), rgba(10, 25, 48, 0.85)),
+    url('/public/lovable-uploads/4be88438-65d5-414b-afb0-eef6bf5ec809.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-california-road {
+  background-image: linear-gradient(rgba(10, 25, 48, 0.75), rgba(10, 25, 48, 0.85)),
+    url('/lovable-uploads/231e6195-f611-4186-994a-51bd373d1ff3.png');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  transform: scale(1.05);
+  filter: brightness(1.1) contrast(1.1);
+}
+
+.chargetrux-truck-shadow {
+  filter: drop-shadow(0px 10px 20px rgba(0, 102, 255, 0.4));
+}
+
+.chargetrux-map {
+  position: relative;
+}
+
+.chargetrux-map::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(10, 25, 48, 0.7), rgba(0, 102, 255, 0.3));
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.chargetrux-map img {
+  filter: saturate(1.2) contrast(1.1);
+  transition: all 0.5s ease;
+}
