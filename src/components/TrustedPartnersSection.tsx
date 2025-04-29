@@ -98,22 +98,7 @@ const TrustedPartnersSection = () => {
           </div>
         </motion.div>
         
-        <motion.div 
-          className="my-16 max-w-4xl mx-auto"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="relative rounded-xl overflow-hidden border-2 border-chargetrux-green/30 shadow-[0_0_30px_rgba(0,204,102,0.15)]">
-            <img 
-              src="/lovable-uploads/aa71866f-8fa3-4af5-a549-d0781144adf5.png" 
-              alt="ChargeTrux Network" 
-              className="w-full h-auto"
-            />
-          </div>
-        </motion.div>
-        
+        {/* Mobility Enabled Section - Moved to the top before the truck image */}
         <motion.div 
           className="my-20"
           initial={{ opacity: 0 }}
@@ -153,6 +138,23 @@ const TrustedPartnersSection = () => {
               Our expertise in mobile charging and service delivery is trusted by industry leaders. With over a million successful deliveries, we provide reliable and efficient charging solutions wherever they're needed.
             </p>
           </motion.div>
+        </motion.div>
+        
+        {/* Truck Network Image - Now after the Mobility Enabled section */}
+        <motion.div 
+          className="my-16 max-w-4xl mx-auto"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="relative rounded-xl overflow-hidden border-2 border-chargetrux-green/30 shadow-[0_0_30px_rgba(0,204,102,0.15)]">
+            <img 
+              src="/lovable-uploads/aa71866f-8fa3-4af5-a549-d0781144adf5.png" 
+              alt="ChargeTrux Network" 
+              className="w-full h-auto"
+            />
+          </div>
         </motion.div>
         
         <motion.div 
