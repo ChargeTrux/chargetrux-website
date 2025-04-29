@@ -1,12 +1,10 @@
 
 .client-logo {
-  filter: grayscale(100%);
-  opacity: 0.7;
+  opacity: 0.9;
   transition: all 0.3s ease;
 }
 
 .client-logo:hover {
-  filter: grayscale(0%);
   opacity: 1;
 }
 

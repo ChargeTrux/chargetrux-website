@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 const ClientsSection = () => {
@@ -25,7 +24,7 @@ const ClientsSection = () => {
     },
     { 
       name: "LAX VALET", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/3/30/LAX_logo.svg" 
+      logo: "/lovable-uploads/40d8cd55-add8-494c-9a4d-dfa1ad64949a.png" 
     },
   ];
 
