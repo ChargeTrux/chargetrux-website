@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -11,6 +12,7 @@ const TestimonialsSection = () => {
       position: "Fleet Operations Director",
       company: "Premier Rentals",
       logo: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png",
+      avatar: "/lovable-uploads/1e840172-5b7e-41b1-8d50-5c58c1134b38.png",
     },
     {
       quote: "The flexibility of mobile charging allowed us to electrify our delivery fleet 6 months ahead of schedule.",
@@ -18,6 +20,7 @@ const TestimonialsSection = () => {
       position: "Sustainability Officer",
       company: "FastShip Logistics",
       logo: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png",
+      avatar: "/lovable-uploads/2a17e2a2-043b-48fd-b836-dde88b37533a.png",
     },
     {
       quote: "When our fixed charging infrastructure went down, ChargeTrux had us back up and running within hours instead of days.",
@@ -25,6 +28,7 @@ const TestimonialsSection = () => {
       position: "Operations Manager",
       company: "Metro Transport Authority",
       logo: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png",
+      avatar: "/lovable-uploads/fe23cd93-05ee-48e5-be6b-0af495d44e12.png",
     },
   ];
 
@@ -75,6 +79,10 @@ const TestimonialsSection = () => {
               </p>
               
               <div className="flex flex-col items-center">
+                <Avatar className="h-24 w-24 border-2 border-chargetrux-blue mb-4">
+                  <AvatarImage src={testimonials[current].avatar} alt={testimonials[current].author} />
+                  <AvatarFallback>{testimonials[current].author.charAt(0)}</AvatarFallback>
+                </Avatar>
                 <img 
                   src={testimonials[current].logo} 
                   alt={testimonials[current].company} 
