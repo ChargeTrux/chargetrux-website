@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const IndustriesSection = () => {
   const industries = [
@@ -27,7 +28,7 @@ const IndustriesSection = () => {
   ];
 
   return (
-    <div className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"
@@ -39,6 +40,7 @@ const IndustriesSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-chargetrux-darkblue">
             Industries We Serve
           </h2>
+          <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-4"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Our mobile charging solutions adapt to the unique needs of various industries, 
             providing flexibility where traditional infrastructure falls short.
@@ -49,22 +51,29 @@ const IndustriesSection = () => {
           {industries.map((industry, index) => (
             <motion.div 
               key={index}
-              className="industry-tile aspect-square rounded-xl overflow-hidden shadow-lg"
+              className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px] group"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <img 
-                src={industry.image} 
-                alt={industry.title} 
-                className="w-full h-full object-cover"
-              />
-              <div className="industry-overlay text-white text-center p-6">
-                <h3 className="text-xl font-bold mb-2">{industry.title}</h3>
-                <p>{industry.description}</p>
-                <a href="#" className="mt-4 inline-block text-white underline">
-                  Learn More
+              <div className="relative h-48">
+                <img 
+                  src={industry.image} 
+                  alt={industry.title} 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-chargetrux-darkblue/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2 text-chargetrux-darkblue">{industry.title}</h3>
+                <p className="text-gray-600 mb-4">{industry.description}</p>
+                <a 
+                  href="#" 
+                  className="inline-flex items-center text-chargetrux-blue font-medium transition-colors hover:text-chargetrux-blue/80"
+                >
+                  Learn More 
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </div>
             </motion.div>
@@ -77,7 +86,7 @@ const IndustriesSection = () => {
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

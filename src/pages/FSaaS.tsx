@@ -65,7 +65,7 @@ const FSaaS = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 md:pt-32 md:pb-16 bg-gradient-to-br from-gray-50 to-gray-100">
+      <section className="pt-24 pb-12 md:pt-32 md:pb-16 bg-gradient-to-br from-chargetrux-darkblue/10 to-chargetrux-blue/5">
         <div className="container mx-auto px-4">
           <motion.div 
             className="max-w-4xl mx-auto text-center"
@@ -74,9 +74,10 @@ const FSaaS = () => {
             viewport={{ once: true }}
             variants={fadeIn}
           >
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 text-chargetrux-darkblue">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-chargetrux-darkblue">
               Fleet Support-as-a-Service (FSaaS)
             </h1>
+            <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-4"></div>
             <p className="text-xl md:text-2xl text-gray-600 mb-6">
               Reliable Level 3 Fast Charging Without the Infrastructure Burden
             </p>
@@ -108,6 +109,7 @@ const FSaaS = () => {
             <h2 className="text-2xl md:text-4xl font-bold mb-2 text-chargetrux-darkblue">
               Our R-Series Mobile Charging Units
             </h2>
+            <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-4"></div>
             <p className="text-xl text-gray-600">
               Next-Generation Mobile Power Delivery System
             </p>
@@ -250,7 +252,7 @@ const FSaaS = () => {
       </section>
       
       {/* Service Models */}
-      <section className="py-16 bg-gray-50" id="service-models">
+      <section className="py-16 bg-gradient-to-b from-gray-50 to-white" id="service-models">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-12"
@@ -262,6 +264,7 @@ const FSaaS = () => {
             <h2 className="text-2xl md:text-4xl font-bold mb-2 text-chargetrux-darkblue">
               Service Models
             </h2>
+            <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-4"></div>
             <p className="text-xl text-gray-600">
               Flexible Options Tailored to Your Fleet's Operational Requirements
             </p>
@@ -305,6 +308,7 @@ const FSaaS = () => {
             <h2 className="text-2xl md:text-4xl font-bold mb-2 text-chargetrux-darkblue">
               Fleet Integration
             </h2>
+            <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-4"></div>
             <p className="text-xl text-gray-600">
               Seamless Connection With Your Existing Fleet Management Systems
             </p>
@@ -467,7 +471,7 @@ const FSaaS = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="py-16 bg-chargetrux-darkblue text-white">
+      <section className="py-16 bg-gradient-to-br from-chargetrux-darkblue to-chargetrux-darkblue/90 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             className="max-w-3xl mx-auto"
@@ -477,12 +481,13 @@ const FSaaS = () => {
             variants={fadeIn}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Experience FSaaS?</h2>
+            <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-4"></div>
             <p className="text-xl mb-8 text-gray-200">
               Discover how ChargeTrux's Fleet Support-as-a-Service can transform your EV fleet operations with reliable, flexible, and infrastructure-free charging solutions.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <Button className="bg-chargetrux-blue text-white hover:bg-chargetrux-blue/90">
+              <Button className="bg-chargetrux-green text-white hover:bg-chargetrux-green/90">
                 Schedule a Demo
               </Button>
               <Button variant="outline" className="border-white text-white hover:bg-white/10">
