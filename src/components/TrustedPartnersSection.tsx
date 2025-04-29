@@ -1,3 +1,4 @@
+
 import { Circle, Zap, Truck, Battery, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -5,7 +6,7 @@ const TrustedPartnersSection = () => {
   const partners = [
     { 
       name: "Amazon", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png"
     },
     { 
       name: "Hertz", 
@@ -17,11 +18,11 @@ const TrustedPartnersSection = () => {
     },
     { 
       name: "Avis", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Avis_Budget_Group_logo.svg/2560px-Avis_Budget_Group_logo.svg.png"
+      logo: "https://www.logo.wine/a/logo/Avis_Car_Rental/Avis_Car_Rental-Logo.wine.svg"
     },
     { 
       name: "Port of Long Beach", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Port_of_Long_Beach_Logo_%28Cropped%29.svg/1200px-Port_of_Long_Beach_Logo_%28Cropped%29.svg.png"
+      logo: "https://www.cleanpng.com/png-port-of-long-beach-port-of-los-angeles-shipping-co-3010077/download-png.html"
     },
     { 
       name: "Los Angeles World Airports", 
