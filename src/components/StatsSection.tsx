@@ -39,11 +39,21 @@ const Counter = ({ end, suffix = "", duration = 2000, delay = 0 }: CounterProps)
 
 const StatsSection = () => {
   return (
-    <div className="bg-white py-16">
+    <div className="bg-white py-20">
       <div className="container mx-auto px-4">
+        <motion.h2 
+          className="text-2xl md:text-3xl font-bold text-center mb-12 text-chargetrux-darkblue"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          Delivering Results Across <span className="text-chargetrux-blue">Major Metro Areas</span>
+        </motion.h2>
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <motion.div 
-            className="bg-white p-6 rounded-lg shadow-lg"
+            className="bg-white p-6 rounded-lg shadow-lg border border-gray-100"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -61,7 +71,7 @@ const StatsSection = () => {
           </motion.div>
           
           <motion.div 
-            className="bg-white p-6 rounded-lg shadow-lg"
+            className="bg-white p-6 rounded-lg shadow-lg border border-gray-100"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -79,7 +89,7 @@ const StatsSection = () => {
           </motion.div>
           
           <motion.div 
-            className="bg-white p-6 rounded-lg shadow-lg"
+            className="bg-white p-6 rounded-lg shadow-lg border border-gray-100"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}

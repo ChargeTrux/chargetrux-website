@@ -6,6 +6,13 @@
   background-position: center;
 }
 
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
 .bg-california-road {
   background-image: linear-gradient(rgba(10, 25, 48, 0.75), rgba(10, 25, 48, 0.85)),
     url('/lovable-uploads/231e6195-f611-4186-994a-51bd373d1ff3.png');
