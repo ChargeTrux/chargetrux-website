@@ -5,12 +5,12 @@ import { ArrowRight, Battery, Zap } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-[90vh] bg-chargetrux-darkblue flex items-center overflow-hidden">
+    <div className="relative min-h-[90vh] bg-gray-50 flex items-center overflow-hidden">
       {/* Modern Background with Electric Vehicle Imagery */}
       <div className="absolute inset-0 z-0">
         <div className="bg-california-road absolute inset-0 bg-fixed">
           {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-chargetrux-darkblue/90 to-chargetrux-darkblue/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-chargetrux-darkblue/70 to-chargetrux-darkblue/50"></div>
           
           {/* Background texture overlay */}
           <div className="absolute inset-0 opacity-15 mix-blend-overlay">
