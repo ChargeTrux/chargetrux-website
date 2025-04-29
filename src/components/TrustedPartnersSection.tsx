@@ -1,15 +1,32 @@
-
 import { Circle, Zap, Truck, Battery, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 
 const TrustedPartnersSection = () => {
   const partners = [
-    { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" },
-    { name: "Hertz", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Hertz_logo.svg/2560px-Hertz_logo.svg.png" },
-    { name: "FedEx", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/FedEx_logo.svg/2560px-FedEx_logo.svg.png" },
-    { name: "Avis", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Avis_logo.svg/2560px-Avis_logo.svg.png" },
-    { name: "Port of Long Beach", logo: "https://www.polb.com/wp-content/uploads/2019/11/logo.svg" },
-    { name: "LAX Valet", logo: "https://www.laxvalet.com/wp-content/uploads/2019/03/laxvalet.png" },
+    { 
+      name: "Amazon", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
+    },
+    { 
+      name: "Hertz", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hertz_Car_Rental_logo.svg/2560px-Hertz_Car_Rental_logo.svg.png"
+    },
+    { 
+      name: "FedEx", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/FedEx_Corporation_-_2016_Logo.svg/1200px-FedEx_Corporation_-_2016_Logo.svg.png" 
+    },
+    { 
+      name: "Avis", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Avis_Budget_Group_logo.svg/2560px-Avis_Budget_Group_logo.svg.png"
+    },
+    { 
+      name: "Port of Long Beach", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Port_of_Long_Beach_Logo_%28Cropped%29.svg/1200px-Port_of_Long_Beach_Logo_%28Cropped%29.svg.png"
+    },
+    { 
+      name: "Los Angeles World Airports", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Los_Angeles_World_Airports_%28logo%29.svg/1280px-Los_Angeles_World_Airports_%28logo%29.svg.png" 
+    },
   ];
 
   const benefits = [
@@ -32,7 +49,6 @@ const TrustedPartnersSection = () => {
 
   return (
     <div className="py-16 bg-chargetrux-darkblue relative overflow-hidden">
-      {/* Background overlay with the charging truck image */}
       <div className="absolute inset-0 opacity-10 mix-blend-screen">
         <img 
           src="/lovable-uploads/0086d727-a12f-4882-96eb-437b6649527f.png" 
@@ -42,7 +58,6 @@ const TrustedPartnersSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Trusted Partners Section */}
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -57,12 +72,11 @@ const TrustedPartnersSection = () => {
             Our mobile charging solutions power the operations of leading companies across transportation, logistics, and service industries.
           </p>
           
-          {/* Partner Logos */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {partners.map((partner, index) => (
               <motion.div 
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center h-24 transition-all hover:bg-white/20"
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 flex items-center justify-center h-32 transition-all hover:bg-white/20"
                 style={{
                   boxShadow: "0 4px 15px rgba(255, 255, 255, 0.05)"
                 }}
@@ -75,14 +89,13 @@ const TrustedPartnersSection = () => {
                 <img 
                   src={partner.logo} 
                   alt={`${partner.name} logo`} 
-                  className="max-h-12 max-w-full object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-all"
+                  className="max-h-16 max-w-full object-contain filter brightness-0 invert opacity-80 hover:opacity-100 transition-all"
                 />
               </motion.div>
             ))}
           </div>
         </motion.div>
         
-        {/* Featured Image Section */}
         <motion.div 
           className="my-16 max-w-4xl mx-auto"
           initial={{ opacity: 0, scale: 0.95 }}
@@ -106,7 +119,6 @@ const TrustedPartnersSection = () => {
           </div>
         </motion.div>
         
-        {/* Mobility Enabled Section */}
         <motion.div 
           className="my-20"
           initial={{ opacity: 0 }}
@@ -122,12 +134,10 @@ const TrustedPartnersSection = () => {
             viewport={{ once: true }}
           >
             <div className="relative">
-              {/* Central circle with concentric circles */}
               <Circle className="w-16 h-16 mx-auto text-chargetrux-blue opacity-80" strokeWidth={1} />
               <Circle className="w-16 h-16 mx-auto absolute top-0 text-chargetrux-blue opacity-50" strokeWidth={1} style={{ transform: 'scale(1.2)' }} />
               <Circle className="w-16 h-16 mx-auto absolute top-0 text-chargetrux-blue opacity-30" strokeWidth={1} style={{ transform: 'scale(1.4)' }} />
               
-              {/* Accent icons */}
               <Zap className="w-8 h-8 absolute -top-4 -right-4 text-chargetrux-green" />
               <Truck className="w-8 h-8 absolute bottom-0 -right-8 text-chargetrux-green" />
               <Battery className="w-8 h-8 absolute -left-8 top-4 text-chargetrux-green" />
@@ -150,7 +160,6 @@ const TrustedPartnersSection = () => {
           </motion.div>
         </motion.div>
         
-        {/* Benefits Section */}
         <motion.div 
           className="mt-16"
           initial={{ opacity: 0, y: 20 }}
