@@ -1,4 +1,3 @@
-
 import { Circle, Zap, Truck, Menu } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -26,7 +25,7 @@ const PartnersSection = () => {
     },
     { 
       name: "LAX VALET", 
-      logo: "/lovable-uploads/40d8cd55-add8-494c-9a4d-dfa1ad64949a.png" 
+      logo: "/lovable-uploads/f1bd1560-32fb-4e13-a37b-6e70f993b6a5.png" 
     },
   ];
 

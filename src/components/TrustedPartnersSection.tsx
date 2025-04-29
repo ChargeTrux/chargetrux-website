@@ -26,7 +26,7 @@ const TrustedPartnersSection = () => {
     },
     { 
       name: "LAX VALET", 
-      logo: "/lovable-uploads/40d8cd55-add8-494c-9a4d-dfa1ad64949a.png" 
+      logo: "/lovable-uploads/f1bd1560-32fb-4e13-a37b-6e70f993b6a5.png" 
     },
   ];
 
@@ -150,7 +150,7 @@ const TrustedPartnersSection = () => {
         >
           <div className="relative rounded-xl overflow-hidden border-2 border-chargetrux-green/30 shadow-[0_0_30px_rgba(0,204,102,0.15)]">
             <img 
-              src="/lovable-uploads/aa71866f-8fa3-4af5-a549-d0781144adf5.png" 
+              src="/lovable-uploads/c9121e55-2ede-4486-9173-2ac2e41fc04f.png" 
               alt="ChargeTrux Network" 
               className="w-full h-auto"
             />
