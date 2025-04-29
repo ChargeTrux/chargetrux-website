@@ -17,7 +17,7 @@ const IndustriesSection = () => {
     {
       title: "Ports & Industrial Zones",
       description: "Power heavy-duty electric equipment and vehicles without fixed charging infrastructure.",
-      image: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png",
+      image: "/lovable-uploads/d8249eda-258d-4a38-b277-2373d1e01415.png",
     },
     {
       title: "Valet, Hospitality & Events",

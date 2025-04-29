@@ -16,7 +16,7 @@ const Industries = () => {
     {
       title: "Ports & Industrial",
       description: "Power heavy-duty electric vehicles and equipment",
-      image: "/lovable-uploads/231e6195-f611-4186-994a-51bd373d1ff3.png"
+      image: "/lovable-uploads/d8249eda-258d-4a38-b277-2373d1e01415.png"
     },
     {
       title: "Valet & Events",
