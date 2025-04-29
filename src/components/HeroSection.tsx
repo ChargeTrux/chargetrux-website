@@ -38,7 +38,7 @@ const HeroSection = () => {
               Next Generation EV Fleet Charging
             </motion.div>
             
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
               Mobile Level 3 Charging.
               <span className="text-chargetrux-green"> Delivered.</span>
             </h1>
@@ -50,10 +50,10 @@ const HeroSection = () => {
               className="flex items-center gap-2 mt-1 mb-2"
             >
               <div className="h-0.5 w-8 bg-chargetrux-green"></div>
-              <p className="text-lg text-chargetrux-green font-medium">Opal City • Powering the Future</p>
+              <p className="text-base text-chargetrux-green font-medium">Opal City • Powering the Future</p>
             </motion.div>
             
-            <p className="text-lg text-gray-300 max-w-2xl">
+            <p className="text-base text-gray-300 max-w-2xl">
               Fleet charging when and where you need it. Up to 450 kWh per session. 
               4 vehicles at once. No infrastructure investment required.
             </p>
