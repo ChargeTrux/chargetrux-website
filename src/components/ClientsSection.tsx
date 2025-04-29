@@ -9,11 +9,11 @@ const ClientsSection = () => {
     },
     { 
       name: "Hertz", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hertz_Car_Rental_logo.svg/1920px-Hertz_Car_Rental_logo.svg.png"
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hertz_Car_Rental_logo.svg/640px-Hertz_Car_Rental_logo.svg.png"
     },
     { 
       name: "FedEx", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/FedEx_Corporation_-_2016_Logo.svg/1920px-FedEx_Corporation_-_2016_Logo.svg.png" 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/FedEx_Corporation_-_2016_Logo.svg/640px-FedEx_Corporation_-_2016_Logo.svg.png" 
     },
     { 
       name: "Avis", 
@@ -21,11 +21,11 @@ const ClientsSection = () => {
     },
     { 
       name: "Port of Long Beach", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/5/56/Port_of_Long_Beach_logo.png" 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Port_of_Long_Beach_logo.png/640px-Port_of_Long_Beach_logo.png" 
     },
     { 
       name: "Los Angeles World Airports", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Los_Angeles_World_Airports_%28logo%29.svg/1280px-Los_Angeles_World_Airports_%28logo%29.svg.png" 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Los_Angeles_World_Airports_%28logo%29.svg/640px-Los_Angeles_World_Airports_%28logo%29.svg.png" 
     },
   ];
 
@@ -61,6 +61,7 @@ const ClientsSection = () => {
                 src={client.logo} 
                 alt={`${client.name} logo`} 
                 className="max-h-16 max-w-full object-contain"
+                style={{ maxWidth: "100%" }}
               />
             </motion.div>
           ))}
