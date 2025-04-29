@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const SustainabilityHero = () => {
   return (
-    <div className="bg-gradient-to-br from-chargetrux-darkblue to-chargetrux-blue py-24 md:py-32 text-white">
+    <div className="bg-chargetrux-darkblue py-24 md:py-32 text-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
