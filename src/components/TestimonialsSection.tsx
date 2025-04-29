@@ -12,7 +12,7 @@ const TestimonialsSection = () => {
       position: "Fleet Operations Director",
       company: "Premier Rentals",
       logo: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png",
-      avatar: "/lovable-uploads/1e840172-5b7e-41b1-8d50-5c58c1134b38.png",
+      avatar: "/lovable-uploads/567a5239-8c55-47c5-9f6a-041284ff6138.png",
     },
     {
       quote: "The flexibility of mobile charging allowed us to electrify our delivery fleet 6 months ahead of schedule.",
@@ -20,7 +20,7 @@ const TestimonialsSection = () => {
       position: "Sustainability Officer",
       company: "FastShip Logistics",
       logo: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png",
-      avatar: "/lovable-uploads/8b7c269d-9b34-4e35-99ea-4e3206e0a0f0.png",
+      avatar: "/lovable-uploads/21e4d5ac-17d0-4544-90a0-46cce2b49080.png",
     },
     {
       quote: "When our fixed charging infrastructure went down, ChargeTrux had us back up and running within hours instead of days.",
