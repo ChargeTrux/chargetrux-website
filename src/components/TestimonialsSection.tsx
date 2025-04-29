@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -33,13 +33,41 @@ const TestimonialsSection = () => {
   ];
 
   const [current, setCurrent] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
+  const autoPlayTime = 5000; // 5 seconds per testimonial
 
-  const nextTestimonial = () => {
-    setCurrent(current === testimonials.length - 1 ? 0 : current + 1);
-  };
+  const nextTestimonial = useCallback(() => {
+    setCurrent(current => current === testimonials.length - 1 ? 0 : current + 1);
+  }, [testimonials.length]);
 
-  const prevTestimonial = () => {
-    setCurrent(current === 0 ? testimonials.length - 1 : current - 1);
+  const prevTestimonial = useCallback(() => {
+    setCurrent(current => current === 0 ? testimonials.length - 1 : current - 1);
+  }, [testimonials.length]);
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    let interval;
+    if (autoPlay) {
+      interval = setInterval(() => {
+        nextTestimonial();
+      }, autoPlayTime);
+    }
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
+  }, [autoPlay, nextTestimonial, autoPlayTime]);
+
+  // Pause auto-scroll when user interacts with the carousel
+  const handleInteraction = () => {
+    setAutoPlay(false);
+    // Resume auto-play after a period of inactivity
+    const timeout = setTimeout(() => {
+      setAutoPlay(true);
+    }, 10000); // Resume after 10 seconds of inactivity
+
+    return () => clearTimeout(timeout);
   };
 
   return (
@@ -60,7 +88,7 @@ const TestimonialsSection = () => {
           </p>
         </motion.div>
         
-        <div className="max-w-4xl mx-auto relative">
+        <div className="max-w-4xl mx-auto relative" onMouseEnter={handleInteraction} onTouchStart={handleInteraction}>
           <div className="absolute top-0 left-0 -mt-6 -ml-4 text-chargetrux-blue">
             <Quote size={60} />
           </div>
@@ -93,7 +121,10 @@ const TestimonialsSection = () => {
           
           <div className="flex justify-center mt-8 space-x-4">
             <button 
-              onClick={prevTestimonial}
+              onClick={() => {
+                prevTestimonial();
+                handleInteraction();
+              }}
               className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
               aria-label="Previous testimonial"
             >
@@ -103,7 +134,10 @@ const TestimonialsSection = () => {
               {testimonials.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrent(index)}
+                  onClick={() => {
+                    setCurrent(index);
+                    handleInteraction();
+                  }}
                   className={`w-3 h-3 rounded-full transition-colors ${
                     index === current ? "bg-chargetrux-green" : "bg-white/30"
                   }`}
@@ -112,7 +146,10 @@ const TestimonialsSection = () => {
               ))}
             </div>
             <button 
-              onClick={nextTestimonial}
+              onClick={() => {
+                nextTestimonial();
+                handleInteraction();
+              }}
               className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
               aria-label="Next testimonial"
             >
