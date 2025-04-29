@@ -1,3 +1,4 @@
+
 import { Circle, Zap, Truck, Battery, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -13,7 +14,7 @@ const TrustedPartnersSection = () => {
     },
     { 
       name: "FedEx", 
-      logo: "/lovable-uploads/126233b7-39b3-4074-8fdc-b68f01db7303.png" 
+      logo: "/lovable-uploads/c7ef7e0e-121a-4f5e-a9ec-396eaa11c44f.png" 
     },
     { 
       name: "Avis", 
