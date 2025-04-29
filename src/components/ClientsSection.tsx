@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 const ClientsSection = () => {
@@ -8,7 +9,7 @@ const ClientsSection = () => {
     },
     { 
       name: "Hertz", 
-      logo: "/lovable-uploads/931c0528-b8cb-40c5-b71e-22a3e25ebecf.png" 
+      logo: "/lovable-uploads/7352ddc9-7057-4db1-8f1e-97b0188b38b4.png" 
     },
     { 
       name: "FedEx", 
@@ -20,7 +21,7 @@ const ClientsSection = () => {
     },
     { 
       name: "Port of Long Beach", 
-      logo: "/lovable-uploads/25613ad2-bdd8-4eeb-ade8-914ca3da1d9d.png" 
+      logo: "/lovable-uploads/2a733f58-c400-4a2e-883d-12ed7d7219ca.png" 
     },
     { 
       name: "LAX VALET", 
