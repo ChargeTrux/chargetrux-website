@@ -21,7 +21,7 @@ const ClientsSection = () => {
     },
     { 
       name: "Port of Long Beach", 
-      logo: "/lovable-uploads/2aa215a7-4ad2-459b-99aa-3beef2f79d7c.png" 
+      logo: "/lovable-uploads/b30d0fbc-35fd-4da3-8dae-db69c558ebe5.png" 
     },
     { 
       name: "Los Angeles World Airports", 
