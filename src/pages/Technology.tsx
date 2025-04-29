@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Battery, Calendar, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -38,7 +37,7 @@ const Technology = () => {
               viewport={{ once: true }}
               className="mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              <h2 className="text-xl md:text-2xl font-bold mb-8">
                 ChargeTrux delivers unmatched mobile charging capabilities through our advanced power platform, designed specifically for commercial fleet operations that demand reliability, efficiency, and flexibility.
               </h2>
             </motion.div>
@@ -54,7 +53,7 @@ const Technology = () => {
                   450 kWh Per Session Capacity
                 </h3>
                 <p className="text-gray-300 mb-6 text-lg">
-                  Our current R-Series mobile charging units provide an industry-leading 450 kWh of energy per charging session – enough to fully charge multiple fleet vehicles without requiring grid connection or fixed infrastructure. This high-capacity design ensures your electric fleet vehicles receive the power they need, when and where they need it.
+                  Our current R-Series mobile charging units provide an industry-leading 450 kWh of energy per charging session – enough to fully charge multiple fleet vehicles or 4 heavy-duty commercial EVs in a single deployment.
                 </p>
                 <TechnologyFeature 
                   icon="⚡"
