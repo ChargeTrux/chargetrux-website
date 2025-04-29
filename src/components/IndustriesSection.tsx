@@ -22,7 +22,7 @@ const IndustriesSection = () => {
     {
       title: "Valet, Hospitality & Events",
       description: "Provide premium charging services at hotels, venues, and special events.",
-      image: "/lovable-uploads/bcfb2662-d555-4c25-86c1-6ff0f063c300.png",
+      image: "/lovable-uploads/184a1e78-89e7-4a15-b547-3968236836ec.png",
     },
   ];
 
