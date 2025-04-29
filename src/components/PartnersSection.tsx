@@ -10,11 +10,11 @@ const PartnersSection = () => {
     },
     { 
       name: "Hertz", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hertz_Car_Rental_logo.svg/1280px-Hertz_Car_Rental_logo.svg.png" 
+      logo: "/lovable-uploads/931c0528-b8cb-40c5-b71e-22a3e25ebecf.png" 
     },
     { 
       name: "FedEx", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/FedEx_Corporation_-_2016_Logo.svg/1280px-FedEx_Corporation_-_2016_Logo.svg.png" 
+      logo: "/lovable-uploads/126233b7-39b3-4074-8fdc-b68f01db7303.png" 
     },
     { 
       name: "Avis", 
@@ -22,11 +22,11 @@ const PartnersSection = () => {
     },
     { 
       name: "Port of Long Beach", 
-      logo: "https://www.polb.com/wp-content/uploads/2019/11/logo.svg" 
+      logo: "/lovable-uploads/2aa215a7-4ad2-459b-99aa-3beef2f79d7c.png" 
     },
     { 
       name: "LAX Valet", 
-      logo: "/lovable-uploads/lax_valet-500px.png" 
+      logo: "/lovable-uploads/3f23e66c-fe5a-4a27-99d3-56c37985db91.png" 
     },
   ];
 
