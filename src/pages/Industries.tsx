@@ -21,7 +21,7 @@ const Industries = () => {
     {
       title: "Valet & Events",
       description: "Mobile charging for special events and valet services",
-      image: "/lovable-uploads/231e6195-f611-4186-994a-51bd373d1ff3.png"
+      image: "/lovable-uploads/e5ac1642-8f41-494a-907e-69f657a9cb21.png"
     }
   ];
 
