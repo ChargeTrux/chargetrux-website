@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Check, ChartBar, CircleDollarSign, Scale, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -21,7 +22,7 @@ const Pricing = () => {
             Transparent EV Charging Pricing For Fleets
           </h1>
           <div className="w-24 h-1.5 bg-chargetrux-green mx-auto mb-8"></div>
-          <p className="text-xl text-white max-w-3xl mx-auto font-medium">
+          <p className="text-base md:text-lg text-white max-w-3xl mx-auto font-medium">
             Flexible Solutions That Scale With Your EV Fleet Needs
           </p>
           <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto mt-6">
