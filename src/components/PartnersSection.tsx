@@ -21,10 +21,6 @@ const PartnersSection = () => {
       logo: "https://www.logo.wine/a/logo/Avis_Car_Rental/Avis_Car_Rental-Logo.wine.svg" 
     },
     { 
-      name: "Port of Long Beach", 
-      logo: "/lovable-uploads/38fa875e-b28b-4716-a893-f6c0b66b7252.png" 
-    },
-    { 
       name: "LAX Valet", 
       logo: "/lovable-uploads/3f23e66c-fe5a-4a27-99d3-56c37985db91.png" 
     },
@@ -74,7 +70,7 @@ const PartnersSection = () => {
         </motion.div>
         
         {/* Partner Logos */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {partners.map((partner, index) => (
             <motion.div 
               key={index}

@@ -1,4 +1,3 @@
-
 import { Circle, Zap, Truck, Battery, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -19,10 +18,6 @@ const TrustedPartnersSection = () => {
     { 
       name: "Avis", 
       logo: "https://www.logo.wine/a/logo/Avis_Car_Rental/Avis_Car_Rental-Logo.wine.svg" 
-    },
-    { 
-      name: "Port of Long Beach", 
-      logo: "/lovable-uploads/38fa875e-b28b-4716-a893-f6c0b66b7252.png" 
     },
     { 
       name: "Los Angeles World Airports", 

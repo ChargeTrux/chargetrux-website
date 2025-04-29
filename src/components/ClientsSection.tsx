@@ -20,10 +20,6 @@ const ClientsSection = () => {
       logo: "https://www.logo.wine/a/logo/Avis_Car_Rental/Avis_Car_Rental-Logo.wine.svg" 
     },
     { 
-      name: "Port of Long Beach", 
-      logo: "/lovable-uploads/38fa875e-b28b-4716-a893-f6c0b66b7252.png" 
-    },
-    { 
       name: "Los Angeles World Airports", 
       logo: "/lovable-uploads/3f23e66c-fe5a-4a27-99d3-56c37985db91.png" 
     },
@@ -43,7 +39,7 @@ const ClientsSection = () => {
             Trusted by Industry Leaders
           </h2>
           <p className="text-gray-600 mt-2 text-lg">
-            Amazon | Hertz | FedEx | Avis | Port of Long Beach | Los Angeles World Airports
+            Amazon | Hertz | FedEx | Avis | Los Angeles World Airports
           </p>
         </motion.div>
         
