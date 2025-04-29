@@ -22,11 +22,11 @@ const PartnersSection = () => {
     },
     { 
       name: "Port of Long Beach", 
-      logo: "https://www.cleanpng.com/png-port-of-long-beach-logo-brand-product-design-port-o-6454851/download-png.html" 
+      logo: "https://www.polb.com/wp-content/uploads/2019/11/logo.svg" 
     },
     { 
       name: "LAX Valet", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Los_Angeles_World_Airports_%28logo%29.svg/1280px-Los_Angeles_World_Airports_%28logo%29.svg.png" 
+      logo: "/lovable-uploads/lax_valet-500px.png" 
     },
   ];
 

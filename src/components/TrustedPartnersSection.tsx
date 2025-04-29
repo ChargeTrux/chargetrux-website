@@ -5,11 +5,11 @@ const TrustedPartnersSection = () => {
   const partners = [
     { 
       name: "Amazon", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png"
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" 
     },
     { 
       name: "Hertz", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hertz_Car_Rental_logo.svg/1280px-Hertz_Car_Rental_logo.svg.png"
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hertz_Car_Rental_logo.svg/1280px-Hertz_Car_Rental_logo.svg.png" 
     },
     { 
       name: "FedEx", 
@@ -17,15 +17,15 @@ const TrustedPartnersSection = () => {
     },
     { 
       name: "Avis", 
-      logo: "https://www.logo.wine/a/logo/Avis_Car_Rental/Avis_Car_Rental-Logo.wine.svg"
+      logo: "https://www.logo.wine/a/logo/Avis_Car_Rental/Avis_Car_Rental-Logo.wine.svg" 
     },
     { 
       name: "Port of Long Beach", 
-      logo: "https://www.cleanpng.com/png-port-of-long-beach-logo-brand-product-design-port-o-6454851/download-png.html"
+      logo: "https://www.polb.com/wp-content/uploads/2019/11/logo.svg" 
     },
     { 
       name: "Los Angeles World Airports", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Los_Angeles_World_Airports_%28logo%29.svg/1280px-Los_Angeles_World_Airports_%28logo%29.svg.png" 
+      logo: "/lovable-uploads/lax_valet-500px.png" 
     },
   ];
 
