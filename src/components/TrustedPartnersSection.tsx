@@ -19,10 +19,6 @@ const TrustedPartnersSection = () => {
       name: "Avis", 
       logo: "https://www.logo.wine/a/logo/Avis_Car_Rental/Avis_Car_Rental-Logo.wine.svg" 
     },
-    { 
-      name: "Los Angeles World Airports", 
-      logo: "/lovable-uploads/3f23e66c-fe5a-4a27-99d3-56c37985db91.png" 
-    },
   ];
 
   const benefits = [
@@ -68,7 +64,7 @@ const TrustedPartnersSection = () => {
             Our mobile charging solutions power the operations of leading companies across transportation, logistics, and service industries.
           </p>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {partners.map((partner, index) => (
               <motion.div 
                 key={index}

@@ -19,10 +19,6 @@ const ClientsSection = () => {
       name: "Avis", 
       logo: "https://www.logo.wine/a/logo/Avis_Car_Rental/Avis_Car_Rental-Logo.wine.svg" 
     },
-    { 
-      name: "Los Angeles World Airports", 
-      logo: "/lovable-uploads/3f23e66c-fe5a-4a27-99d3-56c37985db91.png" 
-    },
   ];
 
   return (
@@ -39,7 +35,7 @@ const ClientsSection = () => {
             Trusted by Industry Leaders
           </h2>
           <p className="text-gray-600 mt-2 text-lg">
-            Amazon | Hertz | FedEx | Avis | Los Angeles World Airports
+            Amazon | Hertz | FedEx | Avis
           </p>
         </motion.div>
         
