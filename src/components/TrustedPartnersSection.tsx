@@ -1,3 +1,4 @@
+
 import { Circle, Zap, Truck, Battery, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -18,6 +19,14 @@ const TrustedPartnersSection = () => {
     { 
       name: "Avis", 
       logo: "https://www.logo.wine/a/logo/Avis_Car_Rental/Avis_Car_Rental-Logo.wine.svg" 
+    },
+    { 
+      name: "Port of Long Beach", 
+      logo: "/lovable-uploads/25613ad2-bdd8-4eeb-ade8-914ca3da1d9d.png" 
+    },
+    { 
+      name: "LAX VALET", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/3/30/LAX_logo.svg" 
     },
   ];
 
@@ -64,7 +73,7 @@ const TrustedPartnersSection = () => {
             Our mobile charging solutions power the operations of leading companies across transportation, logistics, and service industries.
           </p>
           
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {partners.map((partner, index) => (
               <motion.div 
                 key={index}
@@ -81,7 +90,7 @@ const TrustedPartnersSection = () => {
                 <img 
                   src={partner.logo} 
                   alt={`${partner.name} logo`} 
-                  className="max-h-16 max-w-full object-contain filter brightness-0 invert opacity-80 hover:opacity-100 transition-all"
+                  className="max-h-16 max-w-full object-contain hover:opacity-100 transition-all"
                   style={{ maxWidth: "100%" }}
                 />
               </motion.div>

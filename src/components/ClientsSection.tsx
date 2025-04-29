@@ -19,6 +19,14 @@ const ClientsSection = () => {
       name: "Avis", 
       logo: "https://www.logo.wine/a/logo/Avis_Car_Rental/Avis_Car_Rental-Logo.wine.svg" 
     },
+    { 
+      name: "Port of Long Beach", 
+      logo: "/lovable-uploads/25613ad2-bdd8-4eeb-ade8-914ca3da1d9d.png" 
+    },
+    { 
+      name: "LAX VALET", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/3/30/LAX_logo.svg" 
+    },
   ];
 
   return (
@@ -35,7 +43,7 @@ const ClientsSection = () => {
             Trusted by Industry Leaders
           </h2>
           <p className="text-gray-600 mt-2 text-lg">
-            Amazon | Hertz | FedEx | Avis
+            Amazon | Hertz | FedEx | Avis | Port of Long Beach | LAX VALET
           </p>
         </motion.div>
         
@@ -43,7 +51,7 @@ const ClientsSection = () => {
           {clients.map((client, index) => (
             <motion.div 
               key={index}
-              className="client-logo w-32 md:w-40 h-24 flex items-center justify-center"
+              className="w-32 md:w-40 h-24 flex items-center justify-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -52,7 +60,7 @@ const ClientsSection = () => {
               <img 
                 src={client.logo} 
                 alt={`${client.name} logo`} 
-                className="max-h-16 max-w-full object-contain"
+                className="max-h-16 max-w-full object-contain hover:scale-110 transition-transform duration-300"
                 style={{ maxWidth: "100%" }}
               />
             </motion.div>

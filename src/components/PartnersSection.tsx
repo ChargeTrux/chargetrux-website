@@ -20,6 +20,14 @@ const PartnersSection = () => {
       name: "Avis", 
       logo: "https://www.logo.wine/a/logo/Avis_Car_Rental/Avis_Car_Rental-Logo.wine.svg" 
     },
+    { 
+      name: "Port of Long Beach", 
+      logo: "/lovable-uploads/25613ad2-bdd8-4eeb-ade8-914ca3da1d9d.png" 
+    },
+    { 
+      name: "LAX VALET", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/3/30/LAX_logo.svg" 
+    },
   ];
 
   return (
@@ -66,7 +74,7 @@ const PartnersSection = () => {
         </motion.div>
         
         {/* Partner Logos */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {partners.map((partner, index) => (
             <motion.div 
               key={index}
@@ -83,7 +91,7 @@ const PartnersSection = () => {
               <img 
                 src={partner.logo} 
                 alt={`${partner.name} logo`} 
-                className="max-h-12 max-w-full object-contain"
+                className="max-h-12 max-w-full object-contain hover:scale-110 transition-transform duration-300"
               />
             </motion.div>
           ))}
