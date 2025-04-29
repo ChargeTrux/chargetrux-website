@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import FSaaS from "./pages/FSaaS";
+import Sustainability from "./pages/Sustainability";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/fsaas" element={<FSaaS />} />
+          <Route path="/sustainability" element={<Sustainability />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

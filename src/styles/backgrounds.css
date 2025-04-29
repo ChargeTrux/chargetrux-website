@@ -1,4 +1,3 @@
-
 .bg-hero-pattern {
   background-image: linear-gradient(rgba(10, 25, 48, 0.9), rgba(10, 25, 48, 0.85)),
     url('/public/lovable-uploads/4be88438-65d5-414b-afb0-eef6bf5ec809.png');
@@ -46,4 +45,29 @@
 .chargetrux-map img {
   filter: saturate(1.2) contrast(1.1);
   transition: all 0.5s ease;
+}
+
+/* Sustainability page backgrounds */
+.sustainability-gradient {
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 204, 102, 0.1));
+}
+
+.impact-graphic.traditional {
+  background: linear-gradient(180deg, #ff5555 0%, #ff8c66 100%);
+  position: relative;
+}
+
+.impact-graphic.grid-ev {
+  background: linear-gradient(180deg, #ffcc66 0%, #ffdd99 100%);
+  position: relative;
+}
+
+.impact-graphic.chargetrux {
+  background: linear-gradient(180deg, #00cc66 0%, #66eea3 100%);
+  position: relative;
+}
+
+.impact-item.highlighted {
+  box-shadow: 0 0 20px rgba(0, 204, 102, 0.3);
+  transform: translateY(-8px);
 }
