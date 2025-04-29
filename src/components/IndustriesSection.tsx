@@ -12,7 +12,7 @@ const IndustriesSection = () => {
     {
       title: "Last-Mile Delivery",
       description: "Ensure your delivery fleet returns to service quickly with on-site charging solutions.",
-      image: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png",
+      image: "/lovable-uploads/6b116e21-a7b2-44e4-a38a-d056e7c61fce.png",
     },
     {
       title: "Ports & Industrial Zones",

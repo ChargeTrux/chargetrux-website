@@ -11,7 +11,7 @@ const Industries = () => {
     {
       title: "Last-Mile Delivery",
       description: "Support your delivery fleet with mobile charging solutions",
-      image: "/lovable-uploads/231e6195-f611-4186-994a-51bd373d1ff3.png"
+      image: "/lovable-uploads/6b116e21-a7b2-44e4-a38a-d056e7c61fce.png"
     },
     {
       title: "Ports & Industrial",
