@@ -28,7 +28,7 @@ const IndustriesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-20 bg-chargetrux-darkblue">
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"
@@ -37,11 +37,11 @@ const IndustriesSection = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-chargetrux-darkblue">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-white">
             Industries We Serve
           </h2>
           <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Our mobile charging solutions adapt to the unique needs of various industries, 
             providing flexibility where traditional infrastructure falls short.
           </p>
@@ -51,7 +51,7 @@ const IndustriesSection = () => {
           {industries.map((industry, index) => (
             <motion.div 
               key={index}
-              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] group"
+              className="bg-white/10 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] group backdrop-blur-sm"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -66,11 +66,11 @@ const IndustriesSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-chargetrux-darkblue/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-chargetrux-darkblue">{industry.title}</h3>
-                <p className="text-gray-600 mb-4">{industry.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-white">{industry.title}</h3>
+                <p className="text-gray-300 mb-4">{industry.description}</p>
                 <a 
                   href="#" 
-                  className="inline-flex items-center text-chargetrux-blue font-medium transition-colors hover:text-chargetrux-blue/80"
+                  className="inline-flex items-center text-chargetrux-green font-medium transition-colors hover:text-chargetrux-green/80"
                 >
                   Learn More 
                   <ArrowRight className="ml-2 h-4 w-4" />

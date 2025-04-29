@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 const ClientsSection = () => {
@@ -29,7 +30,7 @@ const ClientsSection = () => {
   ];
 
   return (
-    <div className="py-12 bg-gray-50">
+    <div className="py-12 bg-chargetrux-darkblue">
       <div className="container mx-auto px-4">
         {/* Removed heading and description text */}
         
@@ -37,7 +38,7 @@ const ClientsSection = () => {
           {clients.map((client, index) => (
             <motion.div 
               key={index}
-              className="w-32 md:w-40 h-24 flex items-center justify-center"
+              className="w-32 md:w-40 h-24 flex items-center justify-center bg-white/10 p-4 rounded-lg"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}

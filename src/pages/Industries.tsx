@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -118,7 +119,7 @@ const Industries = () => {
   const selectedIndustry = industries.find(ind => ind.id === activeIndustry) || industries[0];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-chargetrux-darkblue">
       <Navbar />
       
       {/* Hero Section */}
@@ -226,9 +227,9 @@ const Industries = () => {
       </div>
       
       {/* All Industries Section */}
-      <div className="bg-gray-50 py-20">
+      <div className="bg-chargetrux-darkblue py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-chargetrux-darkblue">
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">
             Explore All Industries
           </h2>
           
@@ -269,7 +270,7 @@ const Industries = () => {
       </div>
       
       {/* Features Section */}
-      <div className="bg-white py-20">
+      <div className="bg-chargetrux-darkblue py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -278,10 +279,10 @@ const Industries = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold mb-4 text-chargetrux-darkblue">
+            <h2 className="text-3xl font-bold mb-4 text-white">
               Why Choose ChargeTrux Mobile EV Charging Solutions?
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
+            <p className="text-gray-300 max-w-3xl mx-auto">
               Our mobile Level 3 DC fast charging services deliver unmatched flexibility,
               reliability, and performance across all industries.
             </p>
@@ -317,7 +318,7 @@ const Industries = () => {
           </div>
           
           <div className="text-center">
-            <p className="text-gray-500 mb-6 max-w-3xl mx-auto">
+            <p className="text-gray-300 mb-6 max-w-3xl mx-auto">
               ChargeTrux provides mobile Level 3 DC fast charging services for commercial fleets in Los Angeles, San Francisco, San Diego, Seattle, Portland, Chicago, Dallas, Houston, Miami, Atlanta, Washington DC, Boston, and New York metro areas. New markets added monthly. Contact us for EV charging availability and service options in your specific location.
             </p>
           </div>
