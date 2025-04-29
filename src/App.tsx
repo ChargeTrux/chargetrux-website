@@ -12,6 +12,7 @@ import Pricing from "./pages/Pricing";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import FSaaS from "./pages/FSaaS";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/fsaas" element={<FSaaS />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
