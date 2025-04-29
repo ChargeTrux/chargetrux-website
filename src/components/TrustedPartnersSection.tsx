@@ -52,7 +52,7 @@ const TrustedPartnersSection = () => {
     <div className="py-16 bg-chargetrux-darkblue relative overflow-hidden">
       <div className="absolute inset-0 opacity-10 mix-blend-screen">
         <img 
-          src="/lovable-uploads/0086d727-a12f-4882-96eb-437b6649527f.png" 
+          src="/lovable-uploads/aa71866f-8fa3-4af5-a549-d0781144adf5.png" 
           alt="ChargeTrux Network" 
           className="w-full h-full object-cover"
         />
@@ -107,17 +107,10 @@ const TrustedPartnersSection = () => {
         >
           <div className="relative rounded-xl overflow-hidden border-2 border-chargetrux-green/30 shadow-[0_0_30px_rgba(0,204,102,0.15)]">
             <img 
-              src="/lovable-uploads/0086d727-a12f-4882-96eb-437b6649527f.png" 
+              src="/lovable-uploads/aa71866f-8fa3-4af5-a549-d0781144adf5.png" 
               alt="ChargeTrux Network" 
               className="w-full h-auto"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-chargetrux-darkblue via-transparent to-transparent"></div>
-            <div className="absolute bottom-0 left-0 w-full p-4 md:p-6 bg-gradient-to-t from-chargetrux-darkblue to-transparent">
-              <div className="backdrop-blur-sm bg-chargetrux-darkblue/50 p-4 rounded-lg inline-block">
-                <h3 className="text-chargetrux-green text-xl md:text-2xl font-bold">Mobile Fleet Charging Network</h3>
-                <p className="text-white text-sm md:text-base">ChargeTrux vehicles delivering power where and when it's needed</p>
-              </div>
-            </div>
           </div>
         </motion.div>
         
