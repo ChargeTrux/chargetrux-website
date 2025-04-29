@@ -37,10 +37,10 @@ const IndustriesSection = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-chargetrux-darkblue">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-chargetrux-darkblue">
             Industries We Serve
           </h2>
-          <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-4"></div>
+          <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Our mobile charging solutions adapt to the unique needs of various industries, 
             providing flexibility where traditional infrastructure falls short.
@@ -51,7 +51,7 @@ const IndustriesSection = () => {
           {industries.map((industry, index) => (
             <motion.div 
               key={index}
-              className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px] group"
+              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] group"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}

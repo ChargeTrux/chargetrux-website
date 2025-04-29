@@ -20,9 +20,10 @@ const Sustainability = () => {
             transition={{ duration: 0.5 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">ESG & Sustainability</h1>
-            <p className="text-xl md:text-2xl mb-8">Powering the Transition to Carbon-Free Fleet Operations</p>
-            <p className="text-lg text-gray-100 max-w-3xl mx-auto">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">ESG & Sustainability</h1>
+            <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-6"></div>
+            <p className="text-xl md:text-2xl mb-6 font-light">Powering the Transition to Carbon-Free Fleet Operations</p>
+            <p className="text-base md:text-lg text-gray-100 max-w-3xl mx-auto">
               ChargeTrux is committed to accelerating the adoption of sustainable transportation solutions through our mobile Level 3 charging infrastructure. Our innovative approach not only eliminates the need for permanent charging installations but also delivers tangible environmental benefits that support your organization's sustainability goals.
             </p>
           </motion.div>
@@ -39,8 +40,9 @@ const Sustainability = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-2 text-chargetrux-darkblue">Carbon-Free Charging for Electric Vehicle Fleets</h2>
-            <p className="text-xl text-chargetrux-green font-semibold">100% Renewable Electricity Used in All Units</p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-chargetrux-darkblue">Carbon-Free Charging for Electric Vehicle Fleets</h2>
+            <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-4"></div>
+            <p className="text-lg text-chargetrux-green font-medium">100% Renewable Electricity Used in All Units</p>
           </motion.div>
 
           {/* Sustainability Features */}
@@ -50,7 +52,7 @@ const Sustainability = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row gap-6"
+              className="bg-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row gap-6 hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex-shrink-0 w-16 h-16 rounded-full bg-chargetrux-green/10 flex items-center justify-center">
                 <Leaf className="w-8 h-8 text-chargetrux-green" />
@@ -72,7 +74,7 @@ const Sustainability = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row gap-6"
+              className="bg-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row gap-6 hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex-shrink-0 w-16 h-16 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
                 <Shield className="w-8 h-8 text-chargetrux-blue" />
@@ -98,16 +100,16 @@ const Sustainability = () => {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-bold text-center mb-8 text-chargetrux-darkblue">Helping Meet Scope 2 Emission Goals for Fleet Operators</h3>
+            <h3 className="text-xl font-bold text-center mb-8 text-chargetrux-darkblue">Helping Meet Scope 2 Emission Goals for Fleet Operators</h3>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-chargetrux-darkblue mb-3">What are Scope 2 Emissions?</h4>
+              <div className="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition-shadow duration-300">
+                <h4 className="text-lg font-semibold text-chargetrux-darkblue mb-3">What are Scope 2 Emissions?</h4>
                 <p className="text-gray-700">
                   Scope 2 emissions are indirect greenhouse gas emissions associated with the purchase of electricity, steam, heat, or cooling for your operations. For electric vehicle fleets, charging represents the primary source of Scope 2 emissions.
                 </p>
               </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-chargetrux-darkblue mb-3">How ChargeTrux Eliminates Scope 2 Emissions</h4>
+              <div className="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition-shadow duration-300">
+                <h4 className="text-lg font-semibold text-chargetrux-darkblue mb-3">How ChargeTrux Eliminates Scope 2 Emissions</h4>
                 <p className="text-gray-700">
                   By using 100% renewable energy for all charging operations, ChargeTrux helps your organization achieve zero Scope 2 emissions from your electric fleet operations. This is particularly valuable for organizations with formal carbon reduction targets or ESG reporting requirements.
                 </p>
@@ -123,7 +125,7 @@ const Sustainability = () => {
             viewport={{ once: true }}
             className="bg-chargetrux-lightgray rounded-xl p-8 mb-16"
           >
-            <h4 className="text-2xl font-bold text-center mb-8 text-chargetrux-darkblue">Environmental Impact Comparison</h4>
+            <h4 className="text-xl font-bold text-center mb-8 text-chargetrux-darkblue">Environmental Impact Comparison</h4>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white p-5 rounded-lg shadow">
                 <div className="text-lg font-semibold text-center mb-4 text-gray-700">Traditional Fleet</div>
@@ -202,8 +204,9 @@ const Sustainability = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-2 text-chargetrux-darkblue">Data-Backed Sustainability Reporting</h2>
-            <p className="text-xl text-chargetrux-green font-semibold">ESG Compliance Support for Corporate Sustainability Goals</p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-chargetrux-darkblue">Data-Backed Sustainability Reporting</h2>
+            <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-4"></div>
+            <p className="text-lg text-chargetrux-green font-medium">ESG Compliance Support for Corporate Sustainability Goals</p>
           </motion.div>
 
           {/* Reporting Features */}
@@ -213,13 +216,13 @@ const Sustainability = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg shadow-lg p-6 flex items-start gap-4"
+              className="bg-white rounded-lg shadow-lg p-6 flex items-start gap-4 hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
                 <Shield className="w-6 h-6 text-chargetrux-blue" />
               </div>
               <div>
-                <h4 className="text-xl font-bold text-chargetrux-darkblue mb-3">Comprehensive ESG Data Collection</h4>
+                <h4 className="text-lg font-bold text-chargetrux-darkblue mb-3">Comprehensive ESG Data Collection</h4>
                 <p className="text-gray-700">
                   Our advanced monitoring systems collect detailed operational data from every charging session, creating a comprehensive dataset that supports your ESG reporting requirements. This data includes energy consumed, carbon emissions avoided, and renewable energy certification tracking.
                 </p>
@@ -231,13 +234,13 @@ const Sustainability = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg shadow-lg p-6 flex items-start gap-4"
+              className="bg-white rounded-lg shadow-lg p-6 flex items-start gap-4 hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-chargetrux-green/10 flex items-center justify-center">
                 <TrendingUp className="w-6 h-6 text-chargetrux-green" />
               </div>
               <div>
-                <h4 className="text-xl font-bold text-chargetrux-darkblue mb-3">Regulatory Compliance Framework</h4>
+                <h4 className="text-lg font-bold text-chargetrux-darkblue mb-3">Regulatory Compliance Framework</h4>
                 <p className="text-gray-700">
                   ChargeTrux's reporting systems are designed to align with major ESG reporting frameworks, including GRI, SASB, and TCFD. This ensures that the data we provide seamlessly integrates with your existing sustainability reporting processes and meets stringent regulatory requirements.
                 </p>
@@ -253,7 +256,7 @@ const Sustainability = () => {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-bold text-center mb-8 text-chargetrux-darkblue">Monthly Energy + Carbon Offset Reports for All Clients</h3>
+            <h3 className="text-xl font-bold text-center mb-8 text-chargetrux-darkblue">Monthly Energy + Carbon Offset Reports for All Clients</h3>
             
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="grid md:grid-cols-2">
@@ -304,14 +307,15 @@ const Sustainability = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-chargetrux-darkblue">Case Studies</h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">Real-World Impact of Mobile EV Charging Solutions</p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-chargetrux-darkblue">Case Studies</h2>
+            <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-4"></div>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">Real-World Impact of Mobile EV Charging Solutions</p>
             <p className="text-gray-600 max-w-3xl mx-auto">
               Our mobile Level 3 charging infrastructure has helped organizations across various industries achieve significant operational and sustainability improvements. The following case studies demonstrate the tangible benefits of the ChargeTrux solution in real-world applications.
             </p>
           </motion.div>
 
-          {/* Case Study 1 */}
+          {/* Case Study Cards - Using consistent styling with the rest of the site */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -566,8 +570,9 @@ const Sustainability = () => {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Fleet Operations?</h2>
-            <p className="text-xl mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Transform Your Fleet Operations?</h2>
+            <div className="w-20 h-1 bg-white mx-auto mb-6"></div>
+            <p className="text-lg mb-8">
               Discover how ChargeTrux's mobile Level 3 charging solutions can support your organization's operational efficiency and sustainability goals.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">

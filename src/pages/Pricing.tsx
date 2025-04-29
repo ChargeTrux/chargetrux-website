@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Check, ChartBar, CircleDollarSign, Scale, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,7 +8,7 @@ import Footer from "@/components/Footer";
 
 const Pricing = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-100">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <Navbar />
       <div className="container mx-auto px-4 pt-24 pb-16">
         <motion.div
@@ -18,13 +17,14 @@ const Pricing = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-chargetrux-darkblue mb-6">
+          <h1 className="text-3xl md:text-4xl font-bold text-chargetrux-darkblue mb-4">
             Transparent EV Charging Pricing For Fleets
           </h1>
+          <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Flexible Solutions That Scale With Your EV Fleet Needs
           </p>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
+          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto mt-4">
             ChargeTrux provides clear, transparent pricing options designed specifically for commercial fleet operations. 
             Our mobile Level 3 charging solutions eliminate the need for expensive infrastructure investments while 
             offering predictable operational costs that can be tailored to your specific fleet requirements.
@@ -37,10 +37,11 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-3xl font-bold text-center text-chargetrux-darkblue mb-10"
+            className="text-2xl md:text-3xl font-bold text-center text-chargetrux-darkblue mb-4"
           >
             Contract Charging Plans: Predictable Monthly or Seasonal Options
           </motion.h2>
+          <div className="w-20 h-1 bg-chargetrux-blue mx-auto mb-10"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
             <motion.div
@@ -49,10 +50,10 @@ const Pricing = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full border-2 border-gray-200 hover:border-chargetrux-blue transition-colors duration-300">
+              <Card className="h-full border-2 border-gray-200 hover:border-chargetrux-blue hover:shadow-lg transition-all duration-300">
                 <CardHeader className="bg-gray-50 border-b">
-                  <CardTitle className="text-2xl text-chargetrux-darkblue">Monthly Contract Plans</CardTitle>
-                  <CardDescription className="text-lg">
+                  <CardTitle className="text-xl md:text-2xl text-chargetrux-darkblue">Monthly Contract Plans</CardTitle>
+                  <CardDescription className="text-base md:text-lg">
                     Reliable, scheduled charging for consistent fleet operations
                   </CardDescription>
                 </CardHeader>
@@ -98,10 +99,10 @@ const Pricing = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full border-2 border-gray-200 hover:border-chargetrux-blue transition-colors duration-300">
+              <Card className="h-full border-2 border-gray-200 hover:border-chargetrux-blue hover:shadow-lg transition-all duration-300">
                 <CardHeader className="bg-gray-50 border-b">
-                  <CardTitle className="text-2xl text-chargetrux-darkblue">Seasonal Contract Plans</CardTitle>
-                  <CardDescription className="text-lg">
+                  <CardTitle className="text-xl md:text-2xl text-chargetrux-darkblue">Seasonal Contract Plans</CardTitle>
+                  <CardDescription className="text-base md:text-lg">
                     Flexible charging options for operations with seasonal variations
                   </CardDescription>
                 </CardHeader>
@@ -151,7 +152,7 @@ const Pricing = () => {
           >
             <h3 className="text-xl font-bold text-chargetrux-darkblue mb-6">Contract Plan Benefits</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
-              <div className="bg-white p-4 rounded-lg shadow-sm">
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                 <h4 className="font-semibold mb-2">No Infrastructure Investment</h4>
                 <p className="text-sm text-gray-600">Eliminate the costs of installing permanent charging stations</p>
               </div>
@@ -181,10 +182,11 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-3xl font-bold text-center text-chargetrux-darkblue mb-10"
+            className="text-2xl md:text-3xl font-bold text-center text-chargetrux-darkblue mb-4"
           >
             On-Demand Sessions: Charging When You Need It
           </motion.h2>
+          <div className="w-20 h-1 bg-chargetrux-blue mx-auto mb-10"></div>
           
           <div className="grid grid-cols-1 max-w-2xl mx-auto mb-10">
             <motion.div
@@ -193,10 +195,10 @@ const Pricing = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="border-2 border-gray-200 hover:border-chargetrux-blue transition-colors duration-300">
+              <Card className="border-2 border-gray-200 hover:border-chargetrux-blue hover:shadow-lg transition-all duration-300">
                 <CardHeader className="bg-gray-50 border-b">
-                  <CardTitle className="text-2xl text-chargetrux-darkblue">Flexible Pay-Per-Charge Model</CardTitle>
-                  <CardDescription className="text-lg">
+                  <CardTitle className="text-xl md:text-2xl text-chargetrux-darkblue">Flexible Pay-Per-Charge Model</CardTitle>
+                  <CardDescription className="text-base md:text-lg">
                     Only pay for the energy you need, when you need it
                   </CardDescription>
                 </CardHeader>
@@ -276,10 +278,11 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-3xl font-bold text-center text-chargetrux-darkblue mb-10"
+            className="text-2xl md:text-3xl font-bold text-center text-chargetrux-darkblue mb-4"
           >
             Custom Enterprise Packages: Tailored to Your Fleet Operations
           </motion.h2>
+          <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-10"></div>
           
           <div className="grid grid-cols-1 max-w-3xl mx-auto mb-10">
             <motion.div
@@ -288,10 +291,10 @@ const Pricing = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="border-2 border-chargetrux-green bg-gradient-to-br from-white to-green-50">
+              <Card className="border-2 border-chargetrux-green bg-gradient-to-br from-white to-green-50 hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="bg-chargetrux-green bg-opacity-10 border-b">
-                  <CardTitle className="text-2xl text-chargetrux-darkblue">Enterprise Fleet Solutions</CardTitle>
-                  <CardDescription className="text-lg">
+                  <CardTitle className="text-xl md:text-2xl text-chargetrux-darkblue">Enterprise Fleet Solutions</CardTitle>
+                  <CardDescription className="text-base md:text-lg">
                     Comprehensive charging strategies for complex fleet operations
                   </CardDescription>
                 </CardHeader>
@@ -371,10 +374,11 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-3xl font-bold text-center text-chargetrux-darkblue mb-10"
+            className="text-2xl md:text-3xl font-bold text-center text-chargetrux-darkblue mb-4"
           >
             Transparent Value: What Sets ChargeTrux Pricing Apart
           </motion.h2>
+          <div className="w-20 h-1 bg-chargetrux-blue mx-auto mb-10"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
@@ -382,7 +386,7 @@ const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center"
+              className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md hover:border-chargetrux-blue/30 transition-all duration-300"
             >
               <div className="bg-blue-50 w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                 <CircleDollarSign className="h-8 w-8 text-chargetrux-blue" />
@@ -398,7 +402,7 @@ const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center"
+              className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md hover:border-chargetrux-blue/30 transition-all duration-300"
             >
               <div className="bg-blue-50 w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                 <Scale className="h-8 w-8 text-chargetrux-blue" />
@@ -414,7 +418,7 @@ const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center"
+              className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md hover:border-chargetrux-blue/30 transition-all duration-300"
             >
               <div className="bg-blue-50 w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                 <TrendingUp className="h-8 w-8 text-chargetrux-blue" />
@@ -430,7 +434,7 @@ const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center"
+              className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md hover:border-chargetrux-blue/30 transition-all duration-300"
             >
               <div className="bg-blue-50 w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                 <ChartBar className="h-8 w-8 text-chargetrux-blue" />
@@ -449,10 +453,11 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="bg-chargetrux-blue text-white p-10 rounded-xl text-center"
+            className="bg-gradient-to-br from-chargetrux-darkblue to-chargetrux-blue text-white p-10 rounded-xl text-center"
           >
-            <h2 className="text-3xl font-bold mb-4">Ready to Power Your Fleet's Future?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Power Your Fleet's Future?</h2>
+            <div className="w-20 h-1 bg-white mx-auto mb-6"></div>
+            <p className="text-lg mb-8 max-w-2xl mx-auto">
               Our pricing specialists will work with you to develop a customized charging solution that maximizes 
               operational efficiency while minimizing costs for your specific fleet profile.
             </p>
@@ -472,7 +477,7 @@ const Pricing = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="bg-gray-50 p-6 rounded-xl text-sm"
+            className="bg-gray-50 p-6 rounded-xl text-sm shadow-sm"
           >
             <p className="font-semibold mb-2">Coverage Areas:</p>
             <p className="mb-4">
