@@ -20,7 +20,7 @@ const TestimonialsSection = () => {
       position: "Sustainability Officer",
       company: "FastShip Logistics",
       logo: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png",
-      avatar: "/lovable-uploads/2a17e2a2-043b-48fd-b836-dde88b37533a.png",
+      avatar: "/lovable-uploads/8b7c269d-9b34-4e35-99ea-4e3206e0a0f0.png",
     },
     {
       quote: "When our fixed charging infrastructure went down, ChargeTrux had us back up and running within hours instead of days.",
@@ -28,7 +28,7 @@ const TestimonialsSection = () => {
       position: "Operations Manager",
       company: "Metro Transport Authority",
       logo: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png",
-      avatar: "/lovable-uploads/fe23cd93-05ee-48e5-be6b-0af495d44e12.png",
+      avatar: "/lovable-uploads/8956cfb4-260b-4018-b40d-bd32fc141821.png",
     },
   ];
 
