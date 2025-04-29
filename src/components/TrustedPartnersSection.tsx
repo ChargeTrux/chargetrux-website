@@ -10,11 +10,11 @@ const TrustedPartnersSection = () => {
     },
     { 
       name: "Hertz", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hertz_Car_Rental_logo.svg/2560px-Hertz_Car_Rental_logo.svg.png"
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hertz_Car_Rental_logo.svg/1920px-Hertz_Car_Rental_logo.svg.png"
     },
     { 
       name: "FedEx", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/FedEx_Corporation_-_2016_Logo.svg/1200px-FedEx_Corporation_-_2016_Logo.svg.png" 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/FedEx_Corporation_-_2016_Logo.svg/1920px-FedEx_Corporation_-_2016_Logo.svg.png" 
     },
     { 
       name: "Avis", 
@@ -22,7 +22,7 @@ const TrustedPartnersSection = () => {
     },
     { 
       name: "Port of Long Beach", 
-      logo: "https://www.cleanpng.com/png-port-of-long-beach-port-of-los-angeles-shipping-co-3010077/download-png.html"
+      logo: "https://upload.wikimedia.org/wikipedia/commons/5/56/Port_of_Long_Beach_logo.png"
     },
     { 
       name: "Los Angeles World Airports", 
