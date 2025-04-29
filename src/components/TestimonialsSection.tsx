@@ -83,11 +83,7 @@ const TestimonialsSection = () => {
                   <AvatarImage src={testimonials[current].avatar} alt={testimonials[current].author} />
                   <AvatarFallback>{testimonials[current].author.charAt(0)}</AvatarFallback>
                 </Avatar>
-                <img 
-                  src={testimonials[current].logo} 
-                  alt={testimonials[current].company} 
-                  className="h-12 mb-4"
-                />
+                {/* Removed the company logo image that was here */}
                 <h4 className="font-bold text-lg">{testimonials[current].author}</h4>
                 <p className="text-gray-300">{testimonials[current].position}</p>
                 <p className="text-chargetrux-green">{testimonials[current].company}</p>
