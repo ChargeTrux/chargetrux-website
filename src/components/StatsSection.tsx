@@ -1,7 +1,8 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { BarChart4, Zap, MapPin } from "lucide-react";
+import { BarChart4, Zap, MapPin, Info } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 interface CounterProps {
   end: number;
@@ -53,7 +54,7 @@ const StatsSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <motion.div 
-            className="bg-white p-6 rounded-lg shadow-lg border border-gray-100"
+            className="bg-white p-6 rounded-lg shadow-lg border border-gray-100 relative"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -67,7 +68,19 @@ const StatsSection = () => {
             <h3 className="text-4xl font-bold mb-2 text-chargetrux-darkblue">
               <Counter end={1000000} suffix="+" />
             </h3>
-            <p className="text-lg text-gray-600">kWh delivered to date</p>
+            <p className="text-lg text-gray-600 mb-1">kWh delivered to date</p>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <div className="flex justify-center text-xs text-gray-500 italic mt-2">
+                    <Info className="h-4 w-4 mr-1" /> Auto-updated weekly
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Our energy delivery statistics are updated every Monday</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </motion.div>
           
           <motion.div 
@@ -86,6 +99,9 @@ const StatsSection = () => {
               <Counter end={100} suffix="%" />
             </h3>
             <p className="text-lg text-gray-600">Renewable Energy Used</p>
+            <div className="mt-4 h-1 bg-gray-200 rounded-full overflow-hidden">
+              <div className="h-full bg-chargetrux-green rounded-full" style={{ width: "100%" }}></div>
+            </div>
           </motion.div>
           
           <motion.div 
@@ -103,7 +119,14 @@ const StatsSection = () => {
             <h3 className="text-4xl font-bold mb-2 text-chargetrux-darkblue">
               <Counter end={5} />
             </h3>
-            <p className="text-lg text-gray-600">Major Metro Areas Served</p>
+            <p className="text-lg text-gray-600 mb-2">Major Metro Areas Served</p>
+            <div className="text-sm text-gray-500 flex flex-wrap justify-center gap-2">
+              <span className="px-2 py-1 bg-gray-100 rounded-full">Los Angeles</span>
+              <span className="px-2 py-1 bg-gray-100 rounded-full">San Francisco</span>
+              <span className="px-2 py-1 bg-gray-100 rounded-full">San Diego</span>
+              <span className="px-2 py-1 bg-gray-100 rounded-full">Portland</span>
+              <span className="px-2 py-1 bg-gray-100 rounded-full">Seattle</span>
+            </div>
           </motion.div>
         </div>
       </div>
