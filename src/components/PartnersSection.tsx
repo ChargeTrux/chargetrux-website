@@ -22,7 +22,7 @@ const PartnersSection = () => {
     },
     { 
       name: "Port of Long Beach", 
-      logo: "/lovable-uploads/e59fe54f-2f4a-4cbf-97d7-7efc1226aca3.png" 
+      logo: "/lovable-uploads/38fa875e-b28b-4716-a893-f6c0b66b7252.png" 
     },
     { 
       name: "LAX Valet", 
