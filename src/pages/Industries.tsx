@@ -6,22 +6,22 @@ const Industries = () => {
     {
       title: "Rental Fleet",
       description: "Keep your rental EVs charged and ready for customers",
-      image: "/lovable-uploads/231e6195-f611-4186-994a-51bd373d1ff3.png"
+      image: "/lovable-uploads/6742cfd5-4f71-43e7-96d0-3011a6d531f5.png"
     },
     {
       title: "Last-Mile Delivery",
       description: "Support your delivery fleet with mobile charging solutions",
-      image: "/lovable-uploads/231e6195-f611-4186-994a-51bd373d1ff3.png"
+      image: "/lovable-uploads/4a71c39a-4ee9-4b57-99bb-b3ea4389bbc7.png"
     },
     {
       title: "Ports & Industrial",
       description: "Power heavy-duty electric vehicles and equipment",
-      image: "/lovable-uploads/231e6195-f611-4186-994a-51bd373d1ff3.png"
+      image: "/lovable-uploads/92086e75-400a-436c-b6e1-66bab9f4fcc1.png"
     },
     {
       title: "Valet & Events",
       description: "Mobile charging for special events and valet services",
-      image: "/lovable-uploads/231e6195-f611-4186-994a-51bd373d1ff3.png"
+      image: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png"
     }
   ];
 
