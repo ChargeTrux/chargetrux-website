@@ -4,12 +4,30 @@ import { motion } from "framer-motion";
 
 const PartnersSection = () => {
   const partners = [
-    { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" },
-    { name: "Hertz", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Hertz_logo.svg/2560px-Hertz_logo.svg.png" },
-    { name: "FedEx", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/FedEx_logo.svg/2560px-FedEx_logo.svg.png" },
-    { name: "Avis", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Avis_logo.svg/2560px-Avis_logo.svg.png" },
-    { name: "Port of Long Beach", logo: "https://www.polb.com/wp-content/uploads/2019/11/logo.svg" },
-    { name: "LAX Valet", logo: "https://www.laxvalet.com/wp-content/uploads/2019/03/laxvalet.png" },
+    { 
+      name: "Amazon", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" 
+    },
+    { 
+      name: "Hertz", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hertz_Car_Rental_logo.svg/1280px-Hertz_Car_Rental_logo.svg.png" 
+    },
+    { 
+      name: "FedEx", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/FedEx_Corporation_-_2016_Logo.svg/1280px-FedEx_Corporation_-_2016_Logo.svg.png" 
+    },
+    { 
+      name: "Avis", 
+      logo: "https://www.logo.wine/a/logo/Avis_Car_Rental/Avis_Car_Rental-Logo.wine.svg" 
+    },
+    { 
+      name: "Port of Long Beach", 
+      logo: "https://www.cleanpng.com/png-port-of-long-beach-logo-brand-product-design-port-o-6454851/download-png.html" 
+    },
+    { 
+      name: "LAX Valet", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Los_Angeles_World_Airports_%28logo%29.svg/1280px-Los_Angeles_World_Airports_%28logo%29.svg.png" 
+    },
   ];
 
   return (

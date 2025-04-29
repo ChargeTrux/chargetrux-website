@@ -9,11 +9,11 @@ const ClientsSection = () => {
     },
     { 
       name: "Hertz", 
-      logo: "https://1000logos.net/wp-content/uploads/2017/08/Hertz-Logo.png" 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hertz_Car_Rental_logo.svg/1280px-Hertz_Car_Rental_logo.svg.png" 
     },
     { 
       name: "FedEx", 
-      logo: "https://1000logos.net/wp-content/uploads/2017/05/FedEx-Logo.png" 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/FedEx_Corporation_-_2016_Logo.svg/1280px-FedEx_Corporation_-_2016_Logo.svg.png" 
     },
     { 
       name: "Avis", 
@@ -21,11 +21,11 @@ const ClientsSection = () => {
     },
     { 
       name: "Port of Long Beach", 
-      logo: "https://polb.com/wp-content/uploads/2019/11/logo.svg" 
+      logo: "https://www.cleanpng.com/png-port-of-long-beach-logo-brand-product-design-port-o-6454851/download-png.html" 
     },
     { 
       name: "Los Angeles World Airports", 
-      logo: "https://www.lawa.org/-/media/lawa-web/style-guide/logo/lawa-logo-notag-new-blue.ashx" 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Los_Angeles_World_Airports_%28logo%29.svg/1280px-Los_Angeles_World_Airports_%28logo%29.svg.png" 
     },
   ];
 
