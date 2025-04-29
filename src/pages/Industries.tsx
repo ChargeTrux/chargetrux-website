@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -73,7 +72,7 @@ const Industries = () => {
       title: "Valet, Hospitality & Events",
       shortDesc: "Mobile Level 3 charging for high-end clients",
       icon: <Hotel className="h-6 w-6 text-chargetrux-green" />,
-      image: "/lovable-uploads/e5ac1642-8f41-494a-907e-69f657a9cb21.png",
+      image: "/lovable-uploads/067edd74-081c-4520-b5b0-8469dc02fd01.png",
       heading: "Valet, Hospitality & Events EV Charging Services",
       subheading: "Premium Mobile Level 3 Fast Charging for High-End Clients and Guest Experiences",
       description: "Elevate your guest experience with premium mobile EV charging services that differentiate your offering in the competitive hospitality market:",
