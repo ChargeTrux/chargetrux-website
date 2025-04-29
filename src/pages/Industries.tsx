@@ -6,7 +6,7 @@ const Industries = () => {
     {
       title: "Rental Fleet",
       description: "Keep your rental EVs charged and ready for customers",
-      image: "/lovable-uploads/231e6195-f611-4186-994a-51bd373d1ff3.png"
+      image: "/lovable-uploads/6f9386c8-ac09-4dc9-88ba-31ecf9859f75.png"
     },
     {
       title: "Last-Mile Delivery",
