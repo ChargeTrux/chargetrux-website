@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
@@ -11,7 +12,7 @@ const TestimonialsSection = () => {
       position: "Fleet Operations Director",
       company: "Premier Rentals",
       logo: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png",
-      avatar: "/lovable-uploads/614d8f42-977f-4984-acc3-7e53cddd2092.png",
+      avatar: "/lovable-uploads/1e840172-5b7e-41b1-8d50-5c58c1134b38.png",
     },
     {
       quote: "The flexibility of mobile charging allowed us to electrify our delivery fleet 6 months ahead of schedule.",
