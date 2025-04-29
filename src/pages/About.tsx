@@ -1,10 +1,11 @@
-
 import { motion } from "framer-motion";
+import Navbar from "@/components/Navbar";
 
 const About = () => {
   return (
-    <div className="min-h-screen pt-20 bg-gradient-to-b from-chargetrux-darkblue to-black">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-b from-chargetrux-darkblue to-black">
+      <Navbar />
+      <div className="container mx-auto px-4 py-16 pt-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
