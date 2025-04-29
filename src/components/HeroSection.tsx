@@ -8,7 +8,7 @@ const HeroSection = () => {
     <div className="relative min-h-[90vh] bg-chargetrux-darkblue flex items-center overflow-hidden">
       {/* Modern Background with Electric Vehicle Imagery */}
       <div className="absolute inset-0 z-0">
-        <div className="bg-city-charger absolute inset-0 bg-fixed">
+        <div className="bg-california-road absolute inset-0 bg-fixed">
           {/* Overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-chargetrux-darkblue/90 to-chargetrux-darkblue/70"></div>
           
