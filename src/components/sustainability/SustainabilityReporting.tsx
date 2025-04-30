@@ -74,7 +74,7 @@ const SustainabilityReporting = () => {
             <div className="grid md:grid-cols-2">
               <div className="bg-chargetrux-blue h-64 md:h-auto flex items-center justify-center p-6">
                 <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg w-full h-56 flex items-center justify-center">
-                  <p className="text-white text-lg font-medium">Sample ChargeTrux Sustainability Report</p>
+                  <p className="text-chargetrux-lighttext text-lg font-medium">Sample ChargeTrux Sustainability Report</p>
                 </div>
               </div>
               <div className="p-6">
