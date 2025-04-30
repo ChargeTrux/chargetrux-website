@@ -45,11 +45,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Solutions</h3>
             <ul className="space-y-2">
-              <li><Link to="#" className="text-gray-300 hover:text-chargetrux-green">Mobile Charging</Link></li>
-              <li><Link to="#" className="text-gray-300 hover:text-chargetrux-green">Fleet Support-as-a-Service</Link></li>
-              <li><Link to="#" className="text-gray-300 hover:text-chargetrux-green">On-Demand Charging</Link></li>
-              <li><Link to="#" className="text-gray-300 hover:text-chargetrux-green">Infrastructure Backup</Link></li>
-              <li><Link to="#" className="text-gray-300 hover:text-chargetrux-green">ESG Reporting</Link></li>
+              <li><Link to="/industries?industry=rental" className="text-gray-300 hover:text-chargetrux-green">Mobile Charging</Link></li>
+              <li><Link to="/fsaas" className="text-gray-300 hover:text-chargetrux-green">Fleet Support-as-a-Service</Link></li>
+              <li><Link to="/industries?industry=delivery" className="text-gray-300 hover:text-chargetrux-green">On-Demand Charging</Link></li>
+              <li><Link to="/industries?industry=developers" className="text-gray-300 hover:text-chargetrux-green">Infrastructure Backup</Link></li>
+              <li><Link to="/sustainability" className="text-gray-300 hover:text-chargetrux-green">ESG Reporting</Link></li>
             </ul>
           </div>
           
