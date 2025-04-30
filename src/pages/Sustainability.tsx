@@ -2,7 +2,6 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import CtaSection from "@/components/CtaSection";
 import SustainabilityHero from "@/components/sustainability/SustainabilityHero";
 import CarbonFreeChargingSection from "@/components/sustainability/CarbonFreeChargingSection";
 import SustainabilityReporting from "@/components/sustainability/SustainabilityReporting";
@@ -26,10 +25,9 @@ const Sustainability = () => {
       {/* Case Studies Section */}
       <CaseStudies />
 
-      {/* Final CTA Section */}
+      {/* Final CTA Section - Combined from both previous CTAs */}
       <SustainabilityCta />
 
-      <CtaSection />
       <Footer />
     </div>
   );

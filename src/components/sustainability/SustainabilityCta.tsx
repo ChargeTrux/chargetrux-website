@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Merge } from "lucide-react";
 
 const SustainabilityCta = () => {
   return (
@@ -18,16 +19,31 @@ const SustainabilityCta = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Ready to Transform Your Fleet Operations?</h2>
           <div className="w-20 h-1 bg-white mx-auto mb-8"></div>
-          <p className="text-lg mb-10 leading-relaxed text-white">
+          <p className="text-lg mb-6 leading-relaxed text-white">
             Discover how ChargeTrux's mobile Level 3 charging solutions can support your organization's operational efficiency and sustainability goals.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Button size="lg" className="bg-chargetrux-green hover:bg-chargetrux-green/80 text-white px-8 py-6 text-lg">
+          <p className="text-lg mb-10 leading-relaxed text-white">
+            Get mobile Level 3 charging where and when you need it, without the infrastructure headaches.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+            <Button size="lg" className="bg-chargetrux-green hover:bg-chargetrux-green/80 text-white px-8 py-6 text-lg flex items-center gap-2">
               Schedule a Consultation
             </Button>
             <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10 px-8 py-6 text-lg">
               Download Sustainability Guide
             </Button>
+          </div>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button size="lg" className="bg-chargetrux-green hover:bg-chargetrux-green/80 text-white px-8">
+              Request Custom Quote
+            </Button>
+            <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
+              Book Intro Call
+            </Button>
+          </div>
+          <div className="flex items-center justify-center mt-10 text-white/80">
+            <Merge className="h-5 w-5 mr-2" />
+            <span>Streamlined solutions for sustainable fleet operations</span>
           </div>
         </motion.div>
       </div>
