@@ -381,8 +381,8 @@ const Technology = () => {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="py-16 bg-gradient-to-b from-gray-900 to-chargetrux-darkblue">
+      {/* Combined Final CTA Section */}
+      <section className="py-16 bg-gradient-to-b from-gray-900 to-black text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -398,20 +398,36 @@ const Technology = () => {
               ChargeTrux's cutting-edge mobile charging technology eliminates the traditional barriers to fleet electrification, providing a flexible, reliable, and future-proof solution for commercial EV operations. By combining advanced battery technology, innovative power delivery systems, and comprehensive fleet integration capabilities, we're enabling the next generation of electric fleet operations.
             </p>
             
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="lg" className="bg-chargetrux-green hover:bg-chargetrux-green/80 text-white px-8">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+              <Button size="lg" variant="ctaGreen" className="h-14 px-6 text-lg">
                 Schedule a Technology Demonstration
               </Button>
-              <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
+              <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10 h-14 px-6 text-lg">
                 <ExternalLink className="mr-2 h-4 w-4" />
                 Download Technical Specifications
               </Button>
             </div>
+
+            <div className="mt-16 py-12 px-8 bg-gradient-to-r from-chargetrux-blue to-blue-800 rounded-xl">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Electrify Your Fleet Operations?
+              </h2>
+              <p className="text-xl text-gray-200 mb-10">
+                Get mobile Level 3 charging where and when you need it, without the infrastructure headaches.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Button variant="ctaGreen" className="h-14 px-6 text-lg">
+                  Request Custom Quote
+                </Button>
+                <Button variant="ctaBlue" className="h-14 px-6 text-lg">
+                  Book Intro Call
+                </Button>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
-
-      <CtaSection />
     </div>
   );
 };
