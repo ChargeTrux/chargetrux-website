@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -111,33 +110,19 @@ const FSaaS = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
-              className="aspect-video rounded-xl overflow-hidden bg-gray-100 flex items-center justify-center"
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              variants={fadeIn}
-            >
-              <img 
-                src="/lovable-uploads/51d0e0cb-0f86-488b-a6e6-a199c8ded79a.png" 
-                alt="ChargeTrux R-Series Mobile Charging Unit" 
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-            
+          <div className="grid grid-cols-1 gap-12 items-center">            
             <motion.div
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
               variants={fadeIn}
-              className="text-chargetrux-darktext"
+              className="text-chargetrux-darktext max-w-3xl mx-auto"
             >
-              <p className="mb-6">
+              <p className="mb-6 text-center">
                 The ChargeTrux R-Series represents the pinnacle of mobile EV charging technology, delivering unprecedented power and flexibility for commercial fleet operations.
               </p>
               
-              <h3 className="text-xl font-semibold text-chargetrux-darkblue mb-4">Key Technical Specifications:</h3>
+              <h3 className="text-xl font-semibold text-chargetrux-darkblue mb-4 text-center">Key Technical Specifications:</h3>
               
               <Card className="mb-6 bg-chargetrux-darkblue text-white">
                 <CardHeader>
