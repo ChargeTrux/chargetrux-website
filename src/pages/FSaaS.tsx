@@ -338,11 +338,11 @@ const FSaaS = () => {
                 </li>
               </ul>
               
-              <div className="aspect-video rounded-xl overflow-hidden bg-gray-100">
+              <div className="rounded-xl overflow-hidden bg-gray-100 h-[300px]">
                 <img 
                   src="/lovable-uploads/54724381-b62f-4310-86cd-4db96d06f82e.png" 
                   alt="Fleet Integration Dashboard" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </motion.div>
@@ -359,11 +359,11 @@ const FSaaS = () => {
                 Generate detailed reports to support your sustainability initiatives and regulatory compliance:
               </p>
               
-              <div className="aspect-video rounded-xl overflow-hidden bg-gray-100 mb-8">
+              <div className="rounded-xl overflow-hidden bg-gray-100 mb-8 h-[300px]">
                 <img 
                   src="/lovable-uploads/fcaad5a5-861d-4200-bfe5-ff7d1813642d.png" 
                   alt="ESG Compliance Dashboard" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
               
