@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -338,12 +339,10 @@ const FSaaS = () => {
                 </li>
               </ul>
               
-              <div className="aspect-video rounded-xl overflow-hidden bg-gray-100">
-                <img 
-                  src="/lovable-uploads/54724381-b62f-4310-86cd-4db96d06f82e.png" 
-                  alt="Fleet Integration Dashboard" 
-                  className="w-full h-full object-cover"
-                />
+              {/* Removed the image that was here */}
+              <div className="bg-gray-50 border border-gray-100 rounded-xl p-6 text-center">
+                <h4 className="text-lg font-semibold text-chargetrux-darkblue mb-2">Fleet Monitoring Dashboard</h4>
+                <p className="text-chargetrux-darktext">Real-time monitoring interface providing comprehensive visibility into your fleet's charging operations and energy consumption metrics.</p>
               </div>
             </motion.div>
             
