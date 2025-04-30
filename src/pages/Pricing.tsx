@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Check, ChartBar, CircleDollarSign, Scale, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -31,29 +32,6 @@ const Pricing = () => {
           </p>
         </motion.div>
         
-        {/* White information section moved to the top */}
-        <section className="mb-24">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="bg-gray-50 p-6 rounded-xl text-sm shadow-sm"
-          >
-            <p className="font-semibold mb-2 text-chargetrux-darkblue">Coverage Areas:</p>
-            <p className="mb-4 text-gray-700">
-              ChargeTrux currently services major metropolitan areas across the United States including 
-              Los Angeles, San Francisco, Chicago, Dallas, Houston, Miami, Atlanta, Washington DC, Boston, 
-              and New York. See our <a href="/coverage" className="text-chargetrux-blue hover:underline">service map</a> for complete details and expansion plans.
-            </p>
-            <p className="font-semibold mb-2 text-chargetrux-darkblue">Enterprise Solutions:</p>
-            <p className="text-gray-700">
-              Custom enterprise packages are available for fleets of 10+ vehicles. Multi-year agreements 
-              include price protection guarantees and priority service allocation.
-            </p>
-          </motion.div>
-        </section>
-
         <section className="mb-24">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -660,6 +638,29 @@ const Pricing = () => {
               </div>
             </motion.div>
           </div>
+        </section>
+        
+        {/* White information section moved right before the blue CTA section */}
+        <section className="mb-24">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="bg-gray-50 p-6 rounded-xl text-sm shadow-sm"
+          >
+            <p className="font-semibold mb-2 text-chargetrux-darkblue">Coverage Areas:</p>
+            <p className="mb-4 text-gray-700">
+              ChargeTrux currently services major metropolitan areas across the United States including 
+              Los Angeles, San Francisco, Chicago, Dallas, Houston, Miami, Atlanta, Washington DC, Boston, 
+              and New York. See our <a href="/coverage" className="text-chargetrux-blue hover:underline">service map</a> for complete details and expansion plans.
+            </p>
+            <p className="font-semibold mb-2 text-chargetrux-darkblue">Enterprise Solutions:</p>
+            <p className="text-gray-700">
+              Custom enterprise packages are available for fleets of 10+ vehicles. Multi-year agreements 
+              include price protection guarantees and priority service allocation.
+            </p>
+          </motion.div>
         </section>
 
         <section className="mb-16">
