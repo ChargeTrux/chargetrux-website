@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -142,7 +143,7 @@ const FSaaS = () => {
                   <CardTitle className="text-chargetrux-blue">Current R-Series 450</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
-                  <ul className="list-disc pl-6 space-y-2">
+                  <ul className="list-disc pl-6 space-y-2 text-chargetrux-darktext">
                     <li>450 kWh total capacity per unit</li>
                     <li>Up to 440kW output capability</li>
                     <li>Simultaneous charging for up to 4 vehicles</li>
@@ -160,7 +161,7 @@ const FSaaS = () => {
                   <CardTitle className="text-chargetrux-green">Future Developments (Coming Q3 2025)</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
-                  <ul className="list-disc pl-6 space-y-2">
+                  <ul className="list-disc pl-6 space-y-2 text-chargetrux-darktext">
                     <li>R-Series 600: 600 kWh capacity</li>
                     <li>R-Series 750: 750 kWh capacity with enhanced battery density</li>
                     <li>Solar-augmented charging option</li>
@@ -197,7 +198,7 @@ const FSaaS = () => {
                     <div className="flex-shrink-0 h-8 w-8 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
                       <Settings className="h-4 w-4 text-chargetrux-blue" />
                     </div>
-                    <div>
+                    <div className="text-chargetrux-darktext">
                       <span className="font-medium">Intelligent Load Distribution:</span> Dynamic power allocation ensures optimal charging for each connected vehicle
                     </div>
                   </li>
@@ -205,7 +206,7 @@ const FSaaS = () => {
                     <div className="flex-shrink-0 h-8 w-8 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
                       <FileChartLine className="h-4 w-4 text-chargetrux-blue" />
                     </div>
-                    <div>
+                    <div className="text-chargetrux-darktext">
                       <span className="font-medium">Priority Charging Algorithms:</span> Critical vehicles receive accelerated charging based on operational requirements
                     </div>
                   </li>
@@ -213,7 +214,7 @@ const FSaaS = () => {
                     <div className="flex-shrink-0 h-8 w-8 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
                       <Truck className="h-4 w-4 text-chargetrux-blue" />
                     </div>
-                    <div>
+                    <div className="text-chargetrux-darktext">
                       <span className="font-medium">Simultaneous Multi-Vehicle Support:</span> Charge up to 4 vehicles at once with customizable power distribution
                     </div>
                   </li>
@@ -221,7 +222,7 @@ const FSaaS = () => {
                     <div className="flex-shrink-0 h-8 w-8 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
                       <Settings2 className="h-4 w-4 text-chargetrux-blue" />
                     </div>
-                    <div>
+                    <div className="text-chargetrux-darktext">
                       <span className="font-medium">Thermal Management System:</span> Advanced cooling technology maintains optimal charging temperatures even in extreme conditions
                     </div>
                   </li>
@@ -318,30 +319,30 @@ const FSaaS = () => {
               variants={fadeIn}
             >
               <h3 className="text-xl font-bold mb-4 text-chargetrux-darkblue">Real-Time Energy Monitoring</h3>
-              <p className="text-gray-700 mb-6">
+              <p className="text-chargetrux-darktext mb-6">
                 Our cloud-based monitoring platform provides comprehensive visibility into your charging operations:
               </p>
               
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <div className="mt-1 text-chargetrux-blue">•</div>
-                  <div>Live charging status for all vehicles</div>
+                  <div className="text-chargetrux-darktext">Live charging status for all vehicles</div>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="mt-1 text-chargetrux-blue">•</div>
-                  <div>Energy delivery metrics and performance analytics</div>
+                  <div className="text-chargetrux-darktext">Energy delivery metrics and performance analytics</div>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="mt-1 text-chargetrux-blue">•</div>
-                  <div>Consumption tracking and allocation by vehicle/department</div>
+                  <div className="text-chargetrux-darktext">Consumption tracking and allocation by vehicle/department</div>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="mt-1 text-chargetrux-blue">•</div>
-                  <div>Historical data and trend analysis</div>
+                  <div className="text-chargetrux-darktext">Historical data and trend analysis</div>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="mt-1 text-chargetrux-blue">•</div>
-                  <div>Customizable alerts and notifications</div>
+                  <div className="text-chargetrux-darktext">Customizable alerts and notifications</div>
                 </li>
               </ul>
               
@@ -361,7 +362,7 @@ const FSaaS = () => {
               variants={fadeIn}
             >
               <h3 className="text-xl font-bold mb-4 text-chargetrux-darkblue">Reporting for ESG Compliance</h3>
-              <p className="text-gray-700 mb-6">
+              <p className="text-chargetrux-darktext mb-6">
                 Generate detailed reports to support your sustainability initiatives and regulatory compliance:
               </p>
               
@@ -376,23 +377,23 @@ const FSaaS = () => {
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
                   <div className="mt-1 text-chargetrux-green">•</div>
-                  <div>Carbon offset tracking and verification</div>
+                  <div className="text-chargetrux-darktext">Carbon offset tracking and verification</div>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="mt-1 text-chargetrux-green">•</div>
-                  <div>Renewable energy certification</div>
+                  <div className="text-chargetrux-darktext">Renewable energy certification</div>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="mt-1 text-chargetrux-green">•</div>
-                  <div>Quarterly and annual ESG reporting templates</div>
+                  <div className="text-chargetrux-darktext">Quarterly and annual ESG reporting templates</div>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="mt-1 text-chargetrux-green">•</div>
-                  <div>Regulatory compliance documentation</div>
+                  <div className="text-chargetrux-darktext">Regulatory compliance documentation</div>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="mt-1 text-chargetrux-green">•</div>
-                  <div>Custom reporting capabilities for stakeholder requirements</div>
+                  <div className="text-chargetrux-darktext">Custom reporting capabilities for stakeholder requirements</div>
                 </li>
               </ul>
             </motion.div>
@@ -407,7 +408,7 @@ const FSaaS = () => {
             variants={fadeIn}
           >
             <h3 className="text-2xl font-bold mb-6 text-center text-chargetrux-darkblue">API Support for Fleet Scheduling Tools</h3>
-            <p className="text-gray-700 mb-8 text-center max-w-3xl mx-auto">
+            <p className="text-chargetrux-darktext mb-8 text-center max-w-3xl mx-auto">
               Our robust API enables seamless integration with your existing fleet management systems:
             </p>
             
@@ -420,7 +421,7 @@ const FSaaS = () => {
                     <div className="flex-shrink-0 h-8 w-8 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
                       <FileText className="h-4 w-4 text-chargetrux-blue" />
                     </div>
-                    <div>
+                    <div className="text-chargetrux-darktext">
                       <span className="font-medium">RESTful API</span> with comprehensive documentation
                     </div>
                   </li>
@@ -428,7 +429,7 @@ const FSaaS = () => {
                     <div className="flex-shrink-0 h-8 w-8 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
                       <Wifi className="h-4 w-4 text-chargetrux-blue" />
                     </div>
-                    <div>
+                    <div className="text-chargetrux-darktext">
                       <span className="font-medium">Webhook support</span> for real-time event notifications
                     </div>
                   </li>
@@ -436,7 +437,7 @@ const FSaaS = () => {
                     <div className="flex-shrink-0 h-8 w-8 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
                       <Shield className="h-4 w-4 text-chargetrux-blue" />
                     </div>
-                    <div>
+                    <div className="text-chargetrux-darktext">
                       <span className="font-medium">OAuth 2.0 authentication</span> for secure access
                     </div>
                   </li>
@@ -444,7 +445,7 @@ const FSaaS = () => {
                     <div className="flex-shrink-0 h-8 w-8 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
                       <Plug className="h-4 w-4 text-chargetrux-blue" />
                     </div>
-                    <div>
+                    <div className="text-chargetrux-darktext">
                       <span className="font-medium">Integration</span> with major fleet management platforms
                     </div>
                   </li>
@@ -452,12 +453,12 @@ const FSaaS = () => {
                     <div className="flex-shrink-0 h-8 w-8 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
                       <Settings className="h-4 w-4 text-chargetrux-blue" />
                     </div>
-                    <div>
+                    <div className="text-chargetrux-darktext">
                       <span className="font-medium">Custom integration</span> development support
                     </div>
                   </li>
                 </ul>
-                <p className="mt-6 text-gray-700">
+                <p className="mt-6 text-chargetrux-darktext">
                   Our technical team provides full support for API integration, ensuring a smooth connection between your fleet management systems and our charging infrastructure.
                 </p>
               </div>
