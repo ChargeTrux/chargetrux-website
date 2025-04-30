@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -160,7 +159,7 @@ const FSaaS = () => {
             </motion.div>
           </div>
           
-          {/* R-Series Fleet Illustration - Made smaller with width constraint */}
+          {/* R-Series Fleet Illustration - Adjusted size */}
           <motion.div 
             className="mt-12 mb-12"
             initial="initial"
@@ -168,8 +167,8 @@ const FSaaS = () => {
             viewport={{ once: true }}
             variants={fadeIn}
           >
-            <div className="max-w-lg mx-auto">
-              <AspectRatio ratio={4/3} className="bg-muted rounded-lg overflow-hidden">
+            <div className="max-w-2xl mx-auto">
+              <AspectRatio ratio={16/9} className="bg-muted rounded-lg overflow-hidden">
                 <img 
                   src="/lovable-uploads/891f92b4-6ad6-4462-b50e-2e496d37f059.png" 
                   alt="ChargeTrux R-Series Fleet Illustration" 
