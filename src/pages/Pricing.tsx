@@ -68,37 +68,55 @@ const Pricing = () => {
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Fixed monthly fee</strong> based on fleet size and energy requirements</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Fixed monthly fee</span>
+                        <span className="text-gray-700"> based on fleet size and energy requirements</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Unlimited scheduled charging sessions</strong> within your contracted energy allocation</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Unlimited scheduled charging sessions</span>
+                        <span className="text-gray-700"> within your contracted energy allocation</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Priority service scheduling</strong> with guaranteed 4-hour service windows</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Priority service scheduling</span>
+                        <span className="text-gray-700"> with guaranteed 4-hour service windows</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Dedicated account manager</strong> for streamlined operations</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Dedicated account manager</span>
+                        <span className="text-gray-700"> for streamlined operations</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Fleet-wide analytics dashboard</strong> for operational insights</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Fleet-wide analytics dashboard</span>
+                        <span className="text-gray-700"> for operational insights</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">No peak-hour surcharges</strong> for predictable cost management</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">No peak-hour surcharges</span>
+                        <span className="text-gray-700"> for predictable cost management</span>
+                      </div>
                     </li>
                   </ul>
                   <div className="mt-8 pt-4 border-t border-gray-100">
@@ -131,37 +149,54 @@ const Pricing = () => {
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">3, 6, or 9-month commitments</strong> with scaled pricing</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">3, 6, or 9-month commitments</span>
+                        <span className="text-gray-700"> with scaled pricing</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Seasonal capacity adjustments</strong> to match operational intensity</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Seasonal capacity adjustments</span>
+                        <span className="text-gray-700"> to match operational intensity</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Scheduled high-capacity charging</strong> during peak seasons</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Scheduled high-capacity charging</span>
+                        <span className="text-gray-700"> during peak seasons</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Reduced rates during contract extension periods</strong></span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Reduced rates during contract extension periods</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Mid-season plan adjustments available</strong> with 30-day notice</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Mid-season plan adjustments available</span>
+                        <span className="text-gray-700"> with 30-day notice</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Combined with on-demand options</strong> for maximum flexibility</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Combined with on-demand options</span>
+                        <span className="text-gray-700"> for maximum flexibility</span>
+                      </div>
                     </li>
                   </ul>
                   <div className="mt-8 pt-4 border-t border-gray-100">
@@ -259,37 +294,55 @@ const Pricing = () => {
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Base dispatch fee</strong> + transparent per kWh delivered rate</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Base dispatch fee</span>
+                        <span className="text-gray-700"> + transparent per kWh delivered rate</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">No long-term commitments</strong> required</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">No long-term commitments</span>
+                        <span className="text-gray-700"> required</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">2-hour emergency response option</strong> available</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">2-hour emergency response option</span>
+                        <span className="text-gray-700"> available</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Multiple vehicles charged</strong> per service call</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Multiple vehicles charged</span>
+                        <span className="text-gray-700"> per service call</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Pay only for energy delivered</strong> to your fleet</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Pay only for energy delivered</span>
+                        <span className="text-gray-700"> to your fleet</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-blue" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Volume discounts available</strong> for frequent users</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Volume discounts available</span>
+                        <span className="text-gray-700"> for frequent users</span>
+                      </div>
                     </li>
                   </ul>
                   <div className="mt-8 pt-4 border-t border-gray-100">
@@ -387,37 +440,55 @@ const Pricing = () => {
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Tiered pricing by fleet size</strong> for maximum cost efficiency</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Tiered pricing by fleet size</span>
+                        <span className="text-gray-700"> for maximum cost efficiency</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Multi-region coverage</strong> with consistent service levels</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Multi-region coverage</span>
+                        <span className="text-gray-700"> with consistent service levels</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Custom usage frequency options</strong> based on operational patterns</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Custom usage frequency options</span>
+                        <span className="text-gray-700"> based on operational patterns</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Integrated reporting systems</strong> compatible with fleet management software</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Integrated reporting systems</span>
+                        <span className="text-gray-700"> compatible with fleet management software</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Dedicated service team</strong> with specialized fleet experience</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Dedicated service team</span>
+                        <span className="text-gray-700"> with specialized fleet experience</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
-                      <span className="text-gray-700"><strong className="text-chargetrux-darkblue">Customized SLAs</strong> to meet your specific operational requirements</span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Customized SLAs</span>
+                        <span className="text-gray-700"> to meet your specific operational requirements</span>
+                      </div>
                     </li>
                   </ul>
                   <div className="mt-8 pt-4 border-t border-gray-100">
