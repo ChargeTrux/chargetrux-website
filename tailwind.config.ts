@@ -47,6 +47,10 @@ export default {
 					lightgray: '#F5F7FA',
 					lighttext: '#E6E8EA', // Light text color for dark backgrounds
 					darktext: '#333333', // Dark text for light backgrounds
+					tablegreen: '#e6fff0', // Light green background for tables
+					tableheader: '#00cc66', // Green header for tables
+					tableborder: '#b3ffcc', // Light green border for tables
+					tabletext: '#333333', // Dark text for table content
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
