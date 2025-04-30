@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Check, ChartBar, CircleDollarSign, Scale, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -17,7 +18,7 @@ const Pricing = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-2xl md:text-3xl font-bold text-chargetrux-lighttext mb-6 bg-chargetrux-blue bg-opacity-20 inline-block px-6 py-2 rounded-lg">
+          <h1 className="text-2xl md:text-3xl font-bold text-chargetrux-lighttext mb-6 bg-chargetrux-green bg-opacity-20 inline-block px-6 py-2 rounded-lg">
             Transparent EV Charging Pricing For Fleets
           </h1>
           <div className="w-24 h-1.5 bg-chargetrux-green mx-auto mb-8"></div>
@@ -37,14 +38,14 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-4xl font-bold text-center text-chargetrux-lighttext mb-6 bg-chargetrux-blue bg-opacity-20 inline-block px-6 py-2 rounded-lg mx-auto block"
+            className="text-2xl md:text-4xl font-bold text-center text-chargetrux-lighttext mb-6 bg-chargetrux-green bg-opacity-20 inline-block px-6 py-2 rounded-lg mx-auto block"
           >
             Contract Charging Plans
           </motion.h2>
           <p className="text-center text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
             Predictable Monthly or Seasonal Options for Fleet Operators
           </p>
-          <div className="w-24 h-1.5 bg-chargetrux-blue mx-auto mb-12"></div>
+          <div className="w-24 h-1.5 bg-chargetrux-green mx-auto mb-12"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <motion.div
@@ -54,19 +55,19 @@ const Pricing = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="h-full border-2 border-gray-100 hover:border-chargetrux-blue transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
-                <div className="h-2 bg-chargetrux-blue w-full"></div>
-                <CardHeader className="bg-gray-50 border-b">
+              <Card className="h-full border-2 border-gray-100 hover:border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
+                <div className="h-2 bg-chargetrux-green w-full"></div>
+                <CardHeader className="bg-chargetrux-green bg-opacity-10 border-b">
                   <CardTitle className="text-2xl text-chargetrux-darkblue">Monthly Contract Plans</CardTitle>
                   <CardDescription className="text-base md:text-lg">
                     Reliable, scheduled charging for consistent fleet operations
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="pt-6">
+                <CardContent className="pt-6 bg-gradient-to-br from-white to-green-50">
                   <ul className="space-y-4">
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Fixed monthly fee</span>
@@ -74,8 +75,8 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Unlimited scheduled charging sessions</span>
@@ -83,8 +84,8 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Priority service scheduling</span>
@@ -92,8 +93,8 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Dedicated account manager</span>
@@ -101,8 +102,8 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Fleet-wide analytics dashboard</span>
@@ -110,8 +111,8 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">No peak-hour surcharges</span>
@@ -135,19 +136,19 @@ const Pricing = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="h-full border-2 border-gray-100 hover:border-chargetrux-blue transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
-                <div className="h-2 bg-chargetrux-blue w-full"></div>
-                <CardHeader className="bg-gray-50 border-b">
+              <Card className="h-full border-2 border-gray-100 hover:border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
+                <div className="h-2 bg-chargetrux-green w-full"></div>
+                <CardHeader className="bg-chargetrux-green bg-opacity-10 border-b">
                   <CardTitle className="text-2xl text-chargetrux-darkblue">Seasonal Contract Plans</CardTitle>
                   <CardDescription className="text-base md:text-lg">
                     Flexible charging options for operations with seasonal variations
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="pt-6">
+                <CardContent className="pt-6 bg-gradient-to-br from-white to-green-50">
                   <ul className="space-y-4">
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">3, 6, or 9-month commitments</span>
@@ -155,8 +156,8 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Seasonal capacity adjustments</span>
@@ -164,8 +165,8 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Scheduled high-capacity charging</span>
@@ -173,16 +174,16 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Reduced rates during contract extension periods</span>
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Mid-season plan adjustments available</span>
@@ -190,8 +191,8 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Combined with on-demand options</span>
@@ -214,41 +215,41 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-gray-50 to-blue-50/30 rounded-xl p-8 shadow-sm"
+            className="bg-gradient-to-br from-gray-50 to-green-50/30 rounded-xl p-8 shadow-sm"
           >
             <h3 className="text-xl font-bold text-chargetrux-darkblue mb-6">Contract Plan Benefits</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
               <div className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
-                <div className="bg-blue-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
-                  <CircleDollarSign className="h-6 w-6 text-chargetrux-blue" />
+                <div className="bg-green-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
+                  <CircleDollarSign className="h-6 w-6 text-chargetrux-green" />
                 </div>
                 <h4 className="font-semibold mb-2 text-chargetrux-darkblue">No Infrastructure Investment</h4>
                 <p className="text-sm text-gray-700">Eliminate the costs of installing permanent charging stations</p>
               </div>
               <div className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
-                <div className="bg-blue-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
-                  <Scale className="h-6 w-6 text-chargetrux-blue" />
+                <div className="bg-green-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
+                  <Scale className="h-6 w-6 text-chargetrux-green" />
                 </div>
                 <h4 className="font-semibold mb-2 text-chargetrux-darkblue">Predictable Monthly Costs</h4>
                 <p className="text-sm text-gray-700">Fixed pricing makes budgeting straightforward</p>
               </div>
               <div className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
-                <div className="bg-blue-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
-                  <ChartBar className="h-6 w-6 text-chargetrux-blue" />
+                <div className="bg-green-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
+                  <ChartBar className="h-6 w-6 text-chargetrux-green" />
                 </div>
                 <h4 className="font-semibold mb-2 text-chargetrux-darkblue">Schedule Optimization</h4>
                 <p className="text-sm text-gray-700">Align charging schedules with operational downtime</p>
               </div>
               <div className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
-                <div className="bg-blue-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
-                  <TrendingUp className="h-6 w-6 text-chargetrux-blue" />
+                <div className="bg-green-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
+                  <TrendingUp className="h-6 w-6 text-chargetrux-green" />
                 </div>
                 <h4 className="font-semibold mb-2 text-chargetrux-darkblue">Energy Management</h4>
                 <p className="text-sm text-gray-700">Avoid utility demand charges and peak pricing</p>
               </div>
               <div className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
-                <div className="bg-blue-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
-                  <ChartBar className="h-6 w-6 text-chargetrux-blue" />
+                <div className="bg-green-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
+                  <ChartBar className="h-6 w-6 text-chargetrux-green" />
                 </div>
                 <h4 className="font-semibold mb-2 text-chargetrux-darkblue">Emissions Reporting</h4>
                 <p className="text-sm text-gray-700">Detailed ESG documentation included with all plans</p>
@@ -263,14 +264,14 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-4xl font-bold text-center text-chargetrux-lighttext mb-6 bg-chargetrux-blue bg-opacity-20 inline-block px-6 py-2 rounded-lg mx-auto block"
+            className="text-2xl md:text-4xl font-bold text-center text-chargetrux-lighttext mb-6 bg-chargetrux-green bg-opacity-20 inline-block px-6 py-2 rounded-lg mx-auto block"
           >
             On-Demand Sessions
           </motion.h2>
           <p className="text-center text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
             Charging When You Need It, No Commitments Required
           </p>
-          <div className="w-24 h-1.5 bg-chargetrux-blue mx-auto mb-12"></div>
+          <div className="w-24 h-1.5 bg-chargetrux-green mx-auto mb-12"></div>
           
           <div className="grid grid-cols-1 max-w-2xl mx-auto mb-12">
             <motion.div
@@ -280,19 +281,19 @@ const Pricing = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="h-full border-2 border-gray-100 hover:border-chargetrux-blue transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
-                <div className="h-2 bg-chargetrux-blue w-full"></div>
-                <CardHeader className="bg-gray-50 border-b">
+              <Card className="h-full border-2 border-gray-100 hover:border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
+                <div className="h-2 bg-chargetrux-green w-full"></div>
+                <CardHeader className="bg-chargetrux-green bg-opacity-10 border-b">
                   <CardTitle className="text-2xl text-chargetrux-darkblue">Flexible Pay-Per-Charge Model</CardTitle>
                   <CardDescription className="text-base md:text-lg">
                     Only pay for the energy you need, when you need it
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="pt-6">
+                <CardContent className="pt-6 bg-gradient-to-br from-white to-green-50">
                   <ul className="space-y-4">
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Base dispatch fee</span>
@@ -300,8 +301,8 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">No long-term commitments</span>
@@ -309,8 +310,8 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">2-hour emergency response option</span>
@@ -318,8 +319,8 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Multiple vehicles charged</span>
@@ -327,8 +328,8 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Pay only for energy delivered</span>
@@ -336,8 +337,8 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-blue-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-blue" />
+                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                        <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Volume discounts available</span>
@@ -360,41 +361,41 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-gray-50 to-blue-50/30 rounded-xl p-8 shadow-sm"
+            className="bg-gradient-to-br from-gray-50 to-green-50/30 rounded-xl p-8 shadow-sm"
           >
             <h3 className="text-xl font-bold text-chargetrux-darkblue mb-6">On-Demand Benefits</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
               <div className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
-                <div className="bg-blue-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
-                  <CircleDollarSign className="h-6 w-6 text-chargetrux-blue" />
+                <div className="bg-green-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
+                  <CircleDollarSign className="h-6 w-6 text-chargetrux-green" />
                 </div>
                 <h4 className="font-semibold mb-2 text-chargetrux-darkblue">Maximum Flexibility</h4>
                 <p className="text-sm text-gray-700">Request charging service only when needed</p>
               </div>
               <div className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
-                <div className="bg-blue-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
-                  <Scale className="h-6 w-6 text-chargetrux-blue" />
+                <div className="bg-green-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
+                  <Scale className="h-6 w-6 text-chargetrux-green" />
                 </div>
                 <h4 className="font-semibold mb-2 text-chargetrux-darkblue">No Upfront Investment</h4>
                 <p className="text-sm text-gray-700">Zero capital expenditure required</p>
               </div>
               <div className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
-                <div className="bg-blue-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
-                  <ChartBar className="h-6 w-6 text-chargetrux-blue" />
+                <div className="bg-green-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
+                  <ChartBar className="h-6 w-6 text-chargetrux-green" />
                 </div>
                 <h4 className="font-semibold mb-2 text-chargetrux-darkblue">Scale With Demand</h4>
                 <p className="text-sm text-gray-700">Perfect for growing or transitioning fleets</p>
               </div>
               <div className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
-                <div className="bg-blue-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
-                  <TrendingUp className="h-6 w-6 text-chargetrux-blue" />
+                <div className="bg-green-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
+                  <TrendingUp className="h-6 w-6 text-chargetrux-green" />
                 </div>
                 <h4 className="font-semibold mb-2 text-chargetrux-darkblue">Location Freedom</h4>
                 <p className="text-sm text-gray-700">Service available anywhere in our coverage areas</p>
               </div>
               <div className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
-                <div className="bg-blue-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
-                  <ChartBar className="h-6 w-6 text-chargetrux-blue" />
+                <div className="bg-green-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
+                  <ChartBar className="h-6 w-6 text-chargetrux-green" />
                 </div>
                 <h4 className="font-semibold mb-2 text-chargetrux-darkblue">Multi-Vehicle Efficiency</h4>
                 <p className="text-sm text-gray-700">Charge multiple vehicles during a single service call</p>
