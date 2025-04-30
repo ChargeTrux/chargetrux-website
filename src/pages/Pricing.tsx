@@ -54,8 +54,8 @@ const Pricing = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="h-full border-2 border-chargetrux-green hover:border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
-                <div className="h-2 bg-chargetrux-green w-full"></div>
+              <Card className="h-full border-2 border-[#00A859] rounded-lg hover:border-[#00A859] transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
+                <div className="h-2 bg-[#00A859] w-full"></div>
                 <CardHeader className="bg-green-50 border-b">
                   <CardTitle className="text-2xl text-chargetrux-darkblue">Monthly Contract Plans</CardTitle>
                   <CardDescription className="text-base md:text-lg">
@@ -66,7 +66,7 @@ const Pricing = () => {
                   <ul className="space-y-4">
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-green" />
+                        <Check className="h-4 w-4 text-[#00A859]" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Fixed monthly fee</span>
@@ -75,7 +75,7 @@ const Pricing = () => {
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-green" />
+                        <Check className="h-4 w-4 text-[#00A859]" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Unlimited scheduled charging sessions</span>
@@ -84,7 +84,7 @@ const Pricing = () => {
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-green" />
+                        <Check className="h-4 w-4 text-[#00A859]" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Priority service scheduling</span>
@@ -93,7 +93,7 @@ const Pricing = () => {
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-green" />
+                        <Check className="h-4 w-4 text-[#00A859]" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Dedicated account manager</span>
@@ -102,7 +102,7 @@ const Pricing = () => {
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-green" />
+                        <Check className="h-4 w-4 text-[#00A859]" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Fleet-wide analytics dashboard</span>
@@ -111,7 +111,7 @@ const Pricing = () => {
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-green" />
+                        <Check className="h-4 w-4 text-[#00A859]" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">No peak-hour surcharges</span>
@@ -135,19 +135,19 @@ const Pricing = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="h-full border-2 border-chargetrux-green hover:border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
-                <div className="h-2 bg-chargetrux-green w-full"></div>
+              <Card className="h-full border-2 border-[#00A859] rounded-lg hover:border-[#00A859] transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
+                <div className="h-2 bg-[#00A859] w-full"></div>
                 <CardHeader className="bg-green-50 border-b">
                   <CardTitle className="text-2xl text-chargetrux-darkblue">Seasonal Contract Plans</CardTitle>
                   <CardDescription className="text-base md:text-lg">
                     Flexible charging options for operations with seasonal variations
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="pt-6 bg-gradient-to-br from-white to-green-50">
+                <CardContent className="pt-6 pb-8 bg-gradient-to-br from-white to-green-50">
                   <ul className="space-y-4">
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-green" />
+                        <Check className="h-4 w-4 text-[#00A859]" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">3, 6, or 9-month commitments</span>
@@ -156,7 +156,7 @@ const Pricing = () => {
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-green" />
+                        <Check className="h-4 w-4 text-[#00A859]" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Seasonal capacity adjustments</span>
@@ -165,7 +165,7 @@ const Pricing = () => {
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-green" />
+                        <Check className="h-4 w-4 text-[#00A859]" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Scheduled high-capacity charging</span>
@@ -174,7 +174,7 @@ const Pricing = () => {
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-green" />
+                        <Check className="h-4 w-4 text-[#00A859]" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Reduced rates during contract extension periods</span>
@@ -182,7 +182,7 @@ const Pricing = () => {
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-green" />
+                        <Check className="h-4 w-4 text-[#00A859]" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Mid-season plan adjustments available</span>
@@ -191,7 +191,7 @@ const Pricing = () => {
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-chargetrux-green" />
+                        <Check className="h-4 w-4 text-[#00A859]" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Combined with on-demand options</span>
