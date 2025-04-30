@@ -21,6 +21,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         ctaGreen: "bg-[#00cc66] hover:bg-[#00cc66]/90 text-white font-medium",
         ctaBlue: "bg-[#002c77] border-2 border-white text-white hover:bg-[#002c77]/90",
+        viewDetails: "bg-chargetrux-blue text-white hover:bg-chargetrux-blue/90",
       },
       size: {
         default: "h-10 px-4 py-2",

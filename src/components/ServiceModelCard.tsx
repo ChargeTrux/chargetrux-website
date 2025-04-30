@@ -42,7 +42,7 @@ const ServiceModelCard = ({
         <CardContent className="flex-grow flex flex-col">
           <Button
             variant="ghost"
-            className="text-chargetrux-blue flex items-center justify-center mb-4 hover:bg-blue-50"
+            className="text-white bg-chargetrux-blue flex items-center justify-center mb-4 hover:bg-blue-600"
             onClick={() => setIsExpanded(!isExpanded)}
           >
             {isExpanded ? (
