@@ -104,11 +104,11 @@ const Industries = () => {
     },
     {
       id: "developers",
-      title: "Charging Infrastructure Developers",
+      title: "Charging Infrastructure",
       shortDesc: "Temporary mobile support while fixed assets are under construction",
       icon: <Battery className="h-6 w-6 text-chargetrux-green" />,
       image: "/lovable-uploads/6f9386c8-ac09-4dc9-88ba-31ecf9859f75.png", // Using a placeholder image
-      heading: "EV Charging Infrastructure Developers",
+      heading: "EV Charging Infrastructure",
       subheading: "Temporary Mobile Level 3 Charging Support During Fixed Asset Construction",
       description: "Bridge the gap while permanent EV charging infrastructure is under development:",
       benefits: [
