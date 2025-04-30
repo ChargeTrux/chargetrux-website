@@ -16,9 +16,9 @@ const SustainabilityCta = () => {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Fleet Operations?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Ready to Transform Your Fleet Operations?</h2>
           <div className="w-20 h-1 bg-white mx-auto mb-8"></div>
-          <p className="text-lg mb-10 leading-relaxed">
+          <p className="text-lg mb-10 leading-relaxed text-white">
             Discover how ChargeTrux's mobile Level 3 charging solutions can support your organization's operational efficiency and sustainability goals.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">

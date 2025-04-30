@@ -54,7 +54,7 @@ const CaseStudy = ({
                 {stats.map((stat, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
                     <span className="block text-2xl font-bold">{stat.value}</span>
-                    <span className="text-xs text-gray-200">{stat.label}</span>
+                    <span className="text-xs text-white">{stat.label}</span>
                   </div>
                 ))}
               </div>
@@ -76,7 +76,7 @@ const CaseStudy = ({
               {results.map((result, index) => (
                 <li key={index} className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 mt-2 rounded-full bg-chargetrux-green"></span>
-                  <span dangerouslySetInnerHTML={{ __html: result }}></span>
+                  <span className="text-gray-700" dangerouslySetInnerHTML={{ __html: result }}></span>
                 </li>
               ))}
             </ul>

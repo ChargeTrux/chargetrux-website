@@ -82,23 +82,23 @@ const SustainabilityReporting = () => {
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 mt-2 rounded-full bg-chargetrux-green"></span>
-                    <span><strong>Energy Consumption Analysis:</strong> Detailed breakdown of energy usage by vehicle, location, and time</span>
+                    <span className="text-gray-700"><strong>Energy Consumption Analysis:</strong> Detailed breakdown of energy usage by vehicle, location, and time</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 mt-2 rounded-full bg-chargetrux-green"></span>
-                    <span><strong>Carbon Emission Avoidance:</strong> Calculated emissions avoided compared to fossil fuel alternatives</span>
+                    <span className="text-gray-700"><strong>Carbon Emission Avoidance:</strong> Calculated emissions avoided compared to fossil fuel alternatives</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 mt-2 rounded-full bg-chargetrux-green"></span>
-                    <span><strong>Renewable Energy Certificates:</strong> Documentation of the renewable energy used for charging</span>
+                    <span className="text-gray-700"><strong>Renewable Energy Certificates:</strong> Documentation of the renewable energy used for charging</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 mt-2 rounded-full bg-chargetrux-green"></span>
-                    <span><strong>Operational Efficiency Metrics:</strong> Insights to optimize your fleet's energy usage and sustainability performance</span>
+                    <span className="text-gray-700"><strong>Operational Efficiency Metrics:</strong> Insights to optimize your fleet's energy usage and sustainability performance</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 mt-2 rounded-full bg-chargetrux-green"></span>
-                    <span><strong>Customizable Data Integration:</strong> Export options compatible with major sustainability reporting platforms</span>
+                    <span className="text-gray-700"><strong>Customizable Data Integration:</strong> Export options compatible with major sustainability reporting platforms</span>
                   </li>
                 </ul>
                 <Button className="bg-chargetrux-green hover:bg-chargetrux-green/90">View Sample Report</Button>
