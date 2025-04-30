@@ -169,7 +169,7 @@ const FSaaS = () => {
           >
             <div className="max-w-3xl mx-auto">
               <img 
-                src="/lovable-uploads/56460865-ffe7-47b2-9ff1-26854f33ce8f.png" 
+                src="/lovable-uploads/891f92b4-6ad6-4462-b50e-2e496d37f059.png" 
                 alt="ChargeTrux R-Series Fleet Illustration" 
                 className="w-full rounded-xl shadow-lg"
               />
