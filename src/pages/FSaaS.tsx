@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -112,39 +111,19 @@ const FSaaS = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Fleet Illustration - On the left */}
-            <motion.div 
-              className="order-2 lg:order-1"
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              variants={fadeIn}
-            >
-              <div className="max-w-full mx-auto">
-                <AspectRatio ratio={16/9} className="bg-muted rounded-lg overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/6d704202-55fd-471d-bce1-900ab932e7c7.png" 
-                    alt="ChargeTrux R-Series Fleet Illustration" 
-                    className="w-full h-full object-contain rounded-xl shadow-lg"
-                  />
-                </AspectRatio>
-              </div>
-            </motion.div>
-            
-            {/* Technical Specifications - On the right */}
+          <div className="flex justify-center">
             <motion.div
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
               variants={fadeIn}
-              className="text-chargetrux-darktext order-1 lg:order-2"
+              className="text-chargetrux-darktext max-w-3xl"
             >
-              <p className="mb-6">
+              <p className="mb-6 text-center">
                 The ChargeTrux R-Series represents the pinnacle of mobile EV charging technology, delivering unprecedented power and flexibility for commercial fleet operations.
               </p>
               
-              <h3 className="text-xl font-semibold text-chargetrux-darkblue mb-4">Key Technical Specifications:</h3>
+              <h3 className="text-xl font-semibold text-chargetrux-darkblue mb-4 text-center">Key Technical Specifications:</h3>
               
               <Card className="mb-6 bg-chargetrux-darkblue text-white">
                 <CardHeader>
