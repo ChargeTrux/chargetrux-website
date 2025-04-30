@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -238,7 +237,7 @@ const FSaaS = () => {
                 variants={fadeIn}
               >
                 <img 
-                  src="/lovable-uploads/5baece7d-1990-4b70-98ce-5f822d3f3c4d.png" 
+                  src="/lovable-uploads/af89f66d-4b12-429f-8fad-5fd60f878cb2.png" 
                   alt="Multi-Vehicle Connection Diagram" 
                   className="w-full h-full object-cover"
                 />
