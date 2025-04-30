@@ -382,6 +382,25 @@ const FSaaS = () => {
             </motion.div>
           </div>
           
+          {/* Fleet Integration Illustration */}
+          <motion.div 
+            className="my-16"
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={fadeIn}
+          >
+            <div className="w-full max-w-5xl mx-auto">
+              <AspectRatio ratio={16/9} className="bg-transparent overflow-hidden rounded-lg shadow-xl">
+                <img 
+                  src="/lovable-uploads/fd98f191-123f-48e8-9b2c-451ef680cc47.png" 
+                  alt="Fleet Integration Isometric Illustration" 
+                  className="w-full h-full object-contain"
+                />
+              </AspectRatio>
+            </div>
+          </motion.div>
+          
           {/* API Support */}
           <motion.div 
             className="mt-16"
