@@ -16,7 +16,7 @@ const Technology = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="text-2xl md:text-3xl font-bold text-white mb-6">
             Cutting-Edge Mobile EV Charging Technology
           </h1>
           <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-4"></div>
