@@ -54,7 +54,8 @@ const Pricing = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="h-full border-2 border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg bg-white">
+              <Card className="h-full border-2 border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
+                <div className="h-2 bg-chargetrux-green w-full"></div>
                 <CardHeader className="bg-green-50 border-b border-chargetrux-green/20">
                   <CardTitle className="text-2xl text-chargetrux-darkblue">Monthly Contract Plans</CardTitle>
                   <CardDescription className="text-base md:text-lg text-chargetrux-darkblue/80">
@@ -134,14 +135,15 @@ const Pricing = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="h-full border-2 border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg bg-white">
+              <Card className="h-full border-2 border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
+                <div className="h-2 bg-chargetrux-green w-full"></div>
                 <CardHeader className="bg-green-50 border-b border-chargetrux-green/20">
                   <CardTitle className="text-2xl text-chargetrux-darkblue">Seasonal Contract Plans</CardTitle>
                   <CardDescription className="text-base md:text-lg text-chargetrux-darkblue/80">
                     Flexible charging options for operations with seasonal variations
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="pt-6 bg-green-50/30">
+                <CardContent className="pt-6 bg-green-50/30 pb-8">
                   <ul className="space-y-4">
                     <li className="flex items-start gap-4">
                       <span className="bg-chargetrux-green/10 p-1.5 rounded-full mt-0.5">
@@ -536,4 +538,20 @@ const Pricing = () => {
                 <h4 className="font-semibold mb-2 text-chargetrux-darkblue">API Integration</h4>
                 <p className="text-sm text-gray-700">Connect charging data with your existing fleet management systems</p>
               </div>
-              <div className="bg
+              <div className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
+                <div className="bg-green-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
+                  <ChartBar className="h-6 w-6 text-chargetrux-green" />
+                </div>
+                <h4 className="font-semibold mb-2 text-chargetrux-darkblue">Multi-Vehicle Efficiency</h4>
+                <p className="text-sm text-gray-700">Charge multiple vehicles during a single service call</p>
+              </div>
+            </div>
+          </motion.div>
+        </section>
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+export default Pricing;
