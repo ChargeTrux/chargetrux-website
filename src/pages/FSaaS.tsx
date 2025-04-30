@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Battery, Settings, ShieldCheck, FileChartLine, Calendar, Calendar as CalendarDays, Clock, ClockAlert, FileText, FileUp, FileDown, Plug, Truck, Settings2, Shield, ShieldOff, Wifi } from "lucide-react";
 import ServiceModelCard from "@/components/ServiceModelCard";
 import ChargeTruxAPI from "@/components/ChargeTruxAPI";
+import CtaSection from "@/components/CtaSection";
 
 const FSaaS = () => {
   useEffect(() => {
@@ -61,43 +62,38 @@ const FSaaS = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-chargetrux-darkblue">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 md:pt-32 md:pb-16 bg-gradient-to-br from-chargetrux-darkblue/10 to-chargetrux-blue/5">
-        <div className="container mx-auto px-4">
+      <section className="pt-24 pb-12 md:pt-32 md:pb-16 bg-gradient-to-br from-chargetrux-darkblue via-[#0A1930] to-[#001845] text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div 
             className="max-w-4xl mx-auto text-center"
             initial="initial"
-            whileInView="animate"
+            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             variants={fadeIn}
           >
-            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-chargetrux-darkblue">
+            <h1 className="text-2xl md:text-3xl font-bold mb-4 text-white">
               Fleet Support-as-a-Service (FSaaS)
             </h1>
             <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-4"></div>
-            <p className="text-xl md:text-2xl text-gray-600 mb-6">
+            <p className="text-base md:text-lg font-light text-white">
               Reliable Level 3 Fast Charging Without the Infrastructure Burden
             </p>
-            <p className="text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-base md:text-lg text-white/90 max-w-3xl mx-auto leading-relaxed mt-6">
               ChargeTrux delivers high-capacity mobile charging solutions that keep your electric fleet vehicles powered and operational without the constraints of fixed infrastructure. Our innovative FSaaS model combines advanced mobile charging technology, intelligent energy management, and flexible service options to solve the most pressing challenges facing EV fleet operators today.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-chargetrux-blue text-white hover:bg-chargetrux-blue/90">
-                Schedule a Demo
-              </Button>
-              <Button variant="outline" className="border-chargetrux-blue text-chargetrux-blue hover:bg-chargetrux-blue/10">
-                Download Technical Specs
-              </Button>
-            </div>
           </motion.div>
         </div>
       </section>
       
       {/* R-Series Mobile Charging Units */}
-      <section className="py-16 bg-white" id="r-series">
+      <section className="py-20 bg-gradient-to-br from-white to-gray-100" id="r-series">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-12"
@@ -106,11 +102,11 @@ const FSaaS = () => {
             viewport={{ once: true }}
             variants={fadeIn}
           >
-            <h2 className="text-2xl md:text-4xl font-bold mb-2 text-chargetrux-darkblue">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-chargetrux-darkblue">
               Our R-Series Mobile Charging Units
             </h2>
             <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-4"></div>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg text-chargetrux-green font-medium">
               Next-Generation Mobile Power Delivery System
             </p>
           </motion.div>
@@ -136,7 +132,7 @@ const FSaaS = () => {
               viewport={{ once: true }}
               variants={fadeIn}
             >
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-700 mb-6">
                 The ChargeTrux R-Series represents the pinnacle of mobile EV charging technology, delivering unprecedented power and flexibility for commercial fleet operations.
               </p>
               
@@ -252,7 +248,8 @@ const FSaaS = () => {
       </section>
       
       {/* Service Models */}
-      <section className="py-16 bg-gradient-to-b from-gray-50 to-white" id="service-models">
+      <section className="py-20 bg-gradient-to-br from-chargetrux-darkblue via-[#0954c5] to-chargetrux-blue text-white" id="service-models">
+        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-12"
@@ -261,11 +258,11 @@ const FSaaS = () => {
             viewport={{ once: true }}
             variants={fadeIn}
           >
-            <h2 className="text-2xl md:text-4xl font-bold mb-2 text-chargetrux-darkblue">
+            <h2 className="text-2xl md:text-4xl font-bold mb-2 text-white">
               Service Models
             </h2>
-            <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-4"></div>
-            <p className="text-xl text-gray-600">
+            <div className="w-20 h-1 bg-white mx-auto mb-4"></div>
+            <p className="text-xl text-white">
               Flexible Options Tailored to Your Fleet's Operational Requirements
             </p>
           </motion.div>
@@ -284,7 +281,7 @@ const FSaaS = () => {
           </div>
           
           <motion.p 
-            className="text-center mt-8 text-gray-600"
+            className="text-center mt-8 text-white/80"
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
@@ -296,7 +293,7 @@ const FSaaS = () => {
       </section>
       
       {/* Fleet Integration */}
-      <section className="py-16 bg-white" id="fleet-integration">
+      <section className="py-20 bg-gradient-to-br from-white to-gray-100" id="fleet-integration">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-12"
@@ -309,7 +306,7 @@ const FSaaS = () => {
               Fleet Integration
             </h2>
             <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-4"></div>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-chargetrux-darkblue">
               Seamless Connection With Your Existing Fleet Management Systems
             </p>
           </motion.div>
@@ -322,7 +319,7 @@ const FSaaS = () => {
               variants={fadeIn}
             >
               <h3 className="text-xl font-bold mb-4 text-chargetrux-darkblue">Real-Time Energy Monitoring</h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-700 mb-6">
                 Our cloud-based monitoring platform provides comprehensive visibility into your charging operations:
               </p>
               
@@ -365,7 +362,7 @@ const FSaaS = () => {
               variants={fadeIn}
             >
               <h3 className="text-xl font-bold mb-4 text-chargetrux-darkblue">Reporting for ESG Compliance</h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-700 mb-6">
                 Generate detailed reports to support your sustainability initiatives and regulatory compliance:
               </p>
               
@@ -411,7 +408,7 @@ const FSaaS = () => {
             variants={fadeIn}
           >
             <h3 className="text-2xl font-bold mb-6 text-center text-chargetrux-darkblue">API Support for Fleet Scheduling Tools</h3>
-            <p className="text-gray-600 mb-8 text-center max-w-3xl mx-auto">
+            <p className="text-gray-700 mb-8 text-center max-w-3xl mx-auto">
               Our robust API enables seamless integration with your existing fleet management systems:
             </p>
             
@@ -461,7 +458,7 @@ const FSaaS = () => {
                     </div>
                   </li>
                 </ul>
-                <p className="mt-6 text-gray-600">
+                <p className="mt-6 text-gray-700">
                   Our technical team provides full support for API integration, ensuring a smooth connection between your fleet management systems and our charging infrastructure.
                 </p>
               </div>
@@ -471,39 +468,7 @@ const FSaaS = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-chargetrux-darkblue to-chargetrux-darkblue/90 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            className="max-w-3xl mx-auto"
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeIn}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Experience FSaaS?</h2>
-            <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-4"></div>
-            <p className="text-xl mb-8 text-gray-200">
-              Discover how ChargeTrux's Fleet Support-as-a-Service can transform your EV fleet operations with reliable, flexible, and infrastructure-free charging solutions.
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <Button className="bg-chargetrux-green text-white hover:bg-chargetrux-green/90">
-                Schedule a Demo
-              </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white/10">
-                Download Technical Specifications
-              </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white/10">
-                Contact Sales
-              </Button>
-            </div>
-            
-            <p className="text-sm text-gray-300">
-              ChargeTrux utilizes 100% renewable energy and maintains a 99.9% service reliability rating across all service areas. Our R-Series units are manufactured in the USA with industry-leading safety certifications and redundant power systems.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <CtaSection />
       
       <Footer />
     </div>
