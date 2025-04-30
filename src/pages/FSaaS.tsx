@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -119,7 +120,7 @@ const FSaaS = () => {
               variants={fadeIn}
             >
               <img 
-                src="/lovable-uploads/dabe6021-6ce3-435a-8c1d-201c6237a9f4.png" 
+                src="/lovable-uploads/b6c5a03d-860c-4ab3-a314-bdcd4a080415.png" 
                 alt="ChargeTrux R-Series Mobile Charging Unit" 
                 className="w-full h-full object-cover"
               />
@@ -237,7 +238,7 @@ const FSaaS = () => {
                 variants={fadeIn}
               >
                 <img 
-                  src="/lovable-uploads/ca78adf9-dcac-447b-8a8e-ae0aad8f831e.png" 
+                  src="/lovable-uploads/5baece7d-1990-4b70-98ce-5f822d3f3c4d.png" 
                   alt="Multi-Vehicle Connection Diagram" 
                   className="w-full h-full object-cover"
                 />
