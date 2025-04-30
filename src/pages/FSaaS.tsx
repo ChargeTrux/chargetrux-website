@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -112,7 +113,7 @@ const FSaaS = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Fleet Illustration - Now on the left */}
+            {/* Fleet Illustration - On the left */}
             <motion.div 
               className="order-2 lg:order-1"
               initial="initial"
@@ -123,7 +124,7 @@ const FSaaS = () => {
               <div className="max-w-full mx-auto">
                 <AspectRatio ratio={16/9} className="bg-muted rounded-lg overflow-hidden">
                   <img 
-                    src="/lovable-uploads/891f92b4-6ad6-4462-b50e-2e496d37f059.png" 
+                    src="/lovable-uploads/6d704202-55fd-471d-bce1-900ab932e7c7.png" 
                     alt="ChargeTrux R-Series Fleet Illustration" 
                     className="w-full h-full object-contain rounded-xl shadow-lg"
                   />
@@ -131,7 +132,7 @@ const FSaaS = () => {
               </div>
             </motion.div>
             
-            {/* Technical Specifications - Now on the right */}
+            {/* Technical Specifications - On the right */}
             <motion.div
               initial="initial"
               whileInView="animate"
