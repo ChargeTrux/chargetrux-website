@@ -54,18 +54,17 @@ const Pricing = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="h-full border-2 border-chargetrux-green hover:border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
-                <div className="h-2 bg-chargetrux-green w-full"></div>
-                <CardHeader className="bg-green-50 border-b">
+              <Card className="h-full border-2 border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg bg-white">
+                <CardHeader className="bg-green-50 border-b border-chargetrux-green/20">
                   <CardTitle className="text-2xl text-chargetrux-darkblue">Monthly Contract Plans</CardTitle>
-                  <CardDescription className="text-base md:text-lg">
+                  <CardDescription className="text-base md:text-lg text-chargetrux-darkblue/80">
                     Reliable, scheduled charging for consistent fleet operations
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="pt-6 bg-gradient-to-br from-white to-green-50">
+                <CardContent className="pt-6 bg-green-50/30">
                   <ul className="space-y-4">
                     <li className="flex items-start gap-4">
-                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                      <span className="bg-chargetrux-green/10 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
@@ -74,7 +73,7 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                      <span className="bg-chargetrux-green/10 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
@@ -83,7 +82,7 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                      <span className="bg-chargetrux-green/10 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
@@ -92,7 +91,7 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                      <span className="bg-chargetrux-green/10 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
@@ -101,7 +100,7 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                      <span className="bg-chargetrux-green/10 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
@@ -110,7 +109,7 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                      <span className="bg-chargetrux-green/10 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
@@ -135,18 +134,17 @@ const Pricing = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="h-full border-2 border-chargetrux-green hover:border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
-                <div className="h-2 bg-chargetrux-green w-full"></div>
-                <CardHeader className="bg-green-50 border-b">
+              <Card className="h-full border-2 border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg bg-white">
+                <CardHeader className="bg-green-50 border-b border-chargetrux-green/20">
                   <CardTitle className="text-2xl text-chargetrux-darkblue">Seasonal Contract Plans</CardTitle>
-                  <CardDescription className="text-base md:text-lg">
+                  <CardDescription className="text-base md:text-lg text-chargetrux-darkblue/80">
                     Flexible charging options for operations with seasonal variations
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="pt-6 bg-gradient-to-br from-white to-green-50">
+                <CardContent className="pt-6 bg-green-50/30">
                   <ul className="space-y-4">
                     <li className="flex items-start gap-4">
-                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                      <span className="bg-chargetrux-green/10 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
@@ -155,7 +153,7 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                      <span className="bg-chargetrux-green/10 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
@@ -164,7 +162,7 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                      <span className="bg-chargetrux-green/10 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
@@ -173,7 +171,7 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                      <span className="bg-chargetrux-green/10 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
@@ -181,7 +179,7 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                      <span className="bg-chargetrux-green/10 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
@@ -190,7 +188,7 @@ const Pricing = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
+                      <span className="bg-chargetrux-green/10 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-chargetrux-green" />
                       </span>
                       <div>
@@ -538,155 +536,4 @@ const Pricing = () => {
                 <h4 className="font-semibold mb-2 text-chargetrux-darkblue">API Integration</h4>
                 <p className="text-sm text-gray-700">Connect charging data with your existing fleet management systems</p>
               </div>
-              <div className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
-                <div className="bg-green-50 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
-                  <ChartBar className="h-6 w-6 text-chargetrux-green" />
-                </div>
-                <h4 className="font-semibold mb-2 text-chargetrux-darkblue">Strategic Planning</h4>
-                <p className="text-sm text-gray-700">Expert guidance for electrification strategy development</p>
-              </div>
-            </div>
-          </motion.div>
-        </section>
-
-        <section className="mb-24">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-xl md:text-2xl font-bold text-center text-chargetrux-lighttext mb-6 block text-center mx-auto"
-          >
-            Transparent Value
-          </motion.h2>
-          <p className="text-center text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
-            What Sets ChargeTrux Pricing Apart
-          </p>
-          <div className="w-24 h-1.5 bg-chargetrux-blue mx-auto mb-12"></div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="group"
-            >
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center h-full hover:shadow-md hover:border-chargetrux-blue/30 transition-all duration-300 hover:translate-y-[-5px]">
-                <div className="bg-blue-50 w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center">
-                  <CircleDollarSign className="h-8 w-8 text-chargetrux-blue" />
-                </div>
-                <h4 className="text-xl font-bold mb-4 text-chargetrux-darkblue">No Hidden Costs</h4>
-                <p className="text-gray-700">
-                  Our pricing includes all operational costs with no surprise fees, surcharges, or add-ons.
-                </p>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="group"
-            >
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center h-full hover:shadow-md hover:border-chargetrux-blue/30 transition-all duration-300 hover:translate-y-[-5px]">
-                <div className="bg-blue-50 w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center">
-                  <Scale className="h-8 w-8 text-chargetrux-blue" />
-                </div>
-                <h4 className="text-xl font-bold mb-4 text-chargetrux-darkblue">Energy-Based Billing</h4>
-                <p className="text-gray-700">
-                  You only pay for the actual energy delivered to your vehicles, not for connection time or session fees.
-                </p>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="group"
-            >
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center h-full hover:shadow-md hover:border-chargetrux-blue/30 transition-all duration-300 hover:translate-y-[-5px]">
-                <div className="bg-blue-50 w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center">
-                  <TrendingUp className="h-8 w-8 text-chargetrux-blue" />
-                </div>
-                <h4 className="text-xl font-bold mb-4 text-chargetrux-darkblue">Scalable Solutions</h4>
-                <p className="text-gray-700">
-                  Start with what you need now and easily scale as your EV fleet grows without penalties or contract renegotiations.
-                </p>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="group"
-            >
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center h-full hover:shadow-md hover:border-chargetrux-blue/30 transition-all duration-300 hover:translate-y-[-5px]">
-                <div className="bg-blue-50 w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center">
-                  <ChartBar className="h-8 w-8 text-chargetrux-blue" />
-                </div>
-                <h4 className="text-xl font-bold mb-4 text-chargetrux-darkblue">Operational Insights</h4>
-                <p className="text-gray-700">
-                  All plans include robust data reporting to help optimize your fleet's energy consumption and operational efficiency.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-chargetrux-darkblue to-chargetrux-blue text-white p-12 rounded-xl text-center"
-          >
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-chargetrux-lighttext">Ready to Power Your Fleet's Future?</h2>
-            <div className="w-20 h-1 bg-white mx-auto mb-6"></div>
-            <p className="text-lg mb-10 max-w-2xl mx-auto text-chargetrux-lighttext">
-              Our pricing specialists will work with you to develop a customized charging solution that maximizes 
-              operational efficiency while minimizing costs for your specific fleet profile.
-            </p>
-            <Button 
-              className="bg-[#00cc66] hover:bg-[#00cc66]/90 text-white font-medium h-14 px-6 text-lg rounded-md"
-              onClick={() => window.location.href = '/contact'}
-            >
-              Request Custom Quote
-            </Button>
-          </motion.div>
-        </section>
-
-        <section>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="bg-gray-50 p-6 rounded-xl text-sm shadow-sm"
-          >
-            <p className="font-semibold mb-2 text-chargetrux-darkblue">Coverage Areas:</p>
-            <p className="mb-4 text-gray-700">
-              ChargeTrux currently services major metropolitan areas across the United States including 
-              Los Angeles, San Francisco, Chicago, Dallas, Houston, Miami, Atlanta, Washington DC, Boston, 
-              and New York. See our <a href="/coverage" className="text-chargetrux-blue hover:underline">service map</a> for complete details and expansion plans.
-            </p>
-            <p className="font-semibold mb-2 text-chargetrux-darkblue">Enterprise Solutions:</p>
-            <p className="text-gray-700">
-              Custom enterprise packages are available for fleets of 10+ vehicles. Multi-year agreements 
-              include price protection guarantees and priority service allocation.
-            </p>
-          </motion.div>
-        </section>
-      </div>
-      <Footer />
-    </div>
-  );
-};
-
-export default Pricing;
+              <div className="bg
