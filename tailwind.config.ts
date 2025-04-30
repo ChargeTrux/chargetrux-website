@@ -51,6 +51,8 @@ export default {
 					tableheader: '#00cc66', // Green header for tables
 					tableborder: '#b3ffcc', // Light green border for tables
 					tabletext: '#333333', // Dark text for table content
+					cardbackground: '#0A1930', // Dark blue background for cards
+					cardtext: '#FFFFFF', // White text for dark cards
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',

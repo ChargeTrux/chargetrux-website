@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -139,12 +138,12 @@ const FSaaS = () => {
               
               <h3 className="text-xl font-semibold text-chargetrux-darkblue mb-4">Key Technical Specifications:</h3>
               
-              <Card className="mb-6">
+              <Card className="mb-6 bg-chargetrux-darkblue text-white">
                 <CardHeader>
                   <CardTitle className="text-chargetrux-blue">Current R-Series 450</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
-                  <ul className="list-disc pl-6 space-y-2 text-chargetrux-darktext">
+                  <ul className="list-disc pl-6 space-y-2 text-white">
                     <li>450 kWh total capacity per unit</li>
                     <li>Up to 440kW output capability</li>
                     <li>Simultaneous charging for up to 4 vehicles</li>
@@ -157,12 +156,12 @@ const FSaaS = () => {
                 </CardContent>
               </Card>
               
-              <Card>
+              <Card className="bg-chargetrux-darkblue text-white">
                 <CardHeader>
                   <CardTitle className="text-chargetrux-green">Future Developments (Coming Q3 2025)</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
-                  <ul className="list-disc pl-6 space-y-2 text-chargetrux-darktext">
+                  <ul className="list-disc pl-6 space-y-2 text-white">
                     <li>R-Series 600: 600 kWh capacity</li>
                     <li>R-Series 750: 750 kWh capacity with enhanced battery density</li>
                     <li>Solar-augmented charging option</li>
@@ -479,4 +478,3 @@ const FSaaS = () => {
 };
 
 export default FSaaS;
-
