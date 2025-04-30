@@ -341,8 +341,8 @@ const FSaaS = () => {
               
               <div className="aspect-video rounded-xl overflow-hidden bg-gray-100">
                 <img 
-                  src="/lovable-uploads/8b7c269d-9b34-4e35-99ea-4e3206e0a0f0.png" 
-                  alt="Fleet Management Dashboard" 
+                  src="/lovable-uploads/54724381-b62f-4310-86cd-4db96d06f82e.png" 
+                  alt="Fleet Integration Dashboard" 
                   className="w-full h-full object-cover"
                 />
               </div>
