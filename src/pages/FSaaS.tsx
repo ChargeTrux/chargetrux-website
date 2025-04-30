@@ -10,6 +10,7 @@ import { Battery, Settings, ShieldCheck, FileChartLine, Calendar, Calendar as Ca
 import ServiceModelCard from "@/components/ServiceModelCard";
 import ChargeTruxAPI from "@/components/ChargeTruxAPI";
 import CtaSection from "@/components/CtaSection";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const FSaaS = () => {
   useEffect(() => {
@@ -159,7 +160,7 @@ const FSaaS = () => {
             </motion.div>
           </div>
           
-          {/* R-Series Fleet Illustration - Added before "How Our Units Connect" section */}
+          {/* R-Series Fleet Illustration - Made smaller with width constraint */}
           <motion.div 
             className="mt-12 mb-12"
             initial="initial"
@@ -167,12 +168,14 @@ const FSaaS = () => {
             viewport={{ once: true }}
             variants={fadeIn}
           >
-            <div className="max-w-3xl mx-auto">
-              <img 
-                src="/lovable-uploads/891f92b4-6ad6-4462-b50e-2e496d37f059.png" 
-                alt="ChargeTrux R-Series Fleet Illustration" 
-                className="w-full rounded-xl shadow-lg"
-              />
+            <div className="max-w-lg mx-auto">
+              <AspectRatio ratio={4/3} className="bg-muted rounded-lg overflow-hidden">
+                <img 
+                  src="/lovable-uploads/891f92b4-6ad6-4462-b50e-2e496d37f059.png" 
+                  alt="ChargeTrux R-Series Fleet Illustration" 
+                  className="w-full h-full object-contain rounded-xl shadow-lg"
+                />
+              </AspectRatio>
             </div>
           </motion.div>
           
