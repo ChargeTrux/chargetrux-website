@@ -17,7 +17,7 @@ const Pricing = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-2xl md:text-3xl font-bold text-chargetrux-lighttext mb-6 bg-chargetrux-green bg-opacity-20 inline-block px-6 py-2 rounded-lg">
+          <h1 className="text-2xl md:text-3xl font-bold text-chargetrux-lighttext mb-6 bg-chargetrux-green bg-opacity-20 inline-block px-6 py-2 rounded-lg mx-auto">
             Transparent EV Charging Pricing For Fleets
           </h1>
           <div className="w-24 h-1.5 bg-chargetrux-green mx-auto mb-8"></div>
@@ -37,7 +37,7 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-4xl font-bold text-center text-chargetrux-lighttext mb-6 bg-chargetrux-green bg-opacity-20 inline-block px-6 py-2 rounded-lg mx-auto block"
+            className="text-xl md:text-2xl font-bold text-center text-chargetrux-lighttext mb-6 bg-chargetrux-green bg-opacity-20 inline-block px-6 py-2 rounded-lg mx-auto block"
           >
             Contract Charging Plans
           </motion.h2>
@@ -263,7 +263,7 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-4xl font-bold text-center text-chargetrux-lighttext mb-6 bg-chargetrux-green bg-opacity-20 inline-block px-6 py-2 rounded-lg mx-auto block"
+            className="text-xl md:text-2xl font-bold text-center text-chargetrux-lighttext mb-6 bg-chargetrux-green bg-opacity-20 inline-block px-6 py-2 rounded-lg mx-auto block"
           >
             On-Demand Sessions
           </motion.h2>
@@ -409,7 +409,7 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-4xl font-bold text-center text-chargetrux-lighttext mb-6 bg-chargetrux-blue bg-opacity-20 inline-block px-6 py-2 rounded-lg mx-auto block"
+            className="text-xl md:text-2xl font-bold text-center text-chargetrux-lighttext mb-6 bg-chargetrux-blue bg-opacity-20 inline-block px-6 py-2 rounded-lg mx-auto block"
           >
             Custom Enterprise Packages
           </motion.h2>
@@ -555,7 +555,7 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-4xl font-bold text-center text-chargetrux-lighttext mb-6 bg-chargetrux-blue bg-opacity-20 inline-block px-6 py-2 rounded-lg mx-auto block"
+            className="text-xl md:text-2xl font-bold text-center text-chargetrux-lighttext mb-6 bg-chargetrux-blue bg-opacity-20 inline-block px-6 py-2 rounded-lg mx-auto block"
           >
             Transparent Value
           </motion.h2>
