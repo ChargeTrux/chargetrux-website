@@ -26,10 +26,15 @@ const SustainabilityCta = () => {
             Get mobile Level 3 charging where and when you need it, without the infrastructure headaches.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-            <Button size="lg" className="bg-chargetrux-green hover:bg-chargetrux-green/80 text-white px-8 py-6 text-lg flex items-center gap-2">
+            <Button 
+              className="bg-[#00cc66] hover:bg-[#00cc66]/90 text-white font-medium h-14 px-6 text-lg rounded-md"
+            >
               Request Custom Quote
             </Button>
-            <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10 px-8 py-6 text-lg">
+            <Button 
+              variant="outline" 
+              className="bg-[#002c77] border-2 border-white text-white hover:bg-[#002c77]/90 h-14 px-6 text-lg rounded-md"
+            >
               Book Intro Call
             </Button>
           </div>

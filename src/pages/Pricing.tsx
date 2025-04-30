@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Check, ChartBar, CircleDollarSign, Scale, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -584,8 +583,7 @@ const Pricing = () => {
               operational efficiency while minimizing costs for your specific fleet profile.
             </p>
             <Button 
-              size="lg" 
-              className="bg-chargetrux-green hover:bg-chargetrux-green/80 text-white px-8 py-6 h-auto text-lg font-semibold"
+              className="bg-[#00cc66] hover:bg-[#00cc66]/90 text-white font-medium h-14 px-6 text-lg rounded-md"
               onClick={() => window.location.href = '/contact'}
             >
               Request Custom Quote

@@ -21,10 +21,15 @@ const CtaSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-chargetrux-green hover:bg-chargetrux-green/80 text-white px-8">
+            <Button 
+              className="bg-[#00cc66] hover:bg-[#00cc66]/90 text-white font-medium h-14 px-6 text-lg rounded-md"
+            >
               Request Custom Quote
             </Button>
-            <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
+            <Button 
+              variant="outline" 
+              className="bg-[#002c77] border-2 border-white text-white hover:bg-[#002c77]/90 h-14 px-6 text-lg rounded-md"
+            >
               Book Intro Call
             </Button>
           </div>
