@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -158,7 +159,24 @@ const FSaaS = () => {
             </motion.div>
           </div>
           
-          <div className="mt-16">
+          {/* R-Series Fleet Illustration - Added before "How Our Units Connect" section */}
+          <motion.div 
+            className="mt-12 mb-12"
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={fadeIn}
+          >
+            <div className="max-w-3xl mx-auto">
+              <img 
+                src="/lovable-uploads/56460865-ffe7-47b2-9ff1-26854f33ce8f.png" 
+                alt="ChargeTrux R-Series Fleet Illustration" 
+                className="w-full rounded-xl shadow-lg"
+              />
+            </div>
+          </motion.div>
+          
+          <div className="mt-8">
             <motion.h3 
               className="text-2xl font-bold mb-6 text-center text-chargetrux-darkblue"
               initial="initial"
@@ -216,20 +234,6 @@ const FSaaS = () => {
               </motion.div>
             </div>
           </div>
-
-          <motion.div 
-            className="mt-16"
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeIn}
-          >
-            <img 
-              src="/lovable-uploads/1793fadc-ea8d-4e72-9fff-be7ee2a07459.png" 
-              alt="ChargeTrux R-Series Fleet" 
-              className="w-full max-w-5xl mx-auto rounded-xl shadow-lg"
-            />
-          </motion.div>
         </div>
       </section>
       
