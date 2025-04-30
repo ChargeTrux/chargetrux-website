@@ -25,15 +25,15 @@ const Navbar = () => {
 
   const navLinks = [
     { title: "Home", path: "/" },
-    {
-      title: "How It Works",
-      submenu: ["FS-as-a-Service"],
+    { 
+      title: "How It Works", 
       path: "/fsaas",
+      submenu: ["FS-as-a-Service"] 
     },
     {
       title: "Industries We Serve",
-      submenu: ["Rental Fleet", "Last-Mile Delivery", "Ports & Industrial", "Valet & Events"],
       path: "/industries",
+      submenu: ["Rental Fleet", "Last-Mile Delivery", "Ports & Industrial", "Valet & Events"],
     },
     { title: "Technology", path: "/technology" },
     { title: "Pricing", path: "/pricing" },
