@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -362,7 +361,7 @@ const FSaaS = () => {
               
               <div className="aspect-video rounded-xl overflow-hidden bg-gray-100 mb-8">
                 <img 
-                  src="/lovable-uploads/8956cfb4-260b-4018-b40d-bd32fc141821.png" 
+                  src="/lovable-uploads/fcaad5a5-861d-4200-bfe5-ff7d1813642d.png" 
                   alt="ESG Compliance Dashboard" 
                   className="w-full h-full object-cover"
                 />
