@@ -183,9 +183,9 @@ const FSaaS = () => {
               How Our Units Connect to Multiple Vehicles
             </motion.h3>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 gap-12 items-center">
               <motion.div 
-                className="order-2 lg:order-1 text-chargetrux-darktext"
+                className="text-chargetrux-darktext mx-auto max-w-3xl text-center"
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
@@ -193,7 +193,7 @@ const FSaaS = () => {
               >
                 <h4 className="text-xl font-semibold text-chargetrux-darkblue mb-4">Our proprietary connection system enables:</h4>
                 
-                <ul className="space-y-4">
+                <ul className="space-y-4 inline-block text-left">
                   <li className="flex gap-3">
                     <div className="flex-shrink-0 h-8 w-8 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
                       <Settings className="h-4 w-4 text-chargetrux-blue" />
@@ -227,20 +227,6 @@ const FSaaS = () => {
                     </div>
                   </li>
                 </ul>
-              </motion.div>
-              
-              <motion.div 
-                className="interactive-diagram order-1 lg:order-2 aspect-video rounded-xl overflow-hidden bg-gray-100 flex items-center justify-center"
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                variants={fadeIn}
-              >
-                <img 
-                  src="/lovable-uploads/af89f66d-4b12-429f-8fad-5fd60f878cb2.png" 
-                  alt="Multi-Vehicle Connection Diagram" 
-                  className="w-full h-full object-cover"
-                />
               </motion.div>
             </div>
           </div>
