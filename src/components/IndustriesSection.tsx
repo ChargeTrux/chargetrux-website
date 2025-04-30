@@ -71,14 +71,14 @@ const IndustriesSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-chargetrux-darkblue/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-white">{industry.title}</h3>
-                <p className="text-gray-300 mb-4">{industry.description}</p>
+                <h3 className="text-sm md:text-base font-bold mb-2 text-white truncate">{industry.title}</h3>
+                <p className="text-gray-300 text-xs md:text-sm mb-4 line-clamp-3">{industry.description}</p>
                 <a 
                   href="#" 
-                  className="inline-flex items-center text-chargetrux-green font-medium transition-colors hover:text-chargetrux-green/80"
+                  className="inline-flex items-center text-chargetrux-green text-xs md:text-sm font-medium transition-colors hover:text-chargetrux-green/80"
                 >
                   Learn More 
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 h-3 w-3 md:h-4 md:w-4" />
                 </a>
               </div>
             </motion.div>
