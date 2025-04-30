@@ -31,8 +31,9 @@ const CtaSection = () => {
             <Button 
               variant="outline" 
               className="bg-[#002c77] border-2 border-white text-white hover:bg-[#002c77]/90 h-14 px-6 text-lg rounded-md"
+              asChild
             >
-              Book Intro Call
+              <Link to="/contact">Book Intro Call</Link>
             </Button>
           </div>
         </motion.div>
