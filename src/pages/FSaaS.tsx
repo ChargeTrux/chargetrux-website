@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -119,7 +120,7 @@ const FSaaS = () => {
               variants={fadeIn}
             >
               <img 
-                src="/lovable-uploads/b6c5a03d-860c-4ab3-a314-bdcd4a080415.png" 
+                src="/lovable-uploads/51d0e0cb-0f86-488b-a6e6-a199c8ded79a.png" 
                 alt="ChargeTrux R-Series Mobile Charging Unit" 
                 className="w-full h-full object-cover"
               />
@@ -230,6 +231,20 @@ const FSaaS = () => {
               </motion.div>
             </div>
           </div>
+
+          <motion.div 
+            className="mt-16"
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={fadeIn}
+          >
+            <img 
+              src="/lovable-uploads/1793fadc-ea8d-4e72-9fff-be7ee2a07459.png" 
+              alt="ChargeTrux R-Series Fleet" 
+              className="w-full max-w-5xl mx-auto rounded-xl shadow-lg"
+            />
+          </motion.div>
         </div>
       </section>
       
