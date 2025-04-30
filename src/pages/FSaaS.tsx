@@ -339,10 +339,9 @@ const FSaaS = () => {
                 </li>
               </ul>
               
-              {/* Removed the image that was here */}
-              <div className="bg-gray-50 border border-gray-100 rounded-xl p-6 text-center">
-                <h4 className="text-lg font-semibold text-chargetrux-darkblue mb-2">Fleet Monitoring Dashboard</h4>
-                <p className="text-chargetrux-darktext">Real-time monitoring interface providing comprehensive visibility into your fleet's charging operations and energy consumption metrics.</p>
+              {/* Removed the monitoring dashboard content */}
+              <div className="bg-gray-50 border border-gray-100 rounded-xl p-6">
+                {/* Empty placeholder to maintain layout */}
               </div>
             </motion.div>
             
