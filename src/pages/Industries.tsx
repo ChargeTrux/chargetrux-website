@@ -1,5 +1,6 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -12,6 +13,21 @@ import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMe
 
 const Industries = () => {
   const [activeIndustry, setActiveIndustry] = useState("rental");
+  const location = useLocation();
+
+  useEffect(() => {
+    // Get the industry from URL query parameters
+    const searchParams = new URLSearchParams(location.search);
+    const industryParam = searchParams.get('industry');
+    
+    // Set the active industry if a valid one is provided in the URL
+    if (industryParam && industries.some(ind => ind.id === industryParam)) {
+      setActiveIndustry(industryParam);
+      
+      // Scroll to the top to show the selected industry
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
 
   const industries = [
     {
