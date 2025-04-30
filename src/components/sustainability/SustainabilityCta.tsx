@@ -27,17 +27,9 @@ const SustainabilityCta = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <Button size="lg" className="bg-chargetrux-green hover:bg-chargetrux-green/80 text-white px-8 py-6 text-lg flex items-center gap-2">
-              Schedule a Consultation
-            </Button>
-            <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10 px-8 py-6 text-lg">
-              Download Sustainability Guide
-            </Button>
-          </div>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-chargetrux-green hover:bg-chargetrux-green/80 text-white px-8">
               Request Custom Quote
             </Button>
-            <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
+            <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10 px-8 py-6 text-lg">
               Book Intro Call
             </Button>
           </div>
