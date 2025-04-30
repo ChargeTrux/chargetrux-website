@@ -17,11 +17,11 @@ const Pricing = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-2xl md:text-3xl font-bold text-white mb-6">
+          <h1 className="text-2xl md:text-3xl font-bold text-chargetrux-lighttext mb-6 bg-chargetrux-blue bg-opacity-20 inline-block px-6 py-2 rounded-lg">
             Transparent EV Charging Pricing For Fleets
           </h1>
           <div className="w-24 h-1.5 bg-chargetrux-green mx-auto mb-8"></div>
-          <p className="text-base md:text-lg text-white max-w-3xl mx-auto font-medium">
+          <p className="text-base md:text-lg text-chargetrux-lighttext max-w-3xl mx-auto font-medium">
             Flexible Solutions That Scale With Your EV Fleet Needs
           </p>
           <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto mt-6">
@@ -37,7 +37,7 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-4xl font-bold text-center text-white mb-6"
+            className="text-2xl md:text-4xl font-bold text-center text-chargetrux-lighttext mb-6 bg-chargetrux-blue bg-opacity-20 inline-block px-6 py-2 rounded-lg mx-auto block"
           >
             Contract Charging Plans
           </motion.h2>
@@ -228,7 +228,7 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-4xl font-bold text-center text-white mb-6"
+            className="text-2xl md:text-4xl font-bold text-center text-chargetrux-lighttext mb-6 bg-chargetrux-blue bg-opacity-20 inline-block px-6 py-2 rounded-lg mx-auto block"
           >
             On-Demand Sessions
           </motion.h2>
@@ -356,7 +356,7 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-4xl font-bold text-center text-white mb-6"
+            className="text-2xl md:text-4xl font-bold text-center text-chargetrux-lighttext mb-6 bg-chargetrux-blue bg-opacity-20 inline-block px-6 py-2 rounded-lg mx-auto block"
           >
             Custom Enterprise Packages
           </motion.h2>
@@ -484,7 +484,7 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-4xl font-bold text-center text-white mb-6"
+            className="text-2xl md:text-4xl font-bold text-center text-chargetrux-lighttext mb-6 bg-chargetrux-blue bg-opacity-20 inline-block px-6 py-2 rounded-lg mx-auto block"
           >
             Transparent Value
           </motion.h2>
@@ -576,9 +576,9 @@ const Pricing = () => {
             viewport={{ once: true }}
             className="bg-gradient-to-br from-chargetrux-darkblue to-chargetrux-blue text-white p-12 rounded-xl text-center"
           >
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">Ready to Power Your Fleet's Future?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-chargetrux-lighttext">Ready to Power Your Fleet's Future?</h2>
             <div className="w-20 h-1 bg-white mx-auto mb-6"></div>
-            <p className="text-lg mb-10 max-w-2xl mx-auto">
+            <p className="text-lg mb-10 max-w-2xl mx-auto text-chargetrux-lighttext">
               Our pricing specialists will work with you to develop a customized charging solution that maximizes 
               operational efficiency while minimizing costs for your specific fleet profile.
             </p>
