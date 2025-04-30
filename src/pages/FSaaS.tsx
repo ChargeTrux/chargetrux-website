@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -111,19 +112,20 @@ const FSaaS = () => {
             </p>
           </motion.div>
           
-          <div className="flex justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Technical Specifications - On the left */}
             <motion.div
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
               variants={fadeIn}
-              className="text-chargetrux-darktext max-w-3xl"
+              className="text-chargetrux-darktext"
             >
-              <p className="mb-6 text-center">
+              <p className="mb-6">
                 The ChargeTrux R-Series represents the pinnacle of mobile EV charging technology, delivering unprecedented power and flexibility for commercial fleet operations.
               </p>
               
-              <h3 className="text-xl font-semibold text-chargetrux-darkblue mb-4 text-center">Key Technical Specifications:</h3>
+              <h3 className="text-xl font-semibold text-chargetrux-darkblue mb-4">Key Technical Specifications:</h3>
               
               <Card className="mb-6 bg-chargetrux-darkblue text-white">
                 <CardHeader>
@@ -156,6 +158,23 @@ const FSaaS = () => {
                   </ul>
                 </CardContent>
               </Card>
+            </motion.div>
+            
+            {/* Fleet Illustration - On the right */}
+            <motion.div 
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              variants={fadeIn}
+              className="flex items-center justify-center"
+            >
+              <div className="w-full max-w-xl mx-auto">
+                <img 
+                  src="/lovable-uploads/36018224-1970-4370-a620-78bb93d9159d.png" 
+                  alt="ChargeTrux R-Series Fleet Illustration" 
+                  className="w-full h-auto object-contain rounded-lg shadow-lg"
+                />
+              </div>
             </motion.div>
           </div>
           
