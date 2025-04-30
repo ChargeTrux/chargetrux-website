@@ -38,7 +38,8 @@ const Navbar = () => {
         {title: "Rental Fleet", path: "/industries?industry=rental"},
         {title: "Last-Mile Delivery", path: "/industries?industry=delivery"},
         {title: "Ports & Industrial", path: "/industries?industry=ports"},
-        {title: "Valet & Events", path: "/industries?industry=hospitality"}
+        {title: "Valet & Events", path: "/industries?industry=hospitality"},
+        {title: "Charging Infrastructure Developers", path: "/industries?industry=developers"}
       ],
     },
     { title: "Technology", path: "/technology" },

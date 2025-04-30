@@ -25,6 +25,11 @@ const IndustriesSection = () => {
       description: "Provide premium charging services at hotels, venues, and special events.",
       image: "/lovable-uploads/184a1e78-89e7-4a15-b547-3968236836ec.png",
     },
+    {
+      title: "Charging Infrastructure Developers",
+      description: "Bridge the gap with temporary charging solutions during fixed asset construction.",
+      image: "/lovable-uploads/6f9386c8-ac09-4dc9-88ba-31ecf9859f75.png",
+    },
   ];
 
   return (
