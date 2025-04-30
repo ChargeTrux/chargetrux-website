@@ -5,8 +5,10 @@ import { Button } from "@/components/ui/button";
 
 const SustainabilityCta = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-chargetrux-darkblue to-chargetrux-blue text-white">
-      <div className="container mx-auto px-4 text-center">
+    <section className="py-20 bg-gradient-to-br from-chargetrux-darkblue via-[#0954c5] to-chargetrux-blue text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-[url('/lovable-uploads/931c0528-b8cb-40c5-b71e-22a3e25ebecf.png')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
+      <div className="container mx-auto px-4 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

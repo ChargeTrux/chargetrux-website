@@ -6,8 +6,9 @@ import { Button } from "@/components/ui/button";
 
 const SustainabilityReporting = () => {
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-gradient-to-br from-[#f8fafc] to-[#f0f9ff] relative">
+      <div className="absolute inset-0 bg-[url('/lovable-uploads/2a733f58-c400-4a2e-883d-12ed7d7219ca.png')] bg-cover bg-center opacity-5"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

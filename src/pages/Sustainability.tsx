@@ -11,7 +11,7 @@ import SustainabilityCta from "@/components/sustainability/SustainabilityCta";
 
 const Sustainability = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-chargetrux-darkblue to-black">
+    <div className="min-h-screen bg-white">
       <Navbar />
       
       {/* Hero Section */}
