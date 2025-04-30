@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Check, ChartBar, CircleDollarSign, Scale, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -55,9 +54,9 @@ const Pricing = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="h-full border-2 border-gray-100 hover:border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
+              <Card className="h-full border-2 border-chargetrux-green hover:border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
                 <div className="h-2 bg-chargetrux-green w-full"></div>
-                <CardHeader className="bg-chargetrux-green bg-opacity-10 border-b">
+                <CardHeader className="bg-green-50 border-b">
                   <CardTitle className="text-2xl text-chargetrux-darkblue">Monthly Contract Plans</CardTitle>
                   <CardDescription className="text-base md:text-lg">
                     Reliable, scheduled charging for consistent fleet operations
@@ -136,9 +135,9 @@ const Pricing = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="h-full border-2 border-gray-100 hover:border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
+              <Card className="h-full border-2 border-chargetrux-green hover:border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
                 <div className="h-2 bg-chargetrux-green w-full"></div>
-                <CardHeader className="bg-chargetrux-green bg-opacity-10 border-b">
+                <CardHeader className="bg-green-50 border-b">
                   <CardTitle className="text-2xl text-chargetrux-darkblue">Seasonal Contract Plans</CardTitle>
                   <CardDescription className="text-base md:text-lg">
                     Flexible charging options for operations with seasonal variations
@@ -281,9 +280,9 @@ const Pricing = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="h-full border-2 border-gray-100 hover:border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
+              <Card className="h-full border-2 border-chargetrux-green hover:border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
                 <div className="h-2 bg-chargetrux-green w-full"></div>
-                <CardHeader className="bg-chargetrux-green bg-opacity-10 border-b">
+                <CardHeader className="bg-green-50 border-b">
                   <CardTitle className="text-2xl text-chargetrux-darkblue">Flexible Pay-Per-Charge Model</CardTitle>
                   <CardDescription className="text-base md:text-lg">
                     Only pay for the energy you need, when you need it
