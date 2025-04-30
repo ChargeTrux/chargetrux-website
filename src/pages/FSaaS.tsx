@@ -111,19 +111,39 @@ const FSaaS = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 gap-12 items-center">            
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Fleet Illustration - Now on the left */}
+            <motion.div 
+              className="order-2 lg:order-1"
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              variants={fadeIn}
+            >
+              <div className="max-w-full mx-auto">
+                <AspectRatio ratio={16/9} className="bg-muted rounded-lg overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/891f92b4-6ad6-4462-b50e-2e496d37f059.png" 
+                    alt="ChargeTrux R-Series Fleet Illustration" 
+                    className="w-full h-full object-contain rounded-xl shadow-lg"
+                  />
+                </AspectRatio>
+              </div>
+            </motion.div>
+            
+            {/* Technical Specifications - Now on the right */}
             <motion.div
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
               variants={fadeIn}
-              className="text-chargetrux-darktext max-w-3xl mx-auto"
+              className="text-chargetrux-darktext order-1 lg:order-2"
             >
-              <p className="mb-6 text-center">
+              <p className="mb-6">
                 The ChargeTrux R-Series represents the pinnacle of mobile EV charging technology, delivering unprecedented power and flexibility for commercial fleet operations.
               </p>
               
-              <h3 className="text-xl font-semibold text-chargetrux-darkblue mb-4 text-center">Key Technical Specifications:</h3>
+              <h3 className="text-xl font-semibold text-chargetrux-darkblue mb-4">Key Technical Specifications:</h3>
               
               <Card className="mb-6 bg-chargetrux-darkblue text-white">
                 <CardHeader>
@@ -158,25 +178,6 @@ const FSaaS = () => {
               </Card>
             </motion.div>
           </div>
-          
-          {/* R-Series Fleet Illustration - Adjusted size */}
-          <motion.div 
-            className="mt-12 mb-12"
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeIn}
-          >
-            <div className="max-w-5xl mx-auto">
-              <AspectRatio ratio={16/8} className="bg-muted rounded-lg overflow-hidden">
-                <img 
-                  src="/lovable-uploads/891f92b4-6ad6-4462-b50e-2e496d37f059.png" 
-                  alt="ChargeTrux R-Series Fleet Illustration" 
-                  className="w-full h-full object-contain rounded-xl shadow-lg"
-                />
-              </AspectRatio>
-            </div>
-          </motion.div>
           
           <div className="mt-8">
             <motion.h3 
