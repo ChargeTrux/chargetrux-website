@@ -29,7 +29,9 @@ const Navbar = () => {
     { 
       title: "How It Works", 
       path: "/fsaas",
-      submenu: ["FS-as-a-Service"] 
+      submenu: [
+        {title: "FS-as-a-Service", path: "/fsaas"}
+      ] 
     },
     {
       title: "Industries We Serve",
@@ -85,10 +87,11 @@ const Navbar = () => {
                     {link.submenu.map((subItem, subIndex) => (
                       <Link
                         key={subIndex}
-                        to={typeof subItem === 'string' ? "#" : subItem.path}
+                        to={subItem.path}
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        onClick={() => setIsOpen(false)}
                       >
-                        {typeof subItem === 'string' ? subItem : subItem.title}
+                        {subItem.title}
                       </Link>
                     ))}
                   </div>
@@ -135,11 +138,11 @@ const Navbar = () => {
                     {link.submenu.map((subItem, subIndex) => (
                       <Link
                         key={subIndex}
-                        to={typeof subItem === 'string' ? "#" : subItem.path}
+                        to={subItem.path}
                         className="block px-3 py-2 rounded-md text-base font-medium text-gray-500"
                         onClick={() => setIsOpen(false)}
                       >
-                        {typeof subItem === 'string' ? subItem : subItem.title}
+                        {subItem.title}
                       </Link>
                     ))}
                   </div>
