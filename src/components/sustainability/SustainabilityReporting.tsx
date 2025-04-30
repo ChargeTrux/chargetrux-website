@@ -101,7 +101,7 @@ const SustainabilityReporting = () => {
                     <span className="text-gray-700"><strong>Customizable Data Integration:</strong> Export options compatible with major sustainability reporting platforms</span>
                   </li>
                 </ul>
-                <Button className="bg-chargetrux-green hover:bg-chargetrux-green/90">View Sample Report</Button>
+                <Button variant="ctaGreen" size="xl">View Sample Report</Button>
               </div>
             </div>
           </div>
