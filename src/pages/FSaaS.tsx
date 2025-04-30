@@ -120,7 +120,7 @@ const FSaaS = () => {
               variants={fadeIn}
             >
               <img 
-                src="/lovable-uploads/abbbbbba-6902-426b-9b9b-596121cdeefc.png" 
+                src="/lovable-uploads/dabe6021-6ce3-435a-8c1d-201c6237a9f4.png" 
                 alt="ChargeTrux R-Series Mobile Charging Unit" 
                 className="w-full h-full object-cover"
               />
@@ -131,8 +131,9 @@ const FSaaS = () => {
               whileInView="animate"
               viewport={{ once: true }}
               variants={fadeIn}
+              className="text-chargetrux-darktext"
             >
-              <p className="text-gray-700 mb-6">
+              <p className="mb-6">
                 The ChargeTrux R-Series represents the pinnacle of mobile EV charging technology, delivering unprecedented power and flexibility for commercial fleet operations.
               </p>
               
@@ -185,7 +186,7 @@ const FSaaS = () => {
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div 
-                className="order-2 lg:order-1"
+                className="order-2 lg:order-1 text-chargetrux-darktext"
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
@@ -237,7 +238,7 @@ const FSaaS = () => {
                 variants={fadeIn}
               >
                 <img 
-                  src="/lovable-uploads/2a17e2a2-043b-48fd-b836-dde88b37533a.png" 
+                  src="/lovable-uploads/ca78adf9-dcac-447b-8a8e-ae0aad8f831e.png" 
                   alt="Multi-Vehicle Connection Diagram" 
                   className="w-full h-full object-cover"
                 />
@@ -317,9 +318,10 @@ const FSaaS = () => {
               whileInView="animate"
               viewport={{ once: true }}
               variants={fadeIn}
+              className="text-chargetrux-darktext"
             >
               <h3 className="text-xl font-bold mb-4 text-chargetrux-darkblue">Real-Time Energy Monitoring</h3>
-              <p className="text-chargetrux-darktext mb-6">
+              <p className="mb-6">
                 Our cloud-based monitoring platform provides comprehensive visibility into your charging operations:
               </p>
               
@@ -360,9 +362,10 @@ const FSaaS = () => {
               whileInView="animate"
               viewport={{ once: true }}
               variants={fadeIn}
+              className="text-chargetrux-darktext"
             >
               <h3 className="text-xl font-bold mb-4 text-chargetrux-darkblue">Reporting for ESG Compliance</h3>
-              <p className="text-chargetrux-darktext mb-6">
+              <p className="mb-6">
                 Generate detailed reports to support your sustainability initiatives and regulatory compliance:
               </p>
               
@@ -415,7 +418,7 @@ const FSaaS = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <ChargeTruxAPI />
               
-              <div>
+              <div className="text-chargetrux-darktext">
                 <ul className="space-y-4">
                   <li className="flex gap-3">
                     <div className="flex-shrink-0 h-8 w-8 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
@@ -476,3 +479,4 @@ const FSaaS = () => {
 };
 
 export default FSaaS;
+
