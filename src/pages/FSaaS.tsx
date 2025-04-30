@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -359,14 +358,6 @@ const FSaaS = () => {
               <p className="mb-6">
                 Generate detailed reports to support your sustainability initiatives and regulatory compliance:
               </p>
-              
-              <div className="aspect-video rounded-xl overflow-hidden bg-gray-100 mb-8">
-                <img 
-                  src="/lovable-uploads/8956cfb4-260b-4018-b40d-bd32fc141821.png" 
-                  alt="ESG Compliance Dashboard" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
               
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
