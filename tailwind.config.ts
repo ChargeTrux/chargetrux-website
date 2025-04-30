@@ -45,6 +45,7 @@ export default {
 					darkblue: '#0A1930',
 					gray: '#8E9196',
 					lightgray: '#F5F7FA',
+					lighttext: '#E6E8EA', // Added light text color for dark backgrounds
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
