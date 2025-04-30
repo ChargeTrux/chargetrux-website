@@ -167,7 +167,7 @@ const FSaaS = () => {
             viewport={{ once: true }}
             variants={fadeIn}
           >
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-3xl mx-auto">
               <AspectRatio ratio={16/9} className="bg-muted rounded-lg overflow-hidden">
                 <img 
                   src="/lovable-uploads/891f92b4-6ad6-4462-b50e-2e496d37f059.png" 
