@@ -20,8 +20,8 @@ const ClientsSection = () => {
       logo: "https://www.logo.wine/a/logo/Avis_Car_Rental/Avis_Car_Rental-Logo.wine.svg" 
     },
     { 
-      name: "ChargeTrux", 
-      logo: "/lovable-uploads/654e67ac-d324-4425-84e4-892545e2953c.png" 
+      name: "Port of Long Beach", 
+      logo: "/lovable-uploads/2a733f58-c400-4a2e-883d-12ed7d7219ca.png" 
     },
     { 
       name: "LAX VALET", 
