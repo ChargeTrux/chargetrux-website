@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import CtaSection from "@/components/CtaSection";
 import TechnologyFeature from "@/components/TechnologyFeature";
 import ChargeTruxAPI from "@/components/ChargeTruxAPI";
+import { Link } from "react-router-dom";
 
 const Technology = () => {
   return (

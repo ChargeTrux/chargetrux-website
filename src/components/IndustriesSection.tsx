@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const IndustriesSection = () => {
   const industries = [
@@ -86,8 +87,8 @@ const IndustriesSection = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Button className="bg-chargetrux-blue text-white hover:bg-chargetrux-blue/80">
-            See All Industries
+          <Button className="bg-chargetrux-blue text-white hover:bg-chargetrux-blue/80" asChild>
+            <Link to="/contact">See All Industries</Link>
           </Button>
         </div>
       </div>

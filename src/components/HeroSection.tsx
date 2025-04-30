@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Battery, Zap, MapPin, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -78,8 +79,10 @@ const HeroSection = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button size="lg" className="bg-chargetrux-blue hover:bg-chargetrux-blue/80 text-white px-6 rounded-md">
-                Schedule a Demo <ArrowRight className="ml-2 h-4 w-4" />
+              <Button size="lg" className="bg-chargetrux-blue hover:bg-chargetrux-blue/80 text-white px-6 rounded-md" asChild>
+                <Link to="/contact">
+                  Schedule a Demo <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
               <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10 rounded-md">
                 Fleet Overview PDF

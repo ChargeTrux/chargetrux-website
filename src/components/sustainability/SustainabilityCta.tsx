@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Merge } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const SustainabilityCta = () => {
   return (
@@ -28,8 +29,9 @@ const SustainabilityCta = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <Button 
               className="bg-[#00cc66] hover:bg-[#00cc66]/90 text-white font-medium h-14 px-6 text-lg rounded-md"
+              asChild
             >
-              Request Custom Quote
+              <Link to="/contact">Request Custom Quote</Link>
             </Button>
             <Button 
               variant="outline" 
