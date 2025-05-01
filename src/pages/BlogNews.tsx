@@ -13,25 +13,25 @@ const BlogNews = () => {
 
   const blogPosts = [
     {
-      title: "The True Cost of EV Fleet Charging: Infrastructure vs. Mobile Solutions",
-      excerpt: "This analysis compares the total cost of ownership between building fixed charging infrastructure and using on-demand mobile charging services for commercial fleets.",
-      date: "May 1, 2025",
-      category: "Analysis",
-      image: "/lovable-uploads/8b7c269d-9b34-4e35-99ea-4e3206e0a0f0.png"
+      title: "How Mobile EV Charging is Revolutionizing Fleet Management",
+      excerpt: "Discover how on-demand charging solutions are helping fleet managers save on infrastructure costs while maintaining operational efficiency.",
+      date: "May 5, 2025",
+      category: "Industry Trends",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
     },
     {
-      title: "ChargeTrux Partners with Major Port Authority for Zero-Emission Terminal Operations",
-      excerpt: "Our new partnership brings mobile Level 3 charging to one of North America's busiest ports, supporting their transition to all-electric cargo handling equipment.",
-      date: "April 24, 2025",
-      category: "Partnership",
-      image: "/lovable-uploads/38fa875e-b28b-4716-a893-f6c0b66b7252.png"
+      title: "ChargeTrux Expands Services to Major East Coast Shipping Terminals",
+      excerpt: "Our expansion brings rapid mobile charging solutions to five new maritime facilities, supporting the growing electrification of port equipment.",
+      date: "April 28, 2025",
+      category: "Company News",
+      image: "https://images.unsplash.com/photo-1527576539890-dfa815648363"
     },
     {
-      title: "Fleet Electrification Report: Challenges and Solutions for 2025-2030",
-      excerpt: "Our comprehensive report examines the barriers fleet operators face when electrifying their operations and presents innovative solutions to overcome them.",
-      date: "April 18, 2025",
+      title: "The Economics of Mobile vs. Fixed Charging Infrastructure",
+      excerpt: "Our analysis reveals surprising cost comparisons between traditional charging stations and flexible mobile charging solutions for various fleet sizes.",
+      date: "April 20, 2025",
       category: "Research",
-      image: "/lovable-uploads/3f23e66c-fe5a-4a27-99d3-56c37985db91.png"
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
     }
   ];
 
@@ -104,10 +104,9 @@ const BlogNews = () => {
               <Newspaper size={80} className="text-chargetrux-blue" />
             </div>
             <div className="w-full md:w-3/4">
-              <h3 className="text-2xl font-bold text-white mb-3">Subscribe to Our Monthly Industry Report</h3>
+              <h3 className="text-2xl font-bold text-white mb-3">Stay Updated with ChargeTrux Insights</h3>
               <p className="text-gray-300 mb-4">
-                Stay ahead with exclusive insights on EV fleet management, mobile charging innovations, 
-                and sustainability trends delivered directly to your inbox.
+                Get monthly updates on the latest EV charging technology, industry trends, and sustainable fleet practices delivered to your inbox.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <input 
