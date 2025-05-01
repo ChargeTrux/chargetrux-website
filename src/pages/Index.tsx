@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "ChargeTrux - Mobile Level 3 Charging Delivered";
+    document.title = "ChargeTrux";
   }, []);
 
   return (
