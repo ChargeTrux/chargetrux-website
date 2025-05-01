@@ -44,16 +44,6 @@ const HeroSection = () => {
               <span className="text-chargetrux-green"> Delivered.</span>
             </h1>
             
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="flex items-center gap-2 mt-1 mb-2"
-            >
-              <div className="h-0.5 w-8 bg-chargetrux-green"></div>
-              <p className="text-base text-chargetrux-green font-medium">Opal City • Powering the Future</p>
-            </motion.div>
-            
             <p className="text-base text-gray-300 max-w-2xl">
               Fleet charging when and where you need it. Up to 450 kWh per session. 
               4 vehicles at once. No infrastructure investment required.
