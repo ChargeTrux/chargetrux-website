@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Battery, Calendar, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -5,10 +6,13 @@ import CtaSection from "@/components/CtaSection";
 import TechnologyFeature from "@/components/TechnologyFeature";
 import ChargeTruxAPI from "@/components/ChargeTruxAPI";
 import { Link } from "react-router-dom";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const Technology = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-chargetrux-darkblue to-black text-white">
+      <Navbar />
       {/* Hero Section */}
       <div className="container mx-auto pt-24 px-4">
         <motion.div
@@ -383,6 +387,7 @@ const Technology = () => {
       </section>
 
       <CtaSection />
+      <Footer />
     </div>
   );
 };
