@@ -17,21 +17,21 @@ const BlogNews = () => {
       excerpt: "Discover how on-demand charging solutions are helping fleet managers save on infrastructure costs while maintaining operational efficiency.",
       date: "May 5, 2025",
       category: "Industry Trends",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       title: "ChargeTrux Expands Services to Major East Coast Shipping Terminals",
       excerpt: "Our expansion brings rapid mobile charging solutions to five new maritime facilities, supporting the growing electrification of port equipment.",
       date: "April 28, 2025",
       category: "Company News",
-      image: "https://images.unsplash.com/photo-1527576539890-dfa815648363"
+      image: "https://images.unsplash.com/photo-1527576539890-dfa815648363?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       title: "The Economics of Mobile vs. Fixed Charging Infrastructure",
       excerpt: "Our analysis reveals surprising cost comparisons between traditional charging stations and flexible mobile charging solutions for various fleet sizes.",
       date: "April 20, 2025",
       category: "Research",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     }
   ];
 
