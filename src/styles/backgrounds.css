@@ -1,6 +1,7 @@
+
 .bg-hero-pattern {
   background-image: linear-gradient(rgba(10, 25, 48, 0.9), rgba(10, 25, 48, 0.85)),
-    url('/public/lovable-uploads/4be88438-65d5-414b-afb0-eef6bf5ec809.png');
+    url('/lovable-uploads/4be88438-65d5-414b-afb0-eef6bf5ec809.png');
   background-size: cover;
   background-position: center;
 }

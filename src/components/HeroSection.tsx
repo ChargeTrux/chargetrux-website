@@ -108,7 +108,7 @@ const HeroSection = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <img 
-                  src="/public/lovable-uploads/1ff94a4b-5ae5-46ba-a96a-9574796883ad.png" 
+                  src="/lovable-uploads/1ff94a4b-5ae5-46ba-a96a-9574796883ad.png" 
                   alt="ChargeTrux Mobile Charging Truck" 
                   className="w-full h-auto rounded-xl"
                 />
