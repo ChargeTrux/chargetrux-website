@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, FileText, Calendar } from "lucide-react";
+import { ArrowRight, FileText, Calendar, Newspaper } from "lucide-react";
 
 const BlogNews = () => {
   useEffect(() => {
@@ -13,25 +13,25 @@ const BlogNews = () => {
 
   const blogPosts = [
     {
-      title: "The Future of Mobile Level 3 Charging",
-      excerpt: "Explore how mobile Level 3 charging solutions are revolutionizing fleet operations and enabling more flexible EV adoption strategies.",
-      date: "April 25, 2025",
-      category: "Technology",
-      image: "/lovable-uploads/25613ad2-bdd8-4eeb-ade8-914ca3da1d9d.png"
+      title: "The True Cost of EV Fleet Charging: Infrastructure vs. Mobile Solutions",
+      excerpt: "This analysis compares the total cost of ownership between building fixed charging infrastructure and using on-demand mobile charging services for commercial fleets.",
+      date: "May 1, 2025",
+      category: "Analysis",
+      image: "/lovable-uploads/8b7c269d-9b34-4e35-99ea-4e3206e0a0f0.png"
     },
     {
-      title: "Case Study: How Delivery Fleets Save 35% with On-Demand Charging",
-      excerpt: "Learn how major delivery companies are cutting operational costs while meeting sustainability goals with flexible charging solutions.",
+      title: "ChargeTrux Partners with Major Port Authority for Zero-Emission Terminal Operations",
+      excerpt: "Our new partnership brings mobile Level 3 charging to one of North America's busiest ports, supporting their transition to all-electric cargo handling equipment.",
+      date: "April 24, 2025",
+      category: "Partnership",
+      image: "/lovable-uploads/38fa875e-b28b-4716-a893-f6c0b66b7252.png"
+    },
+    {
+      title: "Fleet Electrification Report: Challenges and Solutions for 2025-2030",
+      excerpt: "Our comprehensive report examines the barriers fleet operators face when electrifying their operations and presents innovative solutions to overcome them.",
       date: "April 18, 2025",
-      category: "Case Study",
-      image: "/lovable-uploads/36188dbd-610f-4577-8787-67a7e25b04c5.png"
-    },
-    {
-      title: "ESG Reporting: Measuring the Impact of Mobile Charging",
-      excerpt: "Discover how accurate ESG reporting with ChargeTrux data helps companies demonstrate their commitment to sustainable operations.",
-      date: "April 10, 2025",
-      category: "Sustainability",
-      image: "/lovable-uploads/40d8cd55-add8-494c-9a4d-dfa1ad64949a.png"
+      category: "Research",
+      image: "/lovable-uploads/3f23e66c-fe5a-4a27-99d3-56c37985db91.png"
     }
   ];
 
@@ -46,10 +46,10 @@ const BlogNews = () => {
           className="max-w-4xl mx-auto mb-16 text-center"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Blog & News
+            Industry Insights & Updates
           </h1>
           <p className="text-xl text-gray-300 leading-relaxed">
-            Stay informed with the latest insights, innovations, and updates in mobile EV charging and sustainable fleet operations.
+            Expert analysis, case studies, and news about mobile EV charging innovations and sustainable fleet management.
           </p>
         </motion.div>
 
@@ -63,7 +63,7 @@ const BlogNews = () => {
                 transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
                 className="bg-chargetrux-darkblue/60 border border-gray-700 rounded-lg overflow-hidden hover:border-chargetrux-green transition-all"
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-52 overflow-hidden">
                   <img 
                     src={post.image} 
                     alt={post.title} 
@@ -84,8 +84,8 @@ const BlogNews = () => {
                   <p className="text-gray-300 mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
-                  <Button variant="ghost" className="text-chargetrux-green hover:text-white hover:bg-chargetrux-green/20 p-0">
-                    Read More <ArrowRight size={16} className="ml-1" />
+                  <Button variant="ghost" className="text-chargetrux-green hover:text-white hover:bg-chargetrux-green/20 p-0 flex items-center">
+                    Read Full Article <ArrowRight size={16} className="ml-1" />
                   </Button>
                 </div>
               </motion.div>
@@ -94,13 +94,43 @@ const BlogNews = () => {
         </div>
         
         <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="max-w-5xl mx-auto mb-16 bg-chargetrux-blue/20 border border-chargetrux-blue/30 p-8 rounded-xl"
+        >
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="w-full md:w-1/4 flex justify-center">
+              <Newspaper size={80} className="text-chargetrux-blue" />
+            </div>
+            <div className="w-full md:w-3/4">
+              <h3 className="text-2xl font-bold text-white mb-3">Subscribe to Our Monthly Industry Report</h3>
+              <p className="text-gray-300 mb-4">
+                Stay ahead with exclusive insights on EV fleet management, mobile charging innovations, 
+                and sustainability trends delivered directly to your inbox.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input 
+                  type="email" 
+                  placeholder="Your email address" 
+                  className="bg-chargetrux-darkblue border border-gray-700 px-4 py-2 rounded text-white flex-grow"
+                />
+                <Button className="bg-chargetrux-green hover:bg-chargetrux-green/80 whitespace-nowrap">
+                  Subscribe Now
+                </Button>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+        
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
           className="max-w-4xl mx-auto text-center"
         >
-          <Button variant="ctaGreen" size="lg">
-            View All Articles <ArrowRight size={16} />
+          <Button variant="ctaGreen" size="lg" className="px-8">
+            View All Articles <ArrowRight size={16} className="ml-2" />
           </Button>
         </motion.div>
       </div>
