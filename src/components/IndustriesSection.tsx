@@ -58,18 +58,17 @@ const IndustriesSection = () => {
           </p>
         </motion.div>
         
-        {/* Changed from grid-cols-4 to grid-cols-3 for better distribution */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {industries.map((industry, index) => (
             <motion.div 
               key={index}
-              className="bg-white/10 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] group backdrop-blur-sm"
+              className="bg-white/10 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] group backdrop-blur-sm flex flex-col"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="relative h-48">
+              <div className="relative h-56">
                 <img 
                   src={industry.image} 
                   alt={industry.title} 
@@ -77,16 +76,18 @@ const IndustriesSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-chargetrux-darkblue/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <div className="p-6">
-                <h3 className="text-sm md:text-base font-bold mb-2 text-white truncate">{industry.title}</h3>
-                <p className="text-gray-300 text-xs md:text-sm mb-4 line-clamp-3">{industry.description}</p>
-                <Link 
-                  to={industry.link}
-                  className="inline-flex items-center text-chargetrux-green text-xs md:text-sm font-medium transition-colors hover:text-chargetrux-green/80"
-                >
-                  Learn More 
-                  <ArrowRight className="ml-2 h-3 w-3 md:h-4 md:w-4" />
-                </Link>
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-sm md:text-base font-bold mb-2 text-white">{industry.title}</h3>
+                <p className="text-gray-300 text-xs md:text-sm mb-4">{industry.description}</p>
+                <div className="mt-auto">
+                  <Link 
+                    to={industry.link}
+                    className="inline-flex items-center text-chargetrux-green text-xs md:text-sm font-medium transition-colors hover:text-chargetrux-green/80"
+                  >
+                    Learn More 
+                    <ArrowRight className="ml-2 h-3 w-3 md:h-4 md:w-4" />
+                  </Link>
+                </div>
               </div>
             </motion.div>
           ))}
