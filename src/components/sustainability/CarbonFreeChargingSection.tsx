@@ -36,9 +36,6 @@ const CarbonFreeChargingSection = () => {
 
         {/* Scope Emissions Explainer */}
         <ScopeEmissionsExplainer />
-
-        {/* Environmental Impact Comparison */}
-        <EnvironmentalImpact />
       </div>
     </section>
   );
