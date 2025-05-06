@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { Globe, Truck, Battery, Zap, Building, ShoppingBag } from "lucide-react";
+import { ShoppingBag, Truck, Battery } from "lucide-react";
 
 const ClientsSection = () => {
   const industries = [
@@ -15,19 +15,7 @@ const ClientsSection = () => {
     { 
       name: "Fleet Operators", 
       icon: <Battery className="h-8 w-8 text-chargetrux-green" />
-    },
-    { 
-      name: "Airport Services", 
-      icon: <Zap className="h-8 w-8 text-chargetrux-green" />
-    },
-    { 
-      name: "Port Authorities", 
-      icon: <Globe className="h-8 w-8 text-chargetrux-green" />
-    },
-    { 
-      name: "Logistics Providers", 
-      icon: <Building className="h-8 w-8 text-chargetrux-green" />
-    },
+    }
   ];
 
   return (
