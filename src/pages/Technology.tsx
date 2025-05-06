@@ -329,7 +329,7 @@ const Technology = () => {
                 <TechnologyFeature 
                   icon="📊"
                   title="Advanced Diagnostic Systems"
-                  description="Real-time monitoring with over 200 diagnostic parameters constantly tracked to ensure optimal performance and early issue detection"
+                  description="Real-time monitoring with key diagnostic parameters to ensure optimal performance and safety."
                   variant="large"
                 />
                 
