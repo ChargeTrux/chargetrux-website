@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { Check, ChartBar, CircleDollarSign, Scale, TrendingUp } from "lucide-react";
+import { Check, ChartBar, CircleDollarSign, Scale, TrendingUp, MapPin, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -647,19 +647,36 @@ const Pricing = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="bg-gray-50 p-6 rounded-xl text-sm shadow-sm"
+            className="bg-gradient-to-br from-gray-50 to-chargetrux-lighttext/5 p-8 rounded-xl shadow-md border border-gray-100"
           >
-            <p className="font-semibold mb-2 text-chargetrux-darkblue">Coverage Areas:</p>
-            <p className="mb-4 text-gray-700">
-              ChargeTrux currently services major metropolitan areas across the United States including 
-              Los Angeles, San Francisco, Chicago, Dallas, Houston, Miami, Atlanta, Washington DC, Boston, 
-              and New York. See our <a href="/coverage" className="text-chargetrux-blue hover:underline">service map</a> for complete details and expansion plans.
-            </p>
-            <p className="font-semibold mb-2 text-chargetrux-darkblue">Enterprise Solutions:</p>
-            <p className="text-gray-700">
-              Custom enterprise packages are available for fleets of 10+ vehicles. Multi-year agreements 
-              include price protection guarantees and priority service allocation.
-            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="flex items-start gap-4">
+                <div className="bg-blue-50 p-3 rounded-full mt-1">
+                  <MapPin className="h-5 w-5 text-chargetrux-blue" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-chargetrux-darkblue">Coverage Areas:</h3>
+                  <p className="text-gray-700">
+                    ChargeTrux currently services major metropolitan areas across the United States including 
+                    Los Angeles, San Francisco, Chicago, Dallas, Houston, Miami, Atlanta, Washington DC, Boston, 
+                    and New York. See our <a href="/coverage" className="text-chargetrux-blue hover:underline font-medium">service map</a> for complete details and expansion plans.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="bg-blue-50 p-3 rounded-full mt-1">
+                  <Building className="h-5 w-5 text-chargetrux-blue" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-chargetrux-darkblue">Enterprise Solutions:</h3>
+                  <p className="text-gray-700">
+                    Custom enterprise packages are available for fleets of 10+ vehicles. Multi-year agreements 
+                    include price protection guarantees and priority service allocation.
+                  </p>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </section>
 
