@@ -1,8 +1,6 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 const ScopeEmissionsExplainer = () => {
   return <motion.div initial={{
     opacity: 0,
@@ -15,7 +13,7 @@ const ScopeEmissionsExplainer = () => {
   }} viewport={{
     once: true
   }} className="mb-16">
-      <h3 className="text-2xl font-bold text-center mb-8 text-chargetrux-darkblue">ChargeTrux Supports ESG Initiatives</h3>
+      
       <div className="max-w-3xl mx-auto">
         <Card className="bg-white shadow hover:shadow-md transition-shadow duration-300">
           <CardHeader>
@@ -35,5 +33,4 @@ const ScopeEmissionsExplainer = () => {
       </div>
     </motion.div>;
 };
-
 export default ScopeEmissionsExplainer;
