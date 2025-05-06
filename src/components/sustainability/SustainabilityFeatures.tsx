@@ -1,20 +1,29 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Leaf, Shield } from "lucide-react";
+
 const SustainabilityFeatures = () => {
-  return <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-      <motion.div initial={{
-      opacity: 0,
-      x: -20
-    }} whileInView={{
-      opacity: 1,
-      x: 0
-    }} transition={{
-      duration: 0.5,
-      delay: 0.2
-    }} viewport={{
-      once: true
-    }} className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row gap-6 hover:shadow-xl transition-shadow duration-300">
+  return (
+    <div className="flex justify-center mb-16">
+      <motion.div 
+        initial={{
+          opacity: 0,
+          y: 20
+        }} 
+        whileInView={{
+          opacity: 1,
+          y: 0
+        }} 
+        transition={{
+          duration: 0.5,
+          delay: 0.2
+        }} 
+        viewport={{
+          once: true
+        }} 
+        className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row gap-6 hover:shadow-xl transition-shadow duration-300 max-w-3xl mx-auto"
+      >
         <div className="flex-shrink-0 w-16 h-16 rounded-full bg-chargetrux-green/10 flex items-center justify-center">
           <Leaf className="w-8 h-8 text-chargetrux-green" />
         </div>
@@ -29,8 +38,8 @@ const SustainabilityFeatures = () => {
           </div>
         </div>
       </motion.div>
-
-      
-    </div>;
+    </div>
+  );
 };
+
 export default SustainabilityFeatures;
