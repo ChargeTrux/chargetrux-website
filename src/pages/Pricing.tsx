@@ -1,6 +1,5 @@
-
 import { motion } from "framer-motion";
-import { ArrowDown, BadgePercent, CalendarDays, Check, ChartBar, CircleDollarSign, DollarSign, Scale, TrendingUp, Truck, Users } from "lucide-react";
+import { ArrowDown, BadgePercent, CalendarDays, Check, ChartBar, CircleDollarSign, DollarSign, Globe, Scale, TrendingUp, Truck, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -525,6 +524,109 @@ const Pricing = () => {
           </div>
         </section>
         
+        {/* Service Locations Section */}
+        <section className="mb-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-blue-900/50 to-green-900/30 rounded-xl p-10 border border-blue-800/30"
+          >
+            <div className="flex items-center justify-center mb-6">
+              <Globe className="h-8 w-8 text-chargetrux-green mr-3" />
+              <h2 className="text-xl md:text-2xl font-bold text-chargetrux-lighttext">Service Coverage</h2>
+            </div>
+            <div className="w-24 h-1 bg-chargetrux-blue mx-auto mb-8"></div>
+            
+            <p className="text-center text-lg text-chargetrux-lighttext mb-8 max-w-3xl mx-auto">
+              Now servicing all major U.S. coastal regions—available in metropolitan areas and international airport zones across:
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-blue-800/20"
+              >
+                <h3 className="text-lg font-bold text-chargetrux-green mb-4 flex items-center">
+                  <span className="bg-chargetrux-green/20 p-1.5 rounded-full mr-2">
+                    <Check className="h-4 w-4 text-chargetrux-green" />
+                  </span>
+                  West Coast
+                </h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li>Seattle</li>
+                  <li>Portland</li>
+                  <li>San Francisco</li>
+                  <li>Oakland</li>
+                  <li>San Jose</li>
+                  <li>Los Angeles</li>
+                  <li>Orange County</li>
+                  <li>San Diego</li>
+                </ul>
+              </motion.div>
+              
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-blue-800/20"
+              >
+                <h3 className="text-lg font-bold text-chargetrux-green mb-4 flex items-center">
+                  <span className="bg-chargetrux-green/20 p-1.5 rounded-full mr-2">
+                    <Check className="h-4 w-4 text-chargetrux-green" />
+                  </span>
+                  Gulf Coast & Southwest
+                </h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li>Phoenix</li>
+                  <li>Albuquerque</li>
+                  <li>Dallas</li>
+                  <li>Houston</li>
+                  <li>Austin</li>
+                  <li>San Antonio</li>
+                  <li>New Orleans</li>
+                  <li>Tampa</li>
+                  <li>Orlando</li>
+                  <li>Fort Lauderdale</li>
+                  <li>Miami</li>
+                </ul>
+              </motion.div>
+              
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-blue-800/20"
+              >
+                <h3 className="text-lg font-bold text-chargetrux-green mb-4 flex items-center">
+                  <span className="bg-chargetrux-green/20 p-1.5 rounded-full mr-2">
+                    <Check className="h-4 w-4 text-chargetrux-green" />
+                  </span>
+                  East Coast & Southeast
+                </h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li>Atlanta</li>
+                  <li>Charlotte</li>
+                  <li>Raleigh-Durham</li>
+                  <li>Norfolk/Virginia Beach</li>
+                  <li>Washington D.C.</li>
+                  <li>Baltimore</li>
+                  <li>Philadelphia</li>
+                  <li>Newark</li>
+                  <li>New York City</li>
+                  <li>Boston</li>
+                </ul>
+              </motion.div>
+            </div>
+          </motion.div>
+        </section>
+        
         <section className="mb-16">
           <motion.div initial={{
           opacity: 0,
@@ -553,4 +655,3 @@ const Pricing = () => {
     </div>;
 };
 export default Pricing;
-
