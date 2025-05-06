@@ -20,9 +20,9 @@ const ScopeEmissionsExplainer = () => {
           </p>
         </div>
         <div className="bg-white p-8 rounded-xl shadow hover:shadow-md transition-shadow duration-300">
-          <h4 className="text-xl font-semibold text-chargetrux-darkblue mb-4">How ChargeTrux Eliminates Scope 2 Emissions</h4>
+          <h4 className="text-xl font-semibold text-chargetrux-darkblue mb-4">How ChargeTrux Supports ESG Initiatives</h4>
           <p className="text-gray-700 leading-relaxed">
-            By using 100% renewable energy for all charging operations, ChargeTrux helps your organization achieve zero Scope 2 emissions from your electric fleet operations. This is particularly valuable for organizations with formal carbon reduction targets or ESG reporting requirements.
+            ChargeTrux supports ESG initiatives by delivering 100% renewable energy, helping reduce Scope 2 emissions from grid charging. We help clients align their energy usage with ESG reporting requirements related to renewable electricity.
           </p>
         </div>
       </div>
