@@ -29,7 +29,7 @@ const Sustainability = () => {
       {/* Case Studies Section */}
       <CaseStudies />
 
-      {/* Final CTA Section - Combined from both previous CTAs */}
+      {/* Final CTA Section */}
       <SustainabilityCta />
 
       <Footer />
