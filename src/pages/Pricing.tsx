@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowDown, BadgePercent, CalendarDays, Check, ChartBar, CircleDollarSign, DollarSign, Scale, TrendingUp, Truck, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -189,6 +188,12 @@ const Pricing = () => {
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="bg-green-50 p-1 rounded-full mt-0.5">
+                          <Truck className="h-3.5 w-3.5 text-[#00A859]" />
+                        </span>
+                        <span className="text-sm text-gray-700">Regular scheduled charging service</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="bg-green-50 p-1 rounded-full mt-0.5">
                           <Check className="h-3.5 w-3.5 text-[#00A859]" />
                         </span>
                         <span className="text-sm text-gray-700">Lower per-kWh rates</span>
@@ -255,7 +260,7 @@ const Pricing = () => {
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="bg-orange-50 p-1 rounded-full mt-0.5">
-                          <Check className="h-3.5 w-3.5 text-[#FF9500]" />
+                          <Truck className="h-3.5 w-3.5 text-[#FF9500]" />
                         </span>
                         <span className="text-sm text-gray-700">Dedicated trucks during peak periods</span>
                       </li>
@@ -315,13 +320,13 @@ const Pricing = () => {
                     <ul className="space-y-3">
                       <li className="flex items-start gap-3">
                         <span className="bg-purple-50 p-1 rounded-full mt-0.5">
-                          <Check className="h-3.5 w-3.5 text-purple-500" />
+                          <Truck className="h-3.5 w-3.5 text-purple-500" />
                         </span>
                         <span className="text-sm text-gray-700">Dedicated ChargeTrux units</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="bg-purple-50 p-1 rounded-full mt-0.5">
-                          <Check className="h-3.5 w-3.5 text-purple-500" />
+                          <Users className="h-3.5 w-3.5 text-purple-500" />
                         </span>
                         <span className="text-sm text-gray-700">On-call dispatch availability</span>
                       </li>
@@ -638,7 +643,7 @@ const Pricing = () => {
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-green-50 p-1.5 rounded-full mt-0.5">
-                        <Check className="h-4 w-4 text-[#00A859]" />
+                        <Truck className="h-4 w-4 text-[#00A859]" />
                       </span>
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Added to daily delivery routes</span>
@@ -756,6 +761,15 @@ const Pricing = () => {
                     </li>
                     <li className="flex items-start gap-4">
                       <span className="bg-orange-50 p-1.5 rounded-full mt-0.5">
+                        <Truck className="h-4 w-4 text-[#FF9500]" />
+                      </span>
+                      <div>
+                        <span className="text-chargetrux-darkblue font-medium">Dedicated trucks during peak periods</span>
+                        <span className="text-gray-700"> based on seasonal needs</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-4">
+                      <span className="bg-orange-50 p-1.5 rounded-full mt-0.5">
                         <Check className="h-4 w-4 text-[#FF9500]" />
                       </span>
                       <div>
@@ -769,15 +783,6 @@ const Pricing = () => {
                       <div>
                         <span className="text-chargetrux-darkblue font-medium">Mid-season plan adjustments available</span>
                         <span className="text-gray-700"> with 30-day notice</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-4">
-                      <span className="bg-orange-50 p-1.5 rounded-full mt-0.5">
-                        <Truck className="h-4 w-4 text-[#FF9500]" />
-                      </span>
-                      <div>
-                        <span className="text-chargetrux-darkblue font-medium">Dedicated trucks during peak periods</span>
-                        <span className="text-gray-700"> based on seasonal needs</span>
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
