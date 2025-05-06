@@ -68,11 +68,11 @@ const EnvironmentalImpact = () => {
             </li>
             <li className="flex items-start gap-2">
               <span className="w-2 h-2 mt-1.5 rounded-full bg-green-500"></span>
-              <span className="text-gray-700">Zero indirect emissions (Scope 2)</span>
+              <span className="text-gray-700">Reduced Scope 2 emissions</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-2 h-2 mt-1.5 rounded-full bg-green-500"></span>
-              <span className="text-gray-700">Verified renewable energy sourcing</span>
+              <span className="text-gray-700">Renewable energy sourcing</span>
             </li>
           </ul>
         </div>

@@ -1,6 +1,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+
 const ScopeEmissionsExplainer = () => {
   return <motion.div initial={{
     opacity: 0,
@@ -30,4 +31,5 @@ const ScopeEmissionsExplainer = () => {
       </div>
     </motion.div>;
 };
+
 export default ScopeEmissionsExplainer;
