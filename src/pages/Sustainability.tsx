@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SustainabilityHero from "@/components/sustainability/SustainabilityHero";
 import CarbonFreeChargingSection from "@/components/sustainability/CarbonFreeChargingSection";
+import ScopeEmissionsExplainer from "@/components/sustainability/ScopeEmissionsExplainer";
 import SustainabilityReporting from "@/components/sustainability/SustainabilityReporting";
 import CaseStudies from "@/components/sustainability/CaseStudies";
 import SustainabilityCta from "@/components/sustainability/SustainabilityCta";
@@ -18,6 +19,9 @@ const Sustainability = () => {
 
       {/* Carbon-Free Charging Section */}
       <CarbonFreeChargingSection />
+      
+      {/* Scope Emissions Explainer Section */}
+      <ScopeEmissionsExplainer />
 
       {/* Sustainability Reporting Section */}
       <SustainabilityReporting />
