@@ -182,13 +182,13 @@ const Pricing = () => {
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="bg-green-50 p-1 rounded-full mt-0.5">
-                          <Check className="h-3.5 w-3.5 text-[#00A859]" />
+                          <Truck className="h-3.5 w-3.5 text-[#00A859]" />
                         </span>
                         <span className="text-sm text-gray-700">Added to daily delivery routes</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="bg-green-50 p-1 rounded-full mt-0.5">
-                          <Truck className="h-3.5 w-3.5 text-[#00A859]" />
+                          <Check className="h-3.5 w-3.5 text-[#00A859]" />
                         </span>
                         <span className="text-sm text-gray-700">Regular scheduled charging service</span>
                       </li>
