@@ -233,9 +233,11 @@ const Industries = () => {
                 </p>
               </div>
               
-              <Button className="bg-chargetrux-green hover:bg-chargetrux-green/80 text-white">
-                Learn More About {selectedIndustry.title} Solutions
-                <ChevronRight className="ml-2 h-4 w-4" />
+              <Button className="bg-chargetrux-green hover:bg-chargetrux-green/80 text-white" asChild>
+                <Link to="/contact">
+                  Learn More About {selectedIndustry.title} Solutions
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
             </div>
           </motion.div>
@@ -274,8 +276,8 @@ const Industries = () => {
                     <CardDescription>{industry.shortDesc}</CardDescription>
                   </CardHeader>
                   <CardContent className="pt-4 bg-white">
-                    <Button variant="outline" className="w-full text-chargetrux-blue border-chargetrux-blue hover:bg-chargetrux-blue/10">
-                      View Details
+                    <Button variant="outline" className="w-full text-chargetrux-blue border-chargetrux-blue hover:bg-chargetrux-blue/10" asChild>
+                      <Link to="/contact">View Details</Link>
                     </Button>
                   </CardContent>
                 </Card>

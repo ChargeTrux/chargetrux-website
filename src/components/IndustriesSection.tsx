@@ -10,31 +10,31 @@ const IndustriesSection = () => {
       title: "Rental Fleet Operators",
       description: "Keep your rental EVs charged and ready for customers without expensive infrastructure.",
       image: "/lovable-uploads/6f9386c8-ac09-4dc9-88ba-31ecf9859f75.png",
-      link: "/industries?industry=rental",
+      link: "/contact",
     },
     {
       title: "Last-Mile Delivery",
       description: "Ensure your delivery fleet returns to service quickly with on-site charging solutions.",
       image: "/lovable-uploads/6b116e21-a7b2-44e4-a38a-d056e7c61fce.png",
-      link: "/industries?industry=delivery",
+      link: "/contact",
     },
     {
       title: "Ports & Industrial Zones",
       description: "Power heavy-duty electric equipment and vehicles without fixed charging infrastructure.",
       image: "/lovable-uploads/32a2004b-2356-4605-9883-432a282117a5.png",
-      link: "/industries?industry=ports",
+      link: "/contact",
     },
     {
       title: "Valet, Hospitality & Events",
       description: "Provide premium charging services at hotels, venues, and special events.",
       image: "/lovable-uploads/184a1e78-89e7-4a15-b547-3968236836ec.png",
-      link: "/industries?industry=hospitality",
+      link: "/contact",
     },
     {
       title: "Charging Infrastructure",
       description: "Bridge the gap with temporary charging solutions during fixed asset construction.",
       image: "/lovable-uploads/6f9386c8-ac09-4dc9-88ba-31ecf9859f75.png",
-      link: "/industries?industry=developers",
+      link: "/contact",
     },
   ];
 
@@ -95,7 +95,7 @@ const IndustriesSection = () => {
         
         <div className="text-center mt-12">
           <Button className="bg-chargetrux-blue text-white hover:bg-chargetrux-blue/80" asChild>
-            <Link to="/industries">See All Industries</Link>
+            <Link to="/contact">See All Industries</Link>
           </Button>
         </div>
       </div>
