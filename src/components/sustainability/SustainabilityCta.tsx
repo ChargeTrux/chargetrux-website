@@ -36,8 +36,9 @@ const SustainabilityCta = () => {
             <Button 
               variant="outline" 
               className="bg-[#002c77] border-2 border-white text-white hover:bg-[#002c77]/90 h-14 px-6 text-lg rounded-md"
+              asChild
             >
-              Book Intro Call
+              <Link to="/contact">Schedule Consultation</Link>
             </Button>
           </div>
           <div className="flex items-center justify-center mt-10 text-white/80">

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Mail, Phone, MapPin, Calendar, MessageSquare } from "lucide-react";
+import { MapPin, Calendar } from "lucide-react";
 import { 
   Form,
   FormControl,
@@ -333,45 +333,18 @@ const Contact = () => {
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8">
               <h2 className="text-2xl font-bold text-white mb-6">
-                Prefer to Speak Directly?
+                Schedule a Consultation
               </h2>
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <Calendar className="w-6 h-6 text-chargetrux-green mt-1" />
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Schedule a Consultation</h3>
-                    <p className="text-gray-300 mb-4">Book a 30-minute intro call with our fleet specialists to discuss your specific needs.</p>
+                    <h3 className="text-xl font-bold text-white mb-2">Book a Meeting</h3>
+                    <p className="text-gray-300 mb-4">Schedule a 30-minute intro call with our fleet specialists to discuss your specific needs.</p>
                     <Button className="bg-chargetrux-blue hover:bg-chargetrux-blue/80">
                       Schedule Now
                     </Button>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <MessageSquare className="w-6 h-6 text-chargetrux-green mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Live Chat</h3>
-                    <p className="text-gray-300 mb-4">Chat with one of our representatives right now.</p>
-                    <Button variant="outline" className="border-chargetrux-green text-chargetrux-green hover:bg-chargetrux-green/10">
-                      Start Live Chat
-                    </Button>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <Mail className="w-6 h-6 text-chargetrux-green mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
-                    <p className="text-gray-300">Send inquiries to <a href="mailto:fleet@chargetrux.com" className="text-chargetrux-green hover:underline">fleet@chargetrux.com</a></p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <Phone className="w-6 h-6 text-chargetrux-green mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
-                    <p className="text-gray-300">Speak with our team at <a href="tel:+18882427438" className="text-chargetrux-green hover:underline">(888) CHARGE-TX</a></p>
                   </div>
                 </div>
               </div>
