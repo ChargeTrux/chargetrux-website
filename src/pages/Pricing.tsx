@@ -5,18 +5,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Separator } from "@/components/ui/separator";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
 const Pricing = () => {
-  return (
-    <div className="bg-gradient-to-b from-chargetrux-darkblue to-black min-h-screen">
+  return <div className="bg-gradient-to-b from-chargetrux-darkblue to-black min-h-screen">
       <Navbar />
       <div className="container mx-auto px-4 pt-24 pb-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} animate={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.6
+      }} className="text-center mb-16">
           <h1 className="text-2xl md:text-3xl font-bold text-chargetrux-lighttext mb-6 block text-center mx-auto">
             Transparent EV Charging Pricing For Fleets
           </h1>
@@ -32,13 +33,17 @@ const Pricing = () => {
         </motion.div>
         
         <section className="mb-24">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-xl md:text-2xl font-bold text-center text-chargetrux-lighttext mb-6 block text-center mx-auto"
-          >
+          <motion.h2 initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5
+        }} viewport={{
+          once: true
+        }} className="text-xl md:text-2xl font-bold text-center text-chargetrux-lighttext mb-6 block text-center mx-auto">
             Contract Charging Plans
           </motion.h2>
           <p className="text-center text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -47,13 +52,18 @@ const Pricing = () => {
           <div className="w-24 h-1.5 bg-chargetrux-green mx-auto mb-12"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="group"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5,
+            delay: 0.1
+          }} viewport={{
+            once: true
+          }} className="group">
               <Card className="h-full border-2 border-[#00A859] rounded-lg hover:border-[#00A859] transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
                 <div className="h-2 bg-[#00A859] w-full"></div>
                 <CardHeader className="bg-green-50 border-b">
@@ -128,13 +138,18 @@ const Pricing = () => {
               </Card>
             </motion.div>
             
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="group"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5,
+            delay: 0.2
+          }} viewport={{
+            once: true
+          }} className="group">
               <Card className="h-full border-2 border-[#00A859] rounded-lg hover:border-[#00A859] transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
                 <div className="h-2 bg-[#00A859] w-full"></div>
                 <CardHeader className="bg-green-50 border-b">
@@ -209,13 +224,18 @@ const Pricing = () => {
             </motion.div>
           </div>
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-gray-50 to-green-50/30 rounded-xl p-8 shadow-sm"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5,
+          delay: 0.3
+        }} viewport={{
+          once: true
+        }} className="bg-gradient-to-br from-gray-50 to-green-50/30 rounded-xl p-8 shadow-sm">
             <h3 className="text-xl font-bold text-chargetrux-darkblue mb-6">Contract Plan Benefits</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
               <div className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
@@ -258,13 +278,17 @@ const Pricing = () => {
         </section>
 
         <section className="mb-24">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-xl md:text-2xl font-bold text-center text-chargetrux-lighttext mb-6 block text-center mx-auto"
-          >
+          <motion.h2 initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5
+        }} viewport={{
+          once: true
+        }} className="text-xl md:text-2xl font-bold text-center text-chargetrux-lighttext mb-6 block text-center mx-auto">
             On-Demand Sessions
           </motion.h2>
           <p className="text-center text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -273,13 +297,18 @@ const Pricing = () => {
           <div className="w-24 h-1.5 bg-chargetrux-green mx-auto mb-12"></div>
           
           <div className="grid grid-cols-1 max-w-2xl mx-auto mb-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="group"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5,
+            delay: 0.1
+          }} viewport={{
+            once: true
+          }} className="group">
               <Card className="h-full border-2 border-chargetrux-green hover:border-chargetrux-green transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg">
                 <div className="h-2 bg-chargetrux-green w-full"></div>
                 <CardHeader className="bg-green-50 border-b">
@@ -355,13 +384,18 @@ const Pricing = () => {
             </motion.div>
           </div>
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-gray-50 to-green-50/30 rounded-xl p-8 shadow-sm"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5,
+          delay: 0.3
+        }} viewport={{
+          once: true
+        }} className="bg-gradient-to-br from-gray-50 to-green-50/30 rounded-xl p-8 shadow-sm">
             <h3 className="text-xl font-bold text-chargetrux-darkblue mb-6">On-Demand Benefits</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
               <div className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
@@ -404,13 +438,17 @@ const Pricing = () => {
         </section>
 
         <section className="mb-24">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-xl md:text-2xl font-bold text-center text-chargetrux-lighttext mb-6 block text-center mx-auto"
-          >
+          <motion.h2 initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5
+        }} viewport={{
+          once: true
+        }} className="text-xl md:text-2xl font-bold text-center text-chargetrux-lighttext mb-6 block text-center mx-auto">
             Custom Enterprise Packages
           </motion.h2>
           <p className="text-center text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -419,13 +457,18 @@ const Pricing = () => {
           <div className="w-24 h-1.5 bg-chargetrux-green mx-auto mb-12"></div>
           
           <div className="grid grid-cols-1 max-w-3xl mx-auto mb-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="group"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5,
+            delay: 0.1
+          }} viewport={{
+            once: true
+          }} className="group">
               <Card className="h-full border-2 border-chargetrux-green bg-gradient-to-br from-white to-green-50 hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                 <div className="h-2 bg-chargetrux-green w-full"></div>
                 <CardHeader className="bg-chargetrux-green bg-opacity-10 border-b">
@@ -501,13 +544,18 @@ const Pricing = () => {
             </motion.div>
           </div>
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-gray-50 to-green-50/30 rounded-xl p-8 shadow-sm"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5,
+          delay: 0.3
+        }} viewport={{
+          once: true
+        }} className="bg-gradient-to-br from-gray-50 to-green-50/30 rounded-xl p-8 shadow-sm">
             <h3 className="text-xl font-bold text-chargetrux-darkblue mb-6">Enterprise Package Benefits</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
               <div className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
@@ -550,13 +598,17 @@ const Pricing = () => {
         </section>
 
         <section className="mb-24">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-xl md:text-2xl font-bold text-center text-chargetrux-lighttext mb-6 block text-center mx-auto"
-          >
+          <motion.h2 initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5
+        }} viewport={{
+          once: true
+        }} className="text-xl md:text-2xl font-bold text-center text-chargetrux-lighttext mb-6 block text-center mx-auto">
             Transparent Value
           </motion.h2>
           <p className="text-center text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -565,13 +617,18 @@ const Pricing = () => {
           <div className="w-24 h-1.5 bg-chargetrux-blue mx-auto mb-12"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="group"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5,
+            delay: 0.1
+          }} viewport={{
+            once: true
+          }} className="group">
               <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center h-full hover:shadow-md hover:border-chargetrux-blue/30 transition-all duration-300 hover:translate-y-[-5px]">
                 <div className="bg-blue-50 w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center">
                   <CircleDollarSign className="h-8 w-8 text-chargetrux-blue" />
@@ -583,13 +640,18 @@ const Pricing = () => {
               </div>
             </motion.div>
             
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="group"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5,
+            delay: 0.2
+          }} viewport={{
+            once: true
+          }} className="group">
               <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center h-full hover:shadow-md hover:border-chargetrux-blue/30 transition-all duration-300 hover:translate-y-[-5px]">
                 <div className="bg-blue-50 w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center">
                   <Scale className="h-8 w-8 text-chargetrux-blue" />
@@ -601,13 +663,18 @@ const Pricing = () => {
               </div>
             </motion.div>
             
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="group"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5,
+            delay: 0.3
+          }} viewport={{
+            once: true
+          }} className="group">
               <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center h-full hover:shadow-md hover:border-chargetrux-blue/30 transition-all duration-300 hover:translate-y-[-5px]">
                 <div className="bg-blue-50 w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center">
                   <TrendingUp className="h-8 w-6 text-chargetrux-blue" />
@@ -619,13 +686,18 @@ const Pricing = () => {
               </div>
             </motion.div>
             
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="group"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5,
+            delay: 0.4
+          }} viewport={{
+            once: true
+          }} className="group">
               <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center h-full hover:shadow-md hover:border-chargetrux-blue/30 transition-all duration-300 hover:translate-y-[-5px]">
                 <div className="bg-blue-50 w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center">
                   <ChartBar className="h-8 w-8 text-chargetrux-blue" />
@@ -641,13 +713,15 @@ const Pricing = () => {
         
         {/* White information section moved right before the blue CTA section */}
         <section className="mb-24">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="bg-gray-50 p-6 rounded-xl text-sm shadow-sm"
-          >
+          <motion.div initial={{
+          opacity: 0
+        }} whileInView={{
+          opacity: 1
+        }} transition={{
+          duration: 0.5
+        }} viewport={{
+          once: true
+        }} className="bg-gray-50 p-6 rounded-xl text-sm shadow-sm">
             <p className="font-semibold mb-2 text-chargetrux-darkblue">Coverage Areas:</p>
             <p className="mb-4 text-gray-700">
               Now servicing all major U.S. coastal regions—available in metropolitan areas and international airport zones across:
@@ -669,40 +743,36 @@ const Pricing = () => {
             <p className="mb-4 text-gray-700">
               Additional coverage available nationwide by request. See our <a href="/coverage" className="text-chargetrux-blue hover:underline">service map</a> for complete details and expansion plans.
             </p>
-            <p className="font-semibold mb-2 text-chargetrux-darkblue">Enterprise Solutions:</p>
-            <p className="text-gray-700">
-              Custom enterprise packages are available for fleets of 10+ vehicles. Multi-year agreements 
-              include price protection guarantees and priority service allocation.
-            </p>
+            
+            
           </motion.div>
         </section>
 
         <section className="mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-chargetrux-darkblue to-chargetrux-blue text-white p-12 rounded-xl text-center"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5
+        }} viewport={{
+          once: true
+        }} className="bg-gradient-to-br from-chargetrux-darkblue to-chargetrux-blue text-white p-12 rounded-xl text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-chargetrux-lighttext">Ready to Power Your Fleet's Future?</h2>
             <div className="w-20 h-1 bg-white mx-auto mb-6"></div>
             <p className="text-lg mb-10 max-w-2xl mx-auto text-chargetrux-lighttext">
               Our pricing specialists will work with you to develop a customized charging solution that maximizes 
               operational efficiency while minimizing costs for your specific fleet profile.
             </p>
-            <Button 
-              className="bg-[#00cc66] hover:bg-[#00cc66]/90 text-white font-medium h-14 px-6 text-lg rounded-md"
-              onClick={() => window.location.href = '/contact'}
-            >
+            <Button className="bg-[#00cc66] hover:bg-[#00cc66]/90 text-white font-medium h-14 px-6 text-lg rounded-md" onClick={() => window.location.href = '/contact'}>
               Request Custom Quote
             </Button>
           </motion.div>
         </section>
       </div>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Pricing;
