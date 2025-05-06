@@ -8,7 +8,6 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Battery, Settings, ShieldCheck, FileChartLine, Calendar, Calendar as CalendarDays, Clock, ClockAlert, FileText, FileUp, FileDown, Plug, Truck, Settings2, Shield, ShieldOff, Wifi } from "lucide-react";
 import ServiceModelCard from "@/components/ServiceModelCard";
-import ChargeTruxAPI from "@/components/ChargeTruxAPI";
 import CtaSection from "@/components/CtaSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
@@ -398,72 +397,6 @@ const FSaaS = () => {
                   className="w-full h-full object-contain"
                 />
               </AspectRatio>
-            </div>
-          </motion.div>
-          
-          {/* API Support */}
-          <motion.div 
-            className="mt-16"
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeIn}
-          >
-            <h3 className="text-2xl font-bold mb-6 text-center text-chargetrux-darkblue">API Support for Fleet Scheduling Tools</h3>
-            <p className="text-chargetrux-darktext mb-8 text-center max-w-3xl mx-auto">
-              Our robust API enables seamless integration with your existing fleet management systems:
-            </p>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <ChargeTruxAPI />
-              
-              <div className="text-chargetrux-darktext">
-                <ul className="space-y-4">
-                  <li className="flex gap-3">
-                    <div className="flex-shrink-0 h-8 w-8 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
-                      <FileText className="h-4 w-4 text-chargetrux-blue" />
-                    </div>
-                    <div className="text-chargetrux-darktext">
-                      <span className="font-medium">RESTful API</span> with comprehensive documentation
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <div className="flex-shrink-0 h-8 w-8 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
-                      <Wifi className="h-4 w-4 text-chargetrux-blue" />
-                    </div>
-                    <div className="text-chargetrux-darktext">
-                      <span className="font-medium">Webhook support</span> for real-time event notifications
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <div className="flex-shrink-0 h-8 w-8 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
-                      <Shield className="h-4 w-4 text-chargetrux-blue" />
-                    </div>
-                    <div className="text-chargetrux-darktext">
-                      <span className="font-medium">OAuth 2.0 authentication</span> for secure access
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <div className="flex-shrink-0 h-8 w-8 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
-                      <Plug className="h-4 w-4 text-chargetrux-blue" />
-                    </div>
-                    <div className="text-chargetrux-darktext">
-                      <span className="font-medium">Integration</span> with major fleet management platforms
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <div className="flex-shrink-0 h-8 w-8 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
-                      <Settings className="h-4 w-4 text-chargetrux-blue" />
-                    </div>
-                    <div className="text-chargetrux-darktext">
-                      <span className="font-medium">Custom integration</span> development support
-                    </div>
-                  </li>
-                </ul>
-                <p className="mt-6 text-chargetrux-darktext">
-                  Our technical team provides full support for API integration, ensuring a smooth connection between your fleet management systems and our charging infrastructure.
-                </p>
-              </div>
             </div>
           </motion.div>
         </div>
