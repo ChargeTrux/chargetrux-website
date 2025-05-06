@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Check, ChartBar, CircleDollarSign, Scale, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -611,7 +610,7 @@ const Pricing = () => {
             >
               <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center h-full hover:shadow-md hover:border-chargetrux-blue/30 transition-all duration-300 hover:translate-y-[-5px]">
                 <div className="bg-blue-50 w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center">
-                  <TrendingUp className="h-8 w-8 text-chargetrux-blue" />
+                  <TrendingUp className="h-8 w-6 text-chargetrux-blue" />
                 </div>
                 <h4 className="text-xl font-bold mb-4 text-chargetrux-darkblue">Scalable Solutions</h4>
                 <p className="text-gray-700">
@@ -651,9 +650,24 @@ const Pricing = () => {
           >
             <p className="font-semibold mb-2 text-chargetrux-darkblue">Coverage Areas:</p>
             <p className="mb-4 text-gray-700">
-              ChargeTrux currently services major metropolitan areas across the United States including 
-              Los Angeles, San Francisco, Chicago, Dallas, Houston, Miami, Atlanta, Washington DC, Boston, 
-              and New York. See our <a href="/coverage" className="text-chargetrux-blue hover:underline">service map</a> for complete details and expansion plans.
+              Now servicing all major U.S. coastal regions—available in metropolitan areas and international airport zones across:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+              <div>
+                <p className="font-medium text-chargetrux-darkblue mb-1">West Coast:</p>
+                <p className="text-gray-700">Seattle, Portland, San Francisco, Oakland, San Jose, Los Angeles, Orange County, San Diego</p>
+              </div>
+              <div>
+                <p className="font-medium text-chargetrux-darkblue mb-1">Gulf Coast & Southwest:</p>
+                <p className="text-gray-700">Phoenix, Albuquerque, Dallas, Houston, Austin, San Antonio, New Orleans, Tampa, Orlando, Fort Lauderdale, Miami</p>
+              </div>
+              <div>
+                <p className="font-medium text-chargetrux-darkblue mb-1">East Coast & Southeast:</p>
+                <p className="text-gray-700">Atlanta, Charlotte, Raleigh-Durham, Norfolk/Virginia Beach, Washington D.C., Baltimore, Philadelphia, Newark, New York City, Boston</p>
+              </div>
+            </div>
+            <p className="mb-4 text-gray-700">
+              Additional coverage available nationwide by request. See our <a href="/coverage" className="text-chargetrux-blue hover:underline">service map</a> for complete details and expansion plans.
             </p>
             <p className="font-semibold mb-2 text-chargetrux-darkblue">Enterprise Solutions:</p>
             <p className="text-gray-700">
