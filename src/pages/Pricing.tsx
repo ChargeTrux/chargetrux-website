@@ -42,7 +42,7 @@ const Pricing = () => {
         </motion.div>
         
         {/* Pricing Plans Grid - 4 columns side by side */}
-        <section className="mb-24">
+        <section id="pricing-plans" className="mb-24">
           <motion.h2 initial={{
           opacity: 0,
           y: 20
