@@ -15,7 +15,7 @@ const ScopeEmissionsExplainer = () => {
   }} viewport={{
     once: true
   }} className="mb-16">
-      <h3 className="text-2xl font-bold text-center mb-8 text-chargetrux-darkblue">Understanding Scope 2 Emissions & ESG Support</h3>
+      <h3 className="text-2xl font-bold text-center mb-8 text-chargetrux-darkblue">ChargeTrux Supports ESG Initiatives</h3>
       <div className="max-w-3xl mx-auto">
         <Card className="bg-white shadow hover:shadow-md transition-shadow duration-300">
           <CardHeader>
