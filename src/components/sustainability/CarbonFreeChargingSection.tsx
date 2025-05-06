@@ -2,8 +2,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SustainabilityFeatures from "./SustainabilityFeatures";
-import ScopeEmissionsExplainer from "./ScopeEmissionsExplainer";
-import EnvironmentalImpact from "./EnvironmentalImpact";
 
 const CarbonFreeChargingSection = () => {
   return (
@@ -33,9 +31,6 @@ const CarbonFreeChargingSection = () => {
 
         {/* Sustainability Features */}
         <SustainabilityFeatures />
-
-        {/* Scope Emissions Explainer */}
-        <ScopeEmissionsExplainer />
       </div>
     </section>
   );
