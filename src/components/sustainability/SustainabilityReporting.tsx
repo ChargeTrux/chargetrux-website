@@ -1,19 +1,20 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import { Shield, TrendingUp } from "lucide-react";
-
 const SustainabilityReporting = () => {
-  return (
-    <section className="py-16 bg-gradient-to-br from-[#f8fafc] to-[#f0f9ff] relative">
+  return <section className="bg-gradient-to-br from-[#f8fafc] to-[#f0f9ff] relative py-[54px]">
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.5
+      }} viewport={{
+        once: true
+      }} className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-2 text-chargetrux-darkblue">Data-Backed Sustainability Reporting</h2>
           <div className="w-20 h-1 bg-chargetrux-green mx-auto mb-4"></div>
           <p className="text-lg text-chargetrux-green font-medium">We help clients align their energy usage with ESG reporting requirements related to renewable electricity.</p>
@@ -21,13 +22,18 @@ const SustainabilityReporting = () => {
 
         {/* Reporting Features */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-lg shadow-lg p-6 flex items-start gap-4 hover:shadow-xl transition-shadow duration-300"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          x: -20
+        }} whileInView={{
+          opacity: 1,
+          x: 0
+        }} transition={{
+          duration: 0.5,
+          delay: 0.2
+        }} viewport={{
+          once: true
+        }} className="bg-white rounded-lg shadow-lg p-6 flex items-start gap-4 hover:shadow-xl transition-shadow duration-300">
             <div className="flex-shrink-0 w-12 h-12 rounded-full bg-chargetrux-blue/10 flex items-center justify-center">
               <Shield className="w-6 h-6 text-chargetrux-blue" />
             </div>
@@ -39,13 +45,18 @@ const SustainabilityReporting = () => {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-lg shadow-lg p-6 flex items-start gap-4 hover:shadow-xl transition-shadow duration-300"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          x: 20
+        }} whileInView={{
+          opacity: 1,
+          x: 0
+        }} transition={{
+          duration: 0.5,
+          delay: 0.4
+        }} viewport={{
+          once: true
+        }} className="bg-white rounded-lg shadow-lg p-6 flex items-start gap-4 hover:shadow-xl transition-shadow duration-300">
             <div className="flex-shrink-0 w-12 h-12 rounded-full bg-chargetrux-green/10 flex items-center justify-center">
               <TrendingUp className="w-6 h-6 text-chargetrux-green" />
             </div>
@@ -59,13 +70,17 @@ const SustainabilityReporting = () => {
         </div>
 
         {/* Monthly Reports */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.5
+      }} viewport={{
+        once: true
+      }} className="mb-16">
           <h3 className="text-xl font-bold text-center mb-8 text-chargetrux-darkblue">Monthly Energy + Carbon Offset Information</h3>
           
           <div className="bg-white rounded-xl shadow-lg overflow-hidden">
@@ -104,8 +119,6 @@ const SustainabilityReporting = () => {
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default SustainabilityReporting;
