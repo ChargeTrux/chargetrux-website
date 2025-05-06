@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -150,8 +149,8 @@ const FSaaS = () => {
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <ul className="list-disc pl-6 space-y-2 text-white">
-                    <li>R-Series 600: 600 kWh capacity</li>
-                    <li>R-Series 750: 750 kWh capacity with enhanced battery density</li>
+                    <li>R-600: 600 kWh capacity</li>
+                    <li>R-750: 750 kWh capacity with enhanced battery density</li>
                     <li>Solar-augmented charging option</li>
                     <li>Bi-directional power flow capability</li>
                   </ul>

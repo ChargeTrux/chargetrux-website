@@ -212,7 +212,7 @@ const Technology = () => {
                   </div>
                   <div className="bg-gray-800/60 rounded-lg p-6 backdrop-blur-sm border border-gray-700">
                     <div className="text-chargetrux-blue font-semibold mb-2">Q4 2025</div>
-                    <h4 className="text-xl font-medium mb-2">R-Series 600</h4>
+                    <h4 className="text-xl font-medium mb-2">R-600</h4>
                     <p className="text-gray-300">600 kWh capacity units with enhanced battery density and improved thermal management</p>
                   </div>
                 </motion.div>
@@ -229,7 +229,7 @@ const Technology = () => {
                   </div>
                   <div className="bg-gray-800/60 rounded-lg p-6 backdrop-blur-sm border border-gray-700">
                     <div className="text-chargetrux-green font-semibold mb-2">Q2 2026</div>
-                    <h4 className="text-xl font-medium mb-2">R-Series 750</h4>
+                    <h4 className="text-xl font-medium mb-2">R-750</h4>
                     <p className="text-gray-300">750 kWh high-capacity units capable of supporting up to 6 vehicles simultaneously</p>
                   </div>
                 </motion.div>
