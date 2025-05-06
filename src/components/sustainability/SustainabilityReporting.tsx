@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Shield, TrendingUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const SustainabilityReporting = () => {
   return (
@@ -34,7 +35,7 @@ const SustainabilityReporting = () => {
             <div>
               <h4 className="text-lg font-bold text-chargetrux-darkblue mb-3">Comprehensive ESG Data Collection</h4>
               <p className="text-gray-700">
-                Our advanced monitoring systems collect detailed operational data from every charging session, creating a comprehensive dataset that supports ESG reporting requirements. This includes energy consumed, carbon emissions avoided, and renewable energy certification tracking.
+                Our advanced monitoring systems collect detailed operational data from every charging session, creating a comprehensive dataset that supports your ESG reporting requirements. This data includes energy consumed, carbon emissions avoided, and renewable energy certification tracking.
               </p>
             </div>
           </motion.div>
@@ -50,9 +51,9 @@ const SustainabilityReporting = () => {
               <TrendingUp className="w-6 h-6 text-chargetrux-green" />
             </div>
             <div>
-              <h4 className="text-lg font-bold text-chargetrux-darkblue mb-3">ESG Alignment Framework</h4>
+              <h4 className="text-lg font-bold text-chargetrux-darkblue mb-3">Regulatory Compliance Framework</h4>
               <p className="text-gray-700">
-                We help clients align their energy usage with ESG reporting requirements related to renewable electricity. Our reporting systems are designed to align with major ESG reporting frameworks, ensuring the data seamlessly integrates with existing sustainability reporting processes.
+                ChargeTrux's reporting systems are designed to align with major ESG reporting frameworks, including GRI, SASB, and TCFD. This ensures that the data we provide seamlessly integrates with your existing sustainability reporting processes and meets stringent regulatory requirements.
               </p>
             </div>
           </motion.div>
@@ -99,6 +100,7 @@ const SustainabilityReporting = () => {
                     <span className="text-gray-700"><strong>Customizable Data Integration:</strong> Export options compatible with major sustainability reporting platforms</span>
                   </li>
                 </ul>
+                <Button variant="ctaGreen" size="xl">View Sample Report</Button>
               </div>
             </div>
           </div>
