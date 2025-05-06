@@ -1,31 +1,33 @@
+
 import { Circle, Zap, Truck, Battery, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 
 const TrustedPartnersSection = () => {
-  const partners = [
+  // Updated with general industry categories instead of specific company logos
+  const industries = [
     { 
-      name: "Amazon", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" 
+      name: "Online Retailers", 
+      icon: <Globe className="h-8 w-8 text-chargetrux-green" />
     },
     { 
-      name: "Hertz", 
-      logo: "/lovable-uploads/7352ddc9-7057-4db1-8f1e-97b0188b38b4.png" 
+      name: "Shipping Companies", 
+      icon: <Truck className="h-8 w-8 text-chargetrux-green" />
     },
     { 
-      name: "FedEx", 
-      logo: "/lovable-uploads/c7ef7e0e-121a-4f5e-a9ec-396eaa11c44f.png" 
+      name: "Fleet Operators", 
+      icon: <Battery className="h-8 w-8 text-chargetrux-green" />
     },
     { 
-      name: "Avis", 
-      logo: "https://www.logo.wine/a/logo/Avis_Car_Rental/Avis_Car_Rental-Logo.wine.svg" 
+      name: "Airport Services", 
+      icon: <Zap className="h-8 w-8 text-chargetrux-green" />
     },
     { 
-      name: "Port of Long Beach", 
-      logo: "/lovable-uploads/2a733f58-c400-4a2e-883d-12ed7d7219ca.png" 
+      name: "Port Authorities", 
+      icon: <Globe className="h-8 w-8 text-chargetrux-green" />
     },
     { 
-      name: "LAX VALET", 
-      logo: "/lovable-uploads/b72a601d-7595-45bd-a7b2-1102c24834ca.png" 
+      name: "Logistics Providers", 
+      icon: <Truck className="h-8 w-8 text-chargetrux-green" />
     },
   ];
 
@@ -73,10 +75,10 @@ const TrustedPartnersSection = () => {
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {partners.map((partner, index) => (
+            {industries.map((industry, index) => (
               <motion.div 
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 flex items-center justify-center h-32 transition-all hover:bg-white/20"
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 flex flex-col items-center justify-center h-32 transition-all hover:bg-white/20"
                 style={{
                   boxShadow: "0 4px 15px rgba(255, 255, 255, 0.05)"
                 }}
@@ -86,12 +88,8 @@ const TrustedPartnersSection = () => {
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
               >
-                <img 
-                  src={partner.logo} 
-                  alt={`${partner.name} logo`} 
-                  className="max-h-16 max-w-full object-contain hover:opacity-100 transition-all"
-                  style={{ maxWidth: "100%" }}
-                />
+                {industry.icon}
+                <h3 className="mt-4 text-lg font-medium text-white">{industry.name}</h3>
               </motion.div>
             ))}
           </div>

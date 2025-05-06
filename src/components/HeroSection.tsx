@@ -74,9 +74,7 @@ const HeroSection = () => {
                   Schedule a Demo <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10 rounded-md">
-                Fleet Overview PDF
-              </Button>
+              {/* Fleet Overview PDF button removed */}
             </div>
           </motion.div>
           
