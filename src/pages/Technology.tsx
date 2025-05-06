@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Battery, Calendar, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";

@@ -77,6 +77,10 @@ const ChargeTruxAPI = () => {
           <pre className="text-green-400 whitespace-pre-wrap">{apiExample}</pre>
         )}
       </motion.div>
+      
+      <div className="bg-gray-800 px-4 py-3 text-sm text-gray-300 border-t border-gray-700">
+        <p>Planned future rollout of API-based fleet reporting and account-level integration.</p>
+      </div>
     </div>
   );
 };
