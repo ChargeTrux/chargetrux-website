@@ -91,18 +91,21 @@ const Contact = () => {
     "Still planning deployment"
   ];
 
-  const serviceAreas = [
-    "San Francisco Bay Area",
-    "Greater Los Angeles",
-    "Chicago Metro",
-    "Dallas-Fort Worth",
-    "Houston",
-    "Miami",
-    "Atlanta",
-    "Washington DC Metro",
-    "Boston",
-    "New York City Metro"
-  ];
+  // Updated service areas organized by regions
+  const serviceAreas = {
+    westCoast: {
+      title: "West Coast",
+      cities: ["Seattle", "Portland", "San Francisco", "Oakland", "San Jose", "Los Angeles", "Orange County", "San Diego"]
+    },
+    gulfSouthwest: {
+      title: "Gulf Coast & Southwest",
+      cities: ["Phoenix", "Albuquerque", "Dallas", "Houston", "Austin", "San Antonio", "New Orleans", "Tampa", "Orlando", "Fort Lauderdale", "Miami"]
+    },
+    eastCoast: {
+      title: "East Coast & Southeast",
+      cities: ["Atlanta", "Charlotte", "Raleigh-Durham", "Norfolk/Virginia Beach", "Washington D.C.", "Baltimore", "Philadelphia", "Newark", "New York City", "Boston"]
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-chargetrux-darkblue to-black">
@@ -355,16 +358,56 @@ const Contact = () => {
                 <MapPin className="w-6 h-6 text-chargetrux-green mt-1" />
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Service Areas</h3>
-                  <p className="text-gray-300">ChargeTrux currently services major metropolitan areas across the United States, with rapid expansion plans underway.</p>
+                  <p className="text-gray-300 mb-4">ChargeTrux currently services major metropolitan areas across the United States, with rapid expansion plans underway.</p>
                 </div>
               </div>
               
-              <div className="grid grid-cols-2 gap-2">
-                {serviceAreas.map((area) => (
-                  <div key={area} className="bg-white/5 rounded-md px-3 py-2 text-gray-300">
-                    {area}
+              {/* Updated Service Areas by region */}
+              <div className="grid grid-cols-1 gap-6">
+                {/* West Coast */}
+                <div className="bg-white/5 rounded-lg p-4">
+                  <h4 className="text-lg font-semibold text-chargetrux-green mb-2 flex items-center">
+                    <span className="text-chargetrux-green mr-2">✓</span>
+                    {serviceAreas.westCoast.title}
+                  </h4>
+                  <div className="grid grid-cols-2 gap-2">
+                    {serviceAreas.westCoast.cities.map((city) => (
+                      <div key={city} className="bg-white/5 rounded-md px-3 py-2 text-gray-300">
+                        {city}
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+                
+                {/* Gulf Coast & Southwest */}
+                <div className="bg-white/5 rounded-lg p-4">
+                  <h4 className="text-lg font-semibold text-chargetrux-green mb-2 flex items-center">
+                    <span className="text-chargetrux-green mr-2">✓</span>
+                    {serviceAreas.gulfSouthwest.title}
+                  </h4>
+                  <div className="grid grid-cols-2 gap-2">
+                    {serviceAreas.gulfSouthwest.cities.map((city) => (
+                      <div key={city} className="bg-white/5 rounded-md px-3 py-2 text-gray-300">
+                        {city}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* East Coast & Southeast */}
+                <div className="bg-white/5 rounded-lg p-4">
+                  <h4 className="text-lg font-semibold text-chargetrux-green mb-2 flex items-center">
+                    <span className="text-chargetrux-green mr-2">✓</span>
+                    {serviceAreas.eastCoast.title}
+                  </h4>
+                  <div className="grid grid-cols-2 gap-2">
+                    {serviceAreas.eastCoast.cities.map((city) => (
+                      <div key={city} className="bg-white/5 rounded-md px-3 py-2 text-gray-300">
+                        {city}
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
               
               <p className="mt-4 text-sm text-gray-400">

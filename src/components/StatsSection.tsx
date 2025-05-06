@@ -39,6 +39,13 @@ const Counter = ({ end, suffix = "", duration = 2000, delay = 0 }: CounterProps)
 };
 
 const StatsSection = () => {
+  // Updated service areas to match the comprehensive list from the first image
+  const serviceAreas = [
+    "West Coast",
+    "Gulf Coast & Southwest", 
+    "East Coast & Southeast"
+  ];
+
   return (
     <div className="bg-white py-20">
       <div className="container mx-auto px-4">
@@ -117,15 +124,13 @@ const StatsSection = () => {
               </div>
             </div>
             <h3 className="text-4xl font-bold mb-2 text-chargetrux-darkblue">
-              <Counter end={5} />
+              <Counter end={3} />
             </h3>
-            <p className="text-lg text-gray-600 mb-2">Major Metro Areas Served</p>
+            <p className="text-lg text-gray-600 mb-2">Major Regions Served</p>
             <div className="text-sm text-gray-500 flex flex-wrap justify-center gap-2">
-              <span className="px-2 py-1 bg-gray-100 rounded-full">Los Angeles</span>
-              <span className="px-2 py-1 bg-gray-100 rounded-full">San Francisco</span>
-              <span className="px-2 py-1 bg-gray-100 rounded-full">San Diego</span>
-              <span className="px-2 py-1 bg-gray-100 rounded-full">Portland</span>
-              <span className="px-2 py-1 bg-gray-100 rounded-full">Seattle</span>
+              {serviceAreas.map((area) => (
+                <span key={area} className="px-2 py-1 bg-gray-100 rounded-full">{area}</span>
+              ))}
             </div>
           </motion.div>
         </div>
