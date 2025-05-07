@@ -20,7 +20,7 @@ const FSaaS = () => {
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.5 }
   };
-
+  
   const serviceModels = [
     {
       icon: <Calendar className="h-8 w-8 text-chargetrux-blue" />,
@@ -301,6 +301,23 @@ const FSaaS = () => {
             </p>
           </motion.div>
           
+          {/* Fleet Integration Illustration - Full Width */}
+          <motion.div 
+            className="mb-16"
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={fadeIn}
+          >
+            <div className="w-full mx-auto rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src="/lovable-uploads/a03a4f53-a94d-48d0-8b0d-8358208e2ee5.png" 
+                alt="Fleet Integration Diagram" 
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </motion.div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <motion.div
               initial="initial"
@@ -379,25 +396,6 @@ const FSaaS = () => {
               </ul>
             </motion.div>
           </div>
-          
-          {/* Fleet Integration Illustration */}
-          <motion.div 
-            className="my-16"
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeIn}
-          >
-            <div className="w-full max-w-5xl mx-auto">
-              <AspectRatio ratio={16/9} className="bg-transparent overflow-hidden rounded-lg shadow-xl">
-                <img 
-                  src="/lovable-uploads/fd98f191-123f-48e8-9b2c-451ef680cc47.png" 
-                  alt="Fleet Integration Isometric Illustration" 
-                  className="w-full h-full object-contain"
-                />
-              </AspectRatio>
-            </div>
-          </motion.div>
         </div>
       </section>
       
