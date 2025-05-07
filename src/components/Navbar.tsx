@@ -27,11 +27,15 @@ const Navbar = () => {
   const navLinks = [
     { title: "Home", path: "/" },
     { 
-      title: "How It Works", 
-      path: "/fsaas",
+      title: "Solutions", 
+      path: "/solutions",
       submenu: [
-        {title: "FS-as-a-Service", path: "/fsaas"}
-      ] 
+        {title: "Mobile Charging", path: "/industries?industry=rental"},
+        {title: "Fleet Support-as-a-Service", path: "/fsaas"},
+        {title: "On-Demand Charging", path: "/industries?industry=delivery"},
+        {title: "Infrastructure Backup", path: "/industries?industry=developers"},
+        {title: "ESG Reporting", path: "/sustainability"}
+      ]
     },
     {
       title: "Industries We Serve",
@@ -46,7 +50,7 @@ const Navbar = () => {
     },
     { title: "Technology", path: "/technology" },
     { title: "Pricing", path: "/pricing" },
-    { title: "ESG & Sustainability", path: "/sustainability" },
+    { title: "About", path: "/about" },
     { title: "Contact", path: "/contact" },
   ];
 
