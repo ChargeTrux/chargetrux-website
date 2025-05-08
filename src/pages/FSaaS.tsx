@@ -127,7 +127,7 @@ const FSaaS = () => {
               
               <Card className="mb-6 bg-chargetrux-darkblue text-white">
                 <CardHeader>
-                  <CardTitle className="text-chargetrux-blue">Current R-Series 450</CardTitle>
+                  <CardTitle className="text-chargetrux-blue">R-450</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <ul className="list-disc pl-6 space-y-2 text-white">
