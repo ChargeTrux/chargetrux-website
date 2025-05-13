@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Briefcase, MapPin } from "lucide-react";
+import { ArrowRight, Briefcase, MapPin, CheckCircle } from "lucide-react";
 
 const Careers = () => {
   useEffect(() => {
@@ -17,11 +17,13 @@ const Careers = () => {
       title: "EV Charging Technician",
       location: "San Francisco, CA",
       type: "Full-time",
+      department: "Operations"
     },
     {
       title: "Fleet Support Specialist",
       location: "Los Angeles, CA",
       type: "Full-time",
+      department: "Operations"
     },
   ];
 
@@ -30,11 +32,13 @@ const Careers = () => {
       title: "Field Operations Manager",
       location: "Houston, TX",
       type: "Full-time",
+      department: "Operations"
     },
     {
       title: "Charging Infrastructure Specialist",
       location: "Dallas, TX",
       type: "Full-time",
+      department: "Operations"
     },
   ];
 
@@ -43,11 +47,13 @@ const Careers = () => {
       title: "Software Engineer - Mobile Apps",
       location: "New York, NY",
       type: "Remote",
+      department: "Technology"
     },
     {
       title: "Sustainability Analyst",
       location: "Boston, MA",
       type: "Full-time",
+      department: "Operations"
     },
   ];
 
@@ -56,10 +62,7 @@ const Careers = () => {
     ...westCoastPositions,
     ...gulfCoastPositions,
     ...eastCoastPositions
-  ].map(pos => ({
-    ...pos,
-    department: pos.location.includes("Remote") ? "Technology" : "Operations"
-  }));
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-chargetrux-darkblue to-black">
@@ -137,103 +140,121 @@ const Careers = () => {
           {/* West Coast Region */}
           <div className="mb-10">
             <div className="mb-4 flex items-center">
-              <div className="h-6 w-6 rounded-full bg-chargetrux-green flex items-center justify-center mr-2">
-                <svg className="h-4 w-4 text-chargetrux-darkblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-              </div>
+              <CheckCircle className="h-6 w-6 text-chargetrux-green mr-2" />
               <h3 className="text-xl font-semibold text-chargetrux-green">West Coast</h3>
             </div>
-            <div className="bg-chargetrux-darkblue/40 p-6 rounded-lg border border-gray-700">
-              {westCoastPositions.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {westCoastPositions.map((position, index) => (
-                    <motion.div 
-                      key={`west-pos-${index}`} 
-                      className="p-4 bg-chargetrux-blue/20 rounded-md hover:bg-chargetrux-blue/30 transition-all"
-                      whileHover={{ scale: 1.01 }}
-                    >
-                      <p className="text-white font-medium mb-1">{position.title}</p>
-                      <p className="text-sm text-gray-300 mb-2">{position.location}</p>
-                      <p className="text-xs text-gray-400">{position.type}</p>
-                      <Button variant="link" className="text-chargetrux-green p-0 mt-2 text-sm flex items-center">
-                        Apply now <ArrowRight size={14} className="ml-1" />
+            {westCoastPositions.length > 0 ? (
+              <div className="grid gap-4">
+                {westCoastPositions.map((position, index) => (
+                  <motion.div
+                    key={`west-pos-${index}`}
+                    className="bg-chargetrux-darkblue/60 border border-gray-700 rounded-lg p-6 hover:border-chargetrux-blue transition-all"
+                    whileHover={{ scale: 1.01 }}
+                  >
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                      <div>
+                        <h3 className="text-xl font-semibold text-white mb-2 flex items-center">
+                          <Briefcase size={20} className="mr-2 text-chargetrux-green" />
+                          {position.title}
+                        </h3>
+                        <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 text-gray-300">
+                          <span>{position.department}</span>
+                          <span className="hidden md:inline">•</span>
+                          <span>{position.location}</span>
+                          <span className="hidden md:inline">•</span>
+                          <span>{position.type}</span>
+                        </div>
+                      </div>
+                      <Button variant="viewDetails" className="mt-2 md:mt-0">
+                        View Details <ArrowRight size={16} />
                       </Button>
-                    </motion.div>
-                  ))}
-                </div>
-              ) : (
-                <p className="text-gray-400">No current positions available in this region.</p>
-              )}
-            </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            ) : (
+              <p className="text-gray-400 bg-chargetrux-darkblue/40 p-4 rounded-lg">No current positions available in this region.</p>
+            )}
           </div>
 
           {/* Gulf Coast & Southwest Region */}
           <div className="mb-10">
             <div className="mb-4 flex items-center">
-              <div className="h-6 w-6 rounded-full bg-chargetrux-green flex items-center justify-center mr-2">
-                <svg className="h-4 w-4 text-chargetrux-darkblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-              </div>
+              <CheckCircle className="h-6 w-6 text-chargetrux-green mr-2" />
               <h3 className="text-xl font-semibold text-chargetrux-green">Gulf Coast & Southwest</h3>
             </div>
-            <div className="bg-chargetrux-darkblue/40 p-6 rounded-lg border border-gray-700">
-              {gulfCoastPositions.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {gulfCoastPositions.map((position, index) => (
-                    <motion.div 
-                      key={`gulf-pos-${index}`} 
-                      className="p-4 bg-chargetrux-blue/20 rounded-md hover:bg-chargetrux-blue/30 transition-all"
-                      whileHover={{ scale: 1.01 }}
-                    >
-                      <p className="text-white font-medium mb-1">{position.title}</p>
-                      <p className="text-sm text-gray-300 mb-2">{position.location}</p>
-                      <p className="text-xs text-gray-400">{position.type}</p>
-                      <Button variant="link" className="text-chargetrux-green p-0 mt-2 text-sm flex items-center">
-                        Apply now <ArrowRight size={14} className="ml-1" />
+            {gulfCoastPositions.length > 0 ? (
+              <div className="grid gap-4">
+                {gulfCoastPositions.map((position, index) => (
+                  <motion.div
+                    key={`gulf-pos-${index}`}
+                    className="bg-chargetrux-darkblue/60 border border-gray-700 rounded-lg p-6 hover:border-chargetrux-blue transition-all"
+                    whileHover={{ scale: 1.01 }}
+                  >
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                      <div>
+                        <h3 className="text-xl font-semibold text-white mb-2 flex items-center">
+                          <Briefcase size={20} className="mr-2 text-chargetrux-green" />
+                          {position.title}
+                        </h3>
+                        <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 text-gray-300">
+                          <span>{position.department}</span>
+                          <span className="hidden md:inline">•</span>
+                          <span>{position.location}</span>
+                          <span className="hidden md:inline">•</span>
+                          <span>{position.type}</span>
+                        </div>
+                      </div>
+                      <Button variant="viewDetails" className="mt-2 md:mt-0">
+                        View Details <ArrowRight size={16} />
                       </Button>
-                    </motion.div>
-                  ))}
-                </div>
-              ) : (
-                <p className="text-gray-400">No current positions available in this region.</p>
-              )}
-            </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            ) : (
+              <p className="text-gray-400 bg-chargetrux-darkblue/40 p-4 rounded-lg">No current positions available in this region.</p>
+            )}
           </div>
 
           {/* East Coast & Southeast Region */}
           <div className="mb-10">
             <div className="mb-4 flex items-center">
-              <div className="h-6 w-6 rounded-full bg-chargetrux-green flex items-center justify-center mr-2">
-                <svg className="h-4 w-4 text-chargetrux-darkblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-              </div>
+              <CheckCircle className="h-6 w-6 text-chargetrux-green mr-2" />
               <h3 className="text-xl font-semibold text-chargetrux-green">East Coast & Southeast</h3>
             </div>
-            <div className="bg-chargetrux-darkblue/40 p-6 rounded-lg border border-gray-700">
-              {eastCoastPositions.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {eastCoastPositions.map((position, index) => (
-                    <motion.div 
-                      key={`east-pos-${index}`} 
-                      className="p-4 bg-chargetrux-blue/20 rounded-md hover:bg-chargetrux-blue/30 transition-all"
-                      whileHover={{ scale: 1.01 }}
-                    >
-                      <p className="text-white font-medium mb-1">{position.title}</p>
-                      <p className="text-sm text-gray-300 mb-2">{position.location}</p>
-                      <p className="text-xs text-gray-400">{position.type}</p>
-                      <Button variant="link" className="text-chargetrux-green p-0 mt-2 text-sm flex items-center">
-                        Apply now <ArrowRight size={14} className="ml-1" />
+            {eastCoastPositions.length > 0 ? (
+              <div className="grid gap-4">
+                {eastCoastPositions.map((position, index) => (
+                  <motion.div
+                    key={`east-pos-${index}`}
+                    className="bg-chargetrux-darkblue/60 border border-gray-700 rounded-lg p-6 hover:border-chargetrux-blue transition-all"
+                    whileHover={{ scale: 1.01 }}
+                  >
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                      <div>
+                        <h3 className="text-xl font-semibold text-white mb-2 flex items-center">
+                          <Briefcase size={20} className="mr-2 text-chargetrux-green" />
+                          {position.title}
+                        </h3>
+                        <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 text-gray-300">
+                          <span>{position.department}</span>
+                          <span className="hidden md:inline">•</span>
+                          <span>{position.location}</span>
+                          <span className="hidden md:inline">•</span>
+                          <span>{position.type}</span>
+                        </div>
+                      </div>
+                      <Button variant="viewDetails" className="mt-2 md:mt-0">
+                        View Details <ArrowRight size={16} />
                       </Button>
-                    </motion.div>
-                  ))}
-                </div>
-              ) : (
-                <p className="text-gray-400">No current positions available in this region.</p>
-              )}
-            </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            ) : (
+              <p className="text-gray-400 bg-chargetrux-darkblue/40 p-4 rounded-lg">No current positions available in this region.</p>
+            )}
           </div>
         </motion.div>
         
