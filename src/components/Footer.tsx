@@ -1,12 +1,12 @@
+
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Linkedin, Youtube, Instagram, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-chargetrux-darkblue text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
             <Link to="/" className="inline-block mb-6">
@@ -40,23 +40,8 @@ const Footer = () => {
               <li><Link to="/about" className="text-gray-300 hover:text-chargetrux-green">About Us</Link></li>
               <li><Link to="/careers" className="text-gray-300 hover:text-chargetrux-green">Careers</Link></li>
               <li><Link to="/contact" className="text-gray-300 hover:text-chargetrux-green">Contact</Link></li>
-              <li><Link to="/blog" className="text-gray-300 hover:text-chargetrux-green">Blog & News</Link></li>
               <li><Link to="/" className="text-gray-300 hover:text-chargetrux-green">Privacy Policy</Link></li>
             </ul>
-          </div>
-          
-          {/* Newsletter */}
-          <div>
-            <h3 className="text-lg font-bold mb-4">Stay Connected</h3>
-            <p className="text-gray-300 mb-4">
-              Subscribe to our newsletter for updates on mobile charging innovations.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-2">
-              <Input type="email" placeholder="Enter your email" className="bg-gray-800 border-gray-700 text-white" />
-              <Button className="bg-chargetrux-green hover:bg-chargetrux-green/80 whitespace-nowrap">
-                Subscribe
-              </Button>
-            </div>
           </div>
         </div>
         
