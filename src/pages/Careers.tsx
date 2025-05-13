@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -131,7 +130,7 @@ const Careers = () => {
         >
           <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
             <MapPin size={24} className="mr-2 text-chargetrux-green" />
-            Job Positions by Service Area
+            Current Openings by Service Area
           </h2>
           <p className="text-gray-300 mb-8">
             ChargeTrux currently offers positions in major service areas across the United States, with new opportunities being added regularly.
