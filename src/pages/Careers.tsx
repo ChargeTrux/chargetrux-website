@@ -4,39 +4,69 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Briefcase } from "lucide-react";
+import { ArrowRight, Briefcase, MapPin } from "lucide-react";
 
 const Careers = () => {
   useEffect(() => {
     document.title = "Careers - ChargeTrux";
   }, []);
 
-  const positions = [
+  // Positions organized by region
+  const westCoastPositions = [
     {
       title: "EV Charging Technician",
-      department: "Operations",
-      location: "Remote / Various Locations",
-      type: "Full-time",
-    },
-    {
-      title: "Fleet Support Specialist",
-      department: "Customer Service",
       location: "San Francisco, CA",
       type: "Full-time",
     },
     {
-      title: "Software Engineer - Mobile Apps",
-      department: "Technology",
-      location: "Remote",
-      type: "Full-time",
-    },
-    {
-      title: "Sustainability Analyst",
-      department: "ESG",
-      location: "Chicago, IL",
+      title: "Fleet Support Specialist",
+      location: "Los Angeles, CA",
       type: "Full-time",
     },
   ];
+
+  const gulfCoastPositions = [
+    {
+      title: "Field Operations Manager",
+      location: "Houston, TX",
+      type: "Full-time",
+    },
+    {
+      title: "Charging Infrastructure Specialist",
+      location: "Dallas, TX",
+      type: "Full-time",
+    },
+  ];
+
+  const eastCoastPositions = [
+    {
+      title: "Software Engineer - Mobile Apps",
+      location: "New York, NY",
+      type: "Remote",
+    },
+    {
+      title: "Sustainability Analyst",
+      location: "Boston, MA",
+      type: "Full-time",
+    },
+  ];
+
+  // Service areas with cities
+  const serviceAreas = {
+    "West Coast": ["Seattle", "Portland", "San Francisco", "Oakland", "San Jose", "Los Angeles", "Orange County", "San Diego"],
+    "Gulf Coast & Southwest": ["Phoenix", "Albuquerque", "Dallas", "Houston", "Austin", "San Antonio", "New Orleans", "Tampa", "Orlando", "Fort Lauderdale", "Miami"],
+    "East Coast & Southeast": ["Atlanta", "Charlotte", "Raleigh-Durham", "Norfolk/Virginia Beach", "Washington D.C.", "Baltimore", "Philadelphia", "Newark", "New York City", "Boston"]
+  };
+
+  // Combined positions for initial display
+  const positions = [
+    ...westCoastPositions,
+    ...gulfCoastPositions,
+    ...eastCoastPositions
+  ].map(pos => ({
+    ...pos,
+    department: pos.location.includes("Remote") ? "Technology" : "Operations"
+  }));
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-chargetrux-darkblue to-black">
@@ -93,6 +123,118 @@ const Careers = () => {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </motion.div>
+        
+        {/* Service Areas Section */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          className="max-w-5xl mx-auto mb-20"
+        >
+          <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
+            <MapPin size={24} className="mr-2 text-chargetrux-green" />
+            Service Areas
+          </h2>
+          <p className="text-gray-300 mb-8">
+            ChargeTrux currently services major metropolitan areas across the United States, with rapid expansion plans underway.
+          </p>
+
+          {/* West Coast Region */}
+          <div className="mb-10">
+            <div className="mb-4 flex items-center">
+              <div className="h-6 w-6 rounded-full bg-chargetrux-green flex items-center justify-center mr-2">
+                <svg className="h-4 w-4 text-chargetrux-darkblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-chargetrux-green">West Coast</h3>
+            </div>
+            <div className="grid grid-cols-2 gap-4 bg-chargetrux-darkblue/40 p-6 rounded-lg border border-gray-700">
+              {serviceAreas["West Coast"].map((city, index) => (
+                <div key={`west-${index}`} className="p-3 bg-chargetrux-darkblue/60 rounded-md text-gray-300">
+                  {city}
+                </div>
+              ))}
+              {westCoastPositions.length > 0 && (
+                <div className="col-span-2 mt-4">
+                  <p className="text-chargetrux-green font-medium mb-2">Available Positions:</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {westCoastPositions.map((position, index) => (
+                      <div key={`west-pos-${index}`} className="p-3 bg-chargetrux-blue/20 rounded-md">
+                        <p className="text-white font-medium">{position.title}</p>
+                        <p className="text-sm text-gray-300">{position.location}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Gulf Coast & Southwest Region */}
+          <div className="mb-10">
+            <div className="mb-4 flex items-center">
+              <div className="h-6 w-6 rounded-full bg-chargetrux-green flex items-center justify-center mr-2">
+                <svg className="h-4 w-4 text-chargetrux-darkblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-chargetrux-green">Gulf Coast & Southwest</h3>
+            </div>
+            <div className="grid grid-cols-2 gap-4 bg-chargetrux-darkblue/40 p-6 rounded-lg border border-gray-700">
+              {serviceAreas["Gulf Coast & Southwest"].map((city, index) => (
+                <div key={`gulf-${index}`} className="p-3 bg-chargetrux-darkblue/60 rounded-md text-gray-300">
+                  {city}
+                </div>
+              ))}
+              {gulfCoastPositions.length > 0 && (
+                <div className="col-span-2 mt-4">
+                  <p className="text-chargetrux-green font-medium mb-2">Available Positions:</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {gulfCoastPositions.map((position, index) => (
+                      <div key={`gulf-pos-${index}`} className="p-3 bg-chargetrux-blue/20 rounded-md">
+                        <p className="text-white font-medium">{position.title}</p>
+                        <p className="text-sm text-gray-300">{position.location}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* East Coast & Southeast Region */}
+          <div className="mb-10">
+            <div className="mb-4 flex items-center">
+              <div className="h-6 w-6 rounded-full bg-chargetrux-green flex items-center justify-center mr-2">
+                <svg className="h-4 w-4 text-chargetrux-darkblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-chargetrux-green">East Coast & Southeast</h3>
+            </div>
+            <div className="grid grid-cols-2 gap-4 bg-chargetrux-darkblue/40 p-6 rounded-lg border border-gray-700">
+              {serviceAreas["East Coast & Southeast"].map((city, index) => (
+                <div key={`east-${index}`} className="p-3 bg-chargetrux-darkblue/60 rounded-md text-gray-300">
+                  {city}
+                </div>
+              ))}
+              {eastCoastPositions.length > 0 && (
+                <div className="col-span-2 mt-4">
+                  <p className="text-chargetrux-green font-medium mb-2">Available Positions:</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {eastCoastPositions.map((position, index) => (
+                      <div key={`east-pos-${index}`} className="p-3 bg-chargetrux-blue/20 rounded-md">
+                        <p className="text-white font-medium">{position.title}</p>
+                        <p className="text-sm text-gray-300">{position.location}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </motion.div>
         
