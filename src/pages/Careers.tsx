@@ -51,13 +51,6 @@ const Careers = () => {
     },
   ];
 
-  // Service areas with cities
-  const serviceAreas = {
-    "West Coast": ["Seattle", "Portland", "San Francisco", "Oakland", "San Jose", "Los Angeles", "Orange County", "San Diego"],
-    "Gulf Coast & Southwest": ["Phoenix", "Albuquerque", "Dallas", "Houston", "Austin", "San Antonio", "New Orleans", "Tampa", "Orlando", "Fort Lauderdale", "Miami"],
-    "East Coast & Southeast": ["Atlanta", "Charlotte", "Raleigh-Durham", "Norfolk/Virginia Beach", "Washington D.C.", "Baltimore", "Philadelphia", "Newark", "New York City", "Boston"]
-  };
-
   // Combined positions for initial display
   const positions = [
     ...westCoastPositions,
@@ -126,7 +119,7 @@ const Careers = () => {
           </div>
         </motion.div>
         
-        {/* Service Areas Section */}
+        {/* Job Positions by Service Area Section */}
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -135,10 +128,10 @@ const Careers = () => {
         >
           <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
             <MapPin size={24} className="mr-2 text-chargetrux-green" />
-            Service Areas
+            Job Positions by Service Area
           </h2>
           <p className="text-gray-300 mb-8">
-            ChargeTrux currently services major metropolitan areas across the United States, with rapid expansion plans underway.
+            ChargeTrux currently offers positions in major service areas across the United States, with new opportunities being added regularly.
           </p>
 
           {/* West Coast Region */}
@@ -151,24 +144,26 @@ const Careers = () => {
               </div>
               <h3 className="text-xl font-semibold text-chargetrux-green">West Coast</h3>
             </div>
-            <div className="grid grid-cols-2 gap-4 bg-chargetrux-darkblue/40 p-6 rounded-lg border border-gray-700">
-              {serviceAreas["West Coast"].map((city, index) => (
-                <div key={`west-${index}`} className="p-3 bg-chargetrux-darkblue/60 rounded-md text-gray-300">
-                  {city}
+            <div className="bg-chargetrux-darkblue/40 p-6 rounded-lg border border-gray-700">
+              {westCoastPositions.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {westCoastPositions.map((position, index) => (
+                    <motion.div 
+                      key={`west-pos-${index}`} 
+                      className="p-4 bg-chargetrux-blue/20 rounded-md hover:bg-chargetrux-blue/30 transition-all"
+                      whileHover={{ scale: 1.01 }}
+                    >
+                      <p className="text-white font-medium mb-1">{position.title}</p>
+                      <p className="text-sm text-gray-300 mb-2">{position.location}</p>
+                      <p className="text-xs text-gray-400">{position.type}</p>
+                      <Button variant="link" className="text-chargetrux-green p-0 mt-2 text-sm flex items-center">
+                        Apply now <ArrowRight size={14} className="ml-1" />
+                      </Button>
+                    </motion.div>
+                  ))}
                 </div>
-              ))}
-              {westCoastPositions.length > 0 && (
-                <div className="col-span-2 mt-4">
-                  <p className="text-chargetrux-green font-medium mb-2">Available Positions:</p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {westCoastPositions.map((position, index) => (
-                      <div key={`west-pos-${index}`} className="p-3 bg-chargetrux-blue/20 rounded-md">
-                        <p className="text-white font-medium">{position.title}</p>
-                        <p className="text-sm text-gray-300">{position.location}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+              ) : (
+                <p className="text-gray-400">No current positions available in this region.</p>
               )}
             </div>
           </div>
@@ -183,24 +178,26 @@ const Careers = () => {
               </div>
               <h3 className="text-xl font-semibold text-chargetrux-green">Gulf Coast & Southwest</h3>
             </div>
-            <div className="grid grid-cols-2 gap-4 bg-chargetrux-darkblue/40 p-6 rounded-lg border border-gray-700">
-              {serviceAreas["Gulf Coast & Southwest"].map((city, index) => (
-                <div key={`gulf-${index}`} className="p-3 bg-chargetrux-darkblue/60 rounded-md text-gray-300">
-                  {city}
+            <div className="bg-chargetrux-darkblue/40 p-6 rounded-lg border border-gray-700">
+              {gulfCoastPositions.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {gulfCoastPositions.map((position, index) => (
+                    <motion.div 
+                      key={`gulf-pos-${index}`} 
+                      className="p-4 bg-chargetrux-blue/20 rounded-md hover:bg-chargetrux-blue/30 transition-all"
+                      whileHover={{ scale: 1.01 }}
+                    >
+                      <p className="text-white font-medium mb-1">{position.title}</p>
+                      <p className="text-sm text-gray-300 mb-2">{position.location}</p>
+                      <p className="text-xs text-gray-400">{position.type}</p>
+                      <Button variant="link" className="text-chargetrux-green p-0 mt-2 text-sm flex items-center">
+                        Apply now <ArrowRight size={14} className="ml-1" />
+                      </Button>
+                    </motion.div>
+                  ))}
                 </div>
-              ))}
-              {gulfCoastPositions.length > 0 && (
-                <div className="col-span-2 mt-4">
-                  <p className="text-chargetrux-green font-medium mb-2">Available Positions:</p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {gulfCoastPositions.map((position, index) => (
-                      <div key={`gulf-pos-${index}`} className="p-3 bg-chargetrux-blue/20 rounded-md">
-                        <p className="text-white font-medium">{position.title}</p>
-                        <p className="text-sm text-gray-300">{position.location}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+              ) : (
+                <p className="text-gray-400">No current positions available in this region.</p>
               )}
             </div>
           </div>
@@ -215,24 +212,26 @@ const Careers = () => {
               </div>
               <h3 className="text-xl font-semibold text-chargetrux-green">East Coast & Southeast</h3>
             </div>
-            <div className="grid grid-cols-2 gap-4 bg-chargetrux-darkblue/40 p-6 rounded-lg border border-gray-700">
-              {serviceAreas["East Coast & Southeast"].map((city, index) => (
-                <div key={`east-${index}`} className="p-3 bg-chargetrux-darkblue/60 rounded-md text-gray-300">
-                  {city}
+            <div className="bg-chargetrux-darkblue/40 p-6 rounded-lg border border-gray-700">
+              {eastCoastPositions.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {eastCoastPositions.map((position, index) => (
+                    <motion.div 
+                      key={`east-pos-${index}`} 
+                      className="p-4 bg-chargetrux-blue/20 rounded-md hover:bg-chargetrux-blue/30 transition-all"
+                      whileHover={{ scale: 1.01 }}
+                    >
+                      <p className="text-white font-medium mb-1">{position.title}</p>
+                      <p className="text-sm text-gray-300 mb-2">{position.location}</p>
+                      <p className="text-xs text-gray-400">{position.type}</p>
+                      <Button variant="link" className="text-chargetrux-green p-0 mt-2 text-sm flex items-center">
+                        Apply now <ArrowRight size={14} className="ml-1" />
+                      </Button>
+                    </motion.div>
+                  ))}
                 </div>
-              ))}
-              {eastCoastPositions.length > 0 && (
-                <div className="col-span-2 mt-4">
-                  <p className="text-chargetrux-green font-medium mb-2">Available Positions:</p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {eastCoastPositions.map((position, index) => (
-                      <div key={`east-pos-${index}`} className="p-3 bg-chargetrux-blue/20 rounded-md">
-                        <p className="text-white font-medium">{position.title}</p>
-                        <p className="text-sm text-gray-300">{position.location}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+              ) : (
+                <p className="text-gray-400">No current positions available in this region.</p>
               )}
             </div>
           </div>
