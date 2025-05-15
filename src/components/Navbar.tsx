@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { openCalendlySchedule } from "@/lib/utils";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -107,11 +106,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:block">
-          <Button 
-            variant="default" 
-            className="bg-chargetrux-blue text-white hover:bg-chargetrux-blue/80"
-            onClick={openCalendlySchedule}
-          >
+          <Button variant="default" className="bg-chargetrux-blue text-white hover:bg-chargetrux-blue/80">
             Schedule a Demo
           </Button>
         </div>
@@ -162,7 +157,6 @@ const Navbar = () => {
               <Button
                 variant="default"
                 className="w-full bg-chargetrux-blue text-white hover:bg-chargetrux-blue/80"
-                onClick={openCalendlySchedule}
               >
                 Schedule a Demo
               </Button>
