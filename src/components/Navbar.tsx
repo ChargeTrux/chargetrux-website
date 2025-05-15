@@ -3,10 +3,12 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X } from "lucide-react";
+import BookMeeting from "./BookMeeting";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isBookMeetingOpen, setIsBookMeetingOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -23,6 +25,11 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleScheduleDemo = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsBookMeetingOpen(true);
+  };
 
   const navLinks = [
     { title: "Home", path: "/" },
@@ -106,7 +113,11 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:block">
-          <Button variant="default" className="bg-chargetrux-blue text-white hover:bg-chargetrux-blue/80">
+          <Button 
+            variant="default" 
+            className="bg-chargetrux-blue text-white hover:bg-chargetrux-blue/80"
+            onClick={handleScheduleDemo}
+          >
             Schedule a Demo
           </Button>
         </div>
@@ -157,6 +168,7 @@ const Navbar = () => {
               <Button
                 variant="default"
                 className="w-full bg-chargetrux-blue text-white hover:bg-chargetrux-blue/80"
+                onClick={handleScheduleDemo}
               >
                 Schedule a Demo
               </Button>
@@ -164,6 +176,9 @@ const Navbar = () => {
           </div>
         </div>
       )}
+
+      {/* BookMeeting Component */}
+      <BookMeeting isOpen={isBookMeetingOpen} onClose={() => setIsBookMeetingOpen(false)} />
     </nav>
   );
 };

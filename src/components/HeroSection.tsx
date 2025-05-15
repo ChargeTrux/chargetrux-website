@@ -3,8 +3,17 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Battery, Zap, MapPin, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import BookMeeting from "./BookMeeting";
 
 const HeroSection = () => {
+  const [isBookMeetingOpen, setIsBookMeetingOpen] = useState(false);
+  
+  const handleScheduleDemo = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsBookMeetingOpen(true);
+  };
+
   return (
     <section className="relative bg-chargetrux-darkblue py-24 overflow-hidden">
       {/* Background with subtle patterns */}
@@ -69,10 +78,12 @@ const HeroSection = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button size="lg" className="bg-chargetrux-blue hover:bg-chargetrux-blue/80 text-white px-6 rounded-md" asChild>
-                <Link to="/contact">
-                  Schedule a Demo <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+              <Button 
+                size="lg" 
+                className="bg-chargetrux-blue hover:bg-chargetrux-blue/80 text-white px-6 rounded-md" 
+                onClick={handleScheduleDemo}
+              >
+                Schedule a Demo <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               {/* Fleet Overview PDF button removed */}
             </div>
@@ -130,6 +141,9 @@ const HeroSection = () => {
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-white"></path>
         </svg>
       </div>
+
+      {/* BookMeeting Component */}
+      <BookMeeting isOpen={isBookMeetingOpen} onClose={() => setIsBookMeetingOpen(false)} />
     </section>
   );
 };

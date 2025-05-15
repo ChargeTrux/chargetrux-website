@@ -2,13 +2,15 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { openCalendly } from "@/lib/utils";
+import { useState } from "react";
+import BookMeeting from "./BookMeeting";
 
 const CtaSection = () => {
-  // Handle Calendly button click
+  const [isBookMeetingOpen, setIsBookMeetingOpen] = useState(false);
+  
   const handleCalendlyClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    openCalendly();
+    setIsBookMeetingOpen(true);
   };
   
   return (
@@ -45,6 +47,9 @@ const CtaSection = () => {
           </div>
         </motion.div>
       </div>
+      
+      {/* BookMeeting Component */}
+      <BookMeeting isOpen={isBookMeetingOpen} onClose={() => setIsBookMeetingOpen(false)} />
     </div>
   );
 };
