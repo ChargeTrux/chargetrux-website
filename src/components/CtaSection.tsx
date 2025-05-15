@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const CtaSection = () => {
+  // Calendly direct URL - replace with your actual Calendly link
+  const calendlyUrl = "https://calendly.com/your-calendly-link";
+  
   return (
     <div className="py-20 bg-gradient-to-br from-chargetrux-blue to-chargetrux-darkblue text-white">
       <div className="container mx-auto px-4 text-center">
@@ -31,9 +34,9 @@ const CtaSection = () => {
             <Button 
               variant="outline" 
               className="bg-[#002c77] border-2 border-white text-white hover:bg-[#002c77]/90 h-14 px-6 text-lg rounded-md"
-              asChild
+              onClick={() => window.open(calendlyUrl, "_blank")}
             >
-              <Link to="/contact">Book Intro Call</Link>
+              Book Intro Call
             </Button>
           </div>
         </motion.div>
