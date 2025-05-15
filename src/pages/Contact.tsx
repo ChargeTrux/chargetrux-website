@@ -110,14 +110,6 @@ const Contact = () => {
   // Calendly direct URL - replace with your actual Calendly link
   const calendlyUrl = "https://calendly.com/your-calendly-link";
 
-  // Handle Calendly button click
-  const handleCalendlyClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    if (window.Calendly) {
-      window.Calendly.showPopupWidget('https://calendly.com/specialists-chargetrux/30min');
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-chargetrux-darkblue to-black">
       <Navbar />
@@ -358,7 +350,7 @@ const Contact = () => {
                     <p className="text-gray-300 mb-4">Schedule a 30-minute intro call with our fleet specialists to discuss your specific needs.</p>
                     <Button 
                       className="bg-chargetrux-blue hover:bg-chargetrux-blue/80"
-                      onClick={handleCalendlyClick}
+                      onClick={() => window.open(calendlyUrl, "_blank")}
                     >
                       Schedule Now
                     </Button>
