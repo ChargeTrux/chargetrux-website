@@ -2,10 +2,14 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { openCalendly } from "@/lib/utils";
 
 const CtaSection = () => {
-  // Calendly direct URL - replace with your actual Calendly link
-  const calendlyUrl = "https://calendly.com/your-calendly-link";
+  // Handle Calendly button click
+  const handleCalendlyClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    openCalendly();
+  };
   
   return (
     <div className="py-20 bg-gradient-to-br from-chargetrux-blue to-chargetrux-darkblue text-white">
@@ -34,7 +38,7 @@ const CtaSection = () => {
             <Button 
               variant="outline" 
               className="bg-[#002c77] border-2 border-white text-white hover:bg-[#002c77]/90 h-14 px-6 text-lg rounded-md"
-              onClick={() => window.open(calendlyUrl, "_blank")}
+              onClick={handleCalendlyClick}
             >
               Book Intro Call
             </Button>

@@ -4,10 +4,14 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Merge } from "lucide-react";
 import { Link } from "react-router-dom";
+import { openCalendly } from "@/lib/utils";
 
 const SustainabilityCta = () => {
-  // Calendly direct URL - replace with your actual Calendly link
-  const calendlyUrl = "https://calendly.com/your-calendly-link";
+  // Handle Calendly button click
+  const handleCalendlyClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    openCalendly();
+  };
   
   return (
     <section className="py-20 bg-gradient-to-br from-chargetrux-darkblue via-[#0954c5] to-chargetrux-blue text-white relative overflow-hidden">
@@ -39,7 +43,7 @@ const SustainabilityCta = () => {
             <Button 
               variant="outline" 
               className="bg-[#002c77] border-2 border-white text-white hover:bg-[#002c77]/90 h-14 px-6 text-lg rounded-md"
-              onClick={() => window.open(calendlyUrl, "_blank")}
+              onClick={handleCalendlyClick}
             >
               Schedule Consultation
             </Button>
