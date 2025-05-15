@@ -19,6 +19,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/hooks/use-toast";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { openCalendlySchedule } from "@/lib/utils";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -350,7 +351,7 @@ const Contact = () => {
                     <p className="text-gray-300 mb-4">Schedule a 30-minute intro call with our fleet specialists to discuss your specific needs.</p>
                     <Button 
                       className="bg-chargetrux-blue hover:bg-chargetrux-blue/80"
-                      onClick={() => window.open(calendlyUrl, "_blank")}
+                      onClick={openCalendlySchedule}
                     >
                       Schedule Now
                     </Button>
