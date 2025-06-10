@@ -2,25 +2,48 @@
 /* Slide-specific styles */
 .slide-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0A1930 0%, #002c77 100%);
-  color: white;
-  padding: 2rem;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.slide {
+  width: 1280px;
+  height: 720px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
+}
+
+.slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(90deg, #0066FF 0%, #00B4D8 100%);
 }
 
 .slide-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid rgba(0, 102, 255, 0.3);
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(0, 102, 255, 0.1);
 }
 
 .slide-title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #0066FF;
   text-align: center;
@@ -43,16 +66,18 @@
 
 .slide-content {
   flex-grow: 1;
-  padding: 1rem 0;
+  padding: 20px 0;
+  color: #333;
 }
 
 .slide-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: #666;
 }
 
 /* Print styles */
@@ -60,7 +85,15 @@
   .slide-container {
     page-break-after: always;
     min-height: 100vh;
-    padding: 1.5rem;
+    padding: 0;
+    background: white !important;
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100vh;
+    box-shadow: none;
+    border-radius: 0;
   }
   
   .slide-container:last-child {
@@ -86,11 +119,18 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .slide-container {
-    padding: 1rem;
+    padding: 10px;
+  }
+  
+  .slide {
+    width: 100%;
+    height: auto;
+    min-height: 90vh;
+    padding: 30px;
   }
   
   .slide-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 0 1rem;
   }
   
