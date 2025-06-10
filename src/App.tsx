@@ -15,6 +15,7 @@ import NotFound from "./pages/NotFound";
 import FSaaS from "./pages/FSaaS";
 import Sustainability from "./pages/Sustainability";
 import Careers from "./pages/Careers";
+import SlideDeck from "./pages/SlideDeck";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/fsaas" element={<FSaaS />} />
           <Route path="/sustainability" element={<Sustainability />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/slide-deck" element={<SlideDeck />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

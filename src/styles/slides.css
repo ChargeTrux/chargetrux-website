@@ -1,0 +1,102 @@
+
+/* Slide-specific styles */
+.slide-container {
+  min-h-screen;
+  background: linear-gradient(135deg, #0A1930 0%, #002c77 100%);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.slide-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(0, 102, 255, 0.3);
+}
+
+.slide-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0066FF;
+  text-align: center;
+  flex-grow: 1;
+  margin: 0 2rem;
+}
+
+.slide-number {
+  background: #0066FF;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.slide-content {
+  flex-grow: 1;
+  padding: 1rem 0;
+}
+
+.slide-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Print styles */
+@media print {
+  .slide-container {
+    page-break-after: always;
+    min-height: 100vh;
+    padding: 1.5rem;
+  }
+  
+  .slide-container:last-child {
+    page-break-after: avoid;
+  }
+  
+  body {
+    background: white !important;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+@page {
+  size: A4 landscape;
+  margin: 0.5in;
+}
+
+.page-break-after {
+  page-break-after: always;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .slide-container {
+    padding: 1rem;
+  }
+  
+  .slide-title {
+    font-size: 1.2rem;
+    margin: 0 1rem;
+  }
+  
+  .slide-number {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+}
