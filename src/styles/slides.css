@@ -1,7 +1,7 @@
 
 /* Slide-specific styles */
 .slide-container {
-  min-h-screen;
+  min-height: 100vh;
   background: linear-gradient(135deg, #0A1930 0%, #002c77 100%);
   color: white;
   padding: 2rem;
