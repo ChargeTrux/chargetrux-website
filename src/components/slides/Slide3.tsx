@@ -7,7 +7,7 @@ const Slide3 = () => {
     <div className="slide-container">
       {/* Header */}
       <div className="slide-header">
-        <img src="/lovable-uploads/A_logo_of_the_company_name_"ChargeTrux"_is_display.png" alt="ChargeTrux Logo" className="h-8" />
+        <img src="/lovable-uploads/A_logo_of_the_company_name_&quot;ChargeTrux&quot;_is_display.png" alt="ChargeTrux Logo" className="h-8" />
         <h1 className="slide-title">The Hidden Costs of Off-Site EV Charging</h1>
         <div className="slide-number">3</div>
       </div>
