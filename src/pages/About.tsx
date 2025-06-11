@@ -1,7 +1,6 @@
 
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
-import VideoSection from "@/components/VideoSection";
 
 const About = () => {
   return (
@@ -41,9 +40,6 @@ const About = () => {
               Since our founding, we've helped numerous fleets transition to electric vehicles by providing reliable mobile charging solutions. Our services have contributed to significant reductions in carbon emissions while helping our clients optimize their operations.
             </p>
           </div>
-          
-          {/* Video Section moved to bottom */}
-          <VideoSection />
         </motion.div>
       </div>
     </div>
