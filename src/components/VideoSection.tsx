@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -64,10 +63,6 @@ const VideoSection = () => {
     >
       <Card className="bg-white/10 backdrop-blur-sm border-chargetrux-blue/20">
         <CardContent className="p-8">
-          <h2 className="text-2xl font-bold text-white mb-6 text-center">
-            About ChargeTrux Video
-          </h2>
-          
           {!videoFile ? (
             <div className="text-center">
               <div className="border-2 border-dashed border-chargetrux-blue/40 rounded-lg p-12 mb-6">
