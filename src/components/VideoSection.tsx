@@ -1,9 +1,9 @@
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Upload, Play, Pause } from 'lucide-react';
+import { Upload, Play, Pause, Trash2 } from 'lucide-react';
 
 const VideoSection = () => {
   const [videoFile, setVideoFile] = useState<string | null>(null);
@@ -11,13 +11,33 @@ const VideoSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Load saved video from localStorage on component mount
+  useEffect(() => {
+    const savedVideo = localStorage.getItem('chargetrux-video');
+    if (savedVideo) {
+      setVideoFile(savedVideo);
+    }
+  }, []);
+
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file && file.type.startsWith('video/')) {
       const videoUrl = URL.createObjectURL(file);
       setVideoFile(videoUrl);
       setIsPlaying(false);
+      
+      // Save video to localStorage
+      localStorage.setItem('chargetrux-video', videoUrl);
     }
+  };
+
+  const handleRemoveVideo = () => {
+    if (videoFile) {
+      URL.revokeObjectURL(videoFile);
+    }
+    setVideoFile(null);
+    setIsPlaying(false);
+    localStorage.removeItem('chargetrux-video');
   };
 
   const togglePlayPause = () => {
@@ -100,6 +120,15 @@ const VideoSection = () => {
                 >
                   <Upload className="w-4 h-4 mr-2" />
                   Upload New Video
+                </Button>
+
+                <Button
+                  onClick={handleRemoveVideo}
+                  variant="outline"
+                  className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white"
+                >
+                  <Trash2 className="w-4 h-4 mr-2" />
+                  Remove Video
                 </Button>
               </div>
               
