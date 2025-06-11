@@ -18,9 +18,6 @@ const About = () => {
             About ChargeTrux
           </h1>
           
-          {/* Video Section */}
-          <VideoSection />
-          
           <div className="prose prose-lg prose-invert mx-auto mt-12">
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
               ChargeTrux is revolutionizing the way commercial fleets approach EV charging. Our mission is to accelerate the adoption of electric vehicles by providing flexible, reliable, and efficient mobile charging solutions.
@@ -40,10 +37,13 @@ const About = () => {
             </ul>
             
             <h2 className="text-2xl font-bold text-white mt-12 mb-4">Our Impact</h2>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed mb-12">
               Since our founding, we've helped numerous fleets transition to electric vehicles by providing reliable mobile charging solutions. Our services have contributed to significant reductions in carbon emissions while helping our clients optimize their operations.
             </p>
           </div>
+          
+          {/* Video Section moved to bottom */}
+          <VideoSection />
         </motion.div>
       </div>
     </div>
