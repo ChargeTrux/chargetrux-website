@@ -1,5 +1,7 @@
+
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
+import VideoSection from "@/components/VideoSection";
 
 const About = () => {
   return (
@@ -15,7 +17,11 @@ const About = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 text-center">
             About ChargeTrux
           </h1>
-          <div className="prose prose-lg prose-invert mx-auto">
+          
+          {/* Video Section */}
+          <VideoSection />
+          
+          <div className="prose prose-lg prose-invert mx-auto mt-12">
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
               ChargeTrux is revolutionizing the way commercial fleets approach EV charging. Our mission is to accelerate the adoption of electric vehicles by providing flexible, reliable, and efficient mobile charging solutions.
             </p>
