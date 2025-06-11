@@ -1,43 +1,16 @@
-import React, { useState, useRef, useEffect } from 'react';
+
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Upload, Play, Pause, Trash2 } from 'lucide-react';
+import { Play, Pause } from 'lucide-react';
 
 const VideoSection = () => {
-  const [videoFile, setVideoFile] = useState<string | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Load saved video from localStorage on component mount
-  useEffect(() => {
-    const savedVideo = localStorage.getItem('chargetrux-video');
-    if (savedVideo) {
-      setVideoFile(savedVideo);
-    }
-  }, []);
-
-  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file && file.type.startsWith('video/')) {
-      const videoUrl = URL.createObjectURL(file);
-      setVideoFile(videoUrl);
-      setIsPlaying(false);
-      
-      // Save video to localStorage
-      localStorage.setItem('chargetrux-video', videoUrl);
-    }
-  };
-
-  const handleRemoveVideo = () => {
-    if (videoFile) {
-      URL.revokeObjectURL(videoFile);
-    }
-    setVideoFile(null);
-    setIsPlaying(false);
-    localStorage.removeItem('chargetrux-video');
-  };
+  // Use a placeholder video URL - you can replace this with your actual video
+  const videoUrl = "/lovable-uploads/chargetrux-demo-video.mp4"; // Replace with your actual video file
 
   const togglePlayPause = () => {
     if (videoRef.current) {
@@ -63,79 +36,32 @@ const VideoSection = () => {
     >
       <Card className="bg-white/10 backdrop-blur-sm border-chargetrux-blue/20">
         <CardContent className="p-8">
-          {!videoFile ? (
-            <div className="text-center">
-              <div className="border-2 border-dashed border-chargetrux-blue/40 rounded-lg p-12 mb-6">
-                <Upload className="w-16 h-16 text-chargetrux-blue mx-auto mb-4" />
-                <p className="text-gray-300 mb-4">Upload a video to showcase ChargeTrux</p>
-                <Button
-                  onClick={() => fileInputRef.current?.click()}
-                  className="bg-chargetrux-green hover:bg-chargetrux-green/90"
-                >
-                  Choose Video File
-                </Button>
-              </div>
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept="video/*"
-                onChange={handleFileUpload}
-                className="hidden"
-              />
+          <div className="relative">
+            <video
+              ref={videoRef}
+              src={videoUrl}
+              className="w-full rounded-lg cursor-pointer"
+              onClick={handleVideoClick}
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
+              controls
+              poster="/lovable-uploads/video-thumbnail.jpg" // Optional: add a thumbnail image
+            />
+            
+            <div className="flex justify-center mt-4">
+              <Button
+                onClick={togglePlayPause}
+                className="bg-chargetrux-blue hover:bg-chargetrux-blue/90"
+              >
+                {isPlaying ? (
+                  <Pause className="w-4 h-4 mr-2" />
+                ) : (
+                  <Play className="w-4 h-4 mr-2" />
+                )}
+                {isPlaying ? 'Pause' : 'Play'}
+              </Button>
             </div>
-          ) : (
-            <div className="relative">
-              <video
-                ref={videoRef}
-                src={videoFile}
-                className="w-full rounded-lg cursor-pointer"
-                onClick={handleVideoClick}
-                onPlay={() => setIsPlaying(true)}
-                onPause={() => setIsPlaying(false)}
-                controls
-              />
-              
-              <div className="flex justify-center mt-4 gap-4">
-                <Button
-                  onClick={togglePlayPause}
-                  className="bg-chargetrux-blue hover:bg-chargetrux-blue/90"
-                >
-                  {isPlaying ? (
-                    <Pause className="w-4 h-4 mr-2" />
-                  ) : (
-                    <Play className="w-4 h-4 mr-2" />
-                  )}
-                  {isPlaying ? 'Pause' : 'Play'}
-                </Button>
-                
-                <Button
-                  onClick={() => fileInputRef.current?.click()}
-                  variant="outline"
-                  className="border-chargetrux-blue text-chargetrux-blue hover:bg-chargetrux-blue hover:text-white"
-                >
-                  <Upload className="w-4 h-4 mr-2" />
-                  Upload New Video
-                </Button>
-
-                <Button
-                  onClick={handleRemoveVideo}
-                  variant="outline"
-                  className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white"
-                >
-                  <Trash2 className="w-4 h-4 mr-2" />
-                  Remove Video
-                </Button>
-              </div>
-              
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept="video/*"
-                onChange={handleFileUpload}
-                className="hidden"
-              />
-            </div>
-          )}
+          </div>
         </CardContent>
       </Card>
     </motion.div>
