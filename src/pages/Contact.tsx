@@ -1,10 +1,11 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { MapPin, Calendar } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { 
   Form,
   FormControl,
@@ -21,10 +22,10 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
+  fullName: z.string().min(2, {
+    message: "Full name must be at least 2 characters.",
   }),
-  company: z.string().min(2, {
+  companyName: z.string().min(2, {
     message: "Company name must be at least 2 characters.",
   }),
   email: z.string().email({
@@ -34,16 +35,24 @@ const formSchema = z.object({
     message: "Please enter a valid phone number.",
   }),
   fleetSize: z.string().min(1, {
-    message: "Please enter your fleet size.",
+    message: "Please select your fleet size.",
   }),
-  frequency: z.string().min(1, {
+  chargingFrequency: z.string().min(1, {
     message: "Please select a charging frequency.",
   }),
-  locations: z.string().min(2, {
-    message: "Please enter your service areas.",
+  serviceArea: z.string().min(1, {
+    message: "Please select your service area.",
   }),
-  message: z.string().optional(),
-  newsletter: z.boolean().default(false).optional(),
+  meetingTimes: z.array(z.string()).min(1, {
+    message: "Please select at least one preferred meeting time.",
+  }),
+  meetingType: z.string().min(1, {
+    message: "Please select a meeting type.",
+  }),
+  timeline: z.string().min(1, {
+    message: "Please select a timeline.",
+  }),
+  additionalComments: z.string().optional(),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -55,40 +64,109 @@ const Contact = () => {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
-      company: "",
+      fullName: "",
+      companyName: "",
       email: "",
       phone: "",
       fleetSize: "",
-      frequency: "",
-      locations: "",
-      message: "",
-      newsletter: false,
+      chargingFrequency: "",
+      serviceArea: "",
+      meetingTimes: [],
+      meetingType: "",
+      timeline: "",
+      additionalComments: "",
     },
   });
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    console.log("Form data submitted:", data);
-    toast({
-      title: "Request Received",
-      description: "One of our fleet specialists will contact you within 24 hours.",
-    });
-    
-    setIsSubmitting(false);
-    form.reset();
+    try {
+      // Prepare email data
+      const emailData = {
+        to: "specialist@chargetrux.com",
+        subject: "New Fleet Charging Consultation Request",
+        html: `
+          <h2>New Fleet Charging Consultation Request</h2>
+          <p><strong>Full Name:</strong> ${data.fullName}</p>
+          <p><strong>Company:</strong> ${data.companyName}</p>
+          <p><strong>Email:</strong> ${data.email}</p>
+          <p><strong>Phone:</strong> ${data.phone}</p>
+          <p><strong>Fleet Size:</strong> ${data.fleetSize}</p>
+          <p><strong>Charging Frequency:</strong> ${data.chargingFrequency}</p>
+          <p><strong>Service Area:</strong> ${data.serviceArea}</p>
+          <p><strong>Preferred Meeting Times:</strong> ${data.meetingTimes.join(", ")}</p>
+          <p><strong>Meeting Type:</strong> ${data.meetingType}</p>
+          <p><strong>Timeline:</strong> ${data.timeline}</p>
+          ${data.additionalComments ? `<p><strong>Additional Comments:</strong> ${data.additionalComments}</p>` : ""}
+        `
+      };
+
+      // Simulate email sending (you'll need to integrate with an email service)
+      console.log("Email data to send:", emailData);
+      
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      toast({
+        title: "Consultation Request Sent",
+        description: "Our fleet specialist will contact you within 24 hours to schedule your consultation.",
+      });
+      
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send consultation request. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  const frequencyOptions = [
+  const fleetSizeOptions = [
+    "1-5 vehicles",
+    "6-15 vehicles", 
+    "16-50 vehicles",
+    "51-100 vehicles",
+    "100+ vehicles"
+  ];
+
+  const chargingFrequencyOptions = [
     "Daily charging needs",
     "Weekly charging needs",
     "Monthly charging needs",
     "Emergency backup only",
     "Still planning deployment"
+  ];
+
+  const serviceAreaOptions = [
+    "Seattle", "Portland", "San Francisco", "Oakland", "San Jose", "Los Angeles", 
+    "Orange County", "San Diego", "Phoenix", "Albuquerque", "Dallas", "Houston", 
+    "Austin", "San Antonio", "New Orleans", "Tampa", "Orlando", "Fort Lauderdale", 
+    "Miami", "Atlanta", "Charlotte", "Raleigh-Durham", "Norfolk/Virginia Beach", 
+    "Washington D.C.", "Baltimore", "Philadelphia", "Newark", "New York City", "Boston"
+  ];
+
+  const meetingTimeOptions = [
+    "Mon 9AM-12PM", "Mon 1PM-5PM", "Tue 9AM-12PM", "Tue 1PM-5PM",
+    "Wed 9AM-12PM", "Wed 1PM-5PM", "Thu 9AM-12PM", "Thu 1PM-5PM", 
+    "Fri 9AM-12PM", "Fri 1PM-5PM"
+  ];
+
+  const meetingTypeOptions = [
+    "Phone Call (30 minutes)",
+    "Video Call - Zoom/Teams (30 minutes)", 
+    "In-Person Meeting (45 minutes)"
+  ];
+
+  const timelineOptions = [
+    "Immediate (within 2 weeks)",
+    "Short-term (1-3 months)",
+    "Medium-term (3-6 months)",
+    "Long-term (6+ months)",
+    "Just exploring options"
   ];
 
   // Updated service areas organized by regions
@@ -98,23 +176,12 @@ const Contact = () => {
       cities: ["Seattle", "Portland", "San Francisco", "Oakland", "San Jose", "Los Angeles", "Orange County", "San Diego"]
     },
     gulfSouthwest: {
-      title: "Gulf Coast & Southwest",
+      title: "Gulf Coast & Southwest", 
       cities: ["Phoenix", "Albuquerque", "Dallas", "Houston", "Austin", "San Antonio", "New Orleans", "Tampa", "Orlando", "Fort Lauderdale", "Miami"]
     },
     eastCoast: {
       title: "East Coast & Southeast",
       cities: ["Atlanta", "Charlotte", "Raleigh-Durham", "Norfolk/Virginia Beach", "Washington D.C.", "Baltimore", "Philadelphia", "Newark", "New York City", "Boston"]
-    }
-  };
-
-  // Calendly direct URL - replace with your actual Calendly link
-  const calendlyUrl = "https://calendly.com/your-calendly-link";
-
-  // Handle Calendly button click
-  const handleCalendlyClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    if (window.Calendly) {
-      window.Calendly.showPopupWidget('https://calendly.com/specialists-chargetrux/30min');
     }
   };
 
@@ -129,11 +196,11 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-2xl md:text-3xl font-bold text-white mb-6">
-            Contact ChargeTrux
+          <h1 className="text-2xl md:text-3xl font-bold text-chargetrux-green mb-6">
+            Schedule Your Free Fleet Charging Consultation
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ready to revolutionize how your fleet charges? Our team of EV charging specialists is ready to discuss your specific needs.
+            Get personalized solutions for your electric vehicle fleet charging needs
           </p>
         </motion.div>
 
@@ -144,99 +211,18 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-white/10 backdrop-blur-lg rounded-lg p-8"
           >
-            <h2 className="text-2xl font-bold text-white mb-6">
-              Get Started With Mobile Fleet Charging
-            </h2>
-            
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-gray-300">Full Name</FormLabel>
-                        <FormControl>
-                          <Input 
-                            placeholder="Your name" 
-                            className="bg-white/5 border-white/10 text-white" 
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="company"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-gray-300">Company/Business Name</FormLabel>
-                        <FormControl>
-                          <Input 
-                            placeholder="Your company" 
-                            className="bg-white/5 border-white/10 text-white" 
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-gray-300">Email Address</FormLabel>
-                        <FormControl>
-                          <Input 
-                            type="email" 
-                            placeholder="your@email.com" 
-                            className="bg-white/5 border-white/10 text-white" 
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-gray-300">Phone Number</FormLabel>
-                        <FormControl>
-                          <Input 
-                            placeholder="Your phone number" 
-                            className="bg-white/5 border-white/10 text-white" 
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-                
                 <FormField
                   control={form.control}
-                  name="fleetSize"
+                  name="fullName"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-300">Number of EVs in Fleet</FormLabel>
+                      <FormLabel className="text-gray-300">Full Name *</FormLabel>
                       <FormControl>
                         <Input 
-                          placeholder="Current or planned fleet size" 
-                          className="bg-white/5 border-white/10 text-white"
+                          placeholder="Your full name" 
+                          className="bg-white/5 border-white/10 text-white" 
                           {...field}
                         />
                       </FormControl>
@@ -247,18 +233,73 @@ const Contact = () => {
                 
                 <FormField
                   control={form.control}
-                  name="frequency"
+                  name="companyName"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-300">Charging Frequency</FormLabel>
+                      <FormLabel className="text-gray-300">Company/Business Name *</FormLabel>
+                      <FormControl>
+                        <Input 
+                          placeholder="Your company name" 
+                          className="bg-white/5 border-white/10 text-white" 
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-300">Email Address *</FormLabel>
+                      <FormControl>
+                        <Input 
+                          type="email" 
+                          placeholder="your@email.com" 
+                          className="bg-white/5 border-white/10 text-white" 
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-300">Phone Number *</FormLabel>
+                      <FormControl>
+                        <Input 
+                          placeholder="Your phone number" 
+                          className="bg-white/5 border-white/10 text-white" 
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="fleetSize"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-300">Number of EVs in Fleet *</FormLabel>
                       <FormControl>
                         <select 
                           className="flex h-10 w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-white text-base md:text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                           {...field}
                           defaultValue=""
                         >
-                          <option value="" disabled>Select charging frequency</option>
-                          {frequencyOptions.map((option) => (
+                          <option value="" disabled>Select fleet size</option>
+                          {fleetSizeOptions.map((option) => (
                             <option key={option} value={option} className="bg-chargetrux-darkblue">
                               {option}
                             </option>
@@ -272,16 +313,23 @@ const Contact = () => {
                 
                 <FormField
                   control={form.control}
-                  name="locations"
+                  name="chargingFrequency"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-300">Primary Service Areas/Locations</FormLabel>
+                      <FormLabel className="text-gray-300">Charging Frequency Needed *</FormLabel>
                       <FormControl>
-                        <Input 
-                          placeholder="Where do you need charging services?" 
-                          className="bg-white/5 border-white/10 text-white"
+                        <select 
+                          className="flex h-10 w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-white text-base md:text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                           {...field}
-                        />
+                          defaultValue=""
+                        >
+                          <option value="" disabled>Select charging frequency</option>
+                          {chargingFrequencyOptions.map((option) => (
+                            <option key={option} value={option} className="bg-chargetrux-darkblue">
+                              {option}
+                            </option>
+                          ))}
+                        </select>
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -290,13 +338,138 @@ const Contact = () => {
                 
                 <FormField
                   control={form.control}
-                  name="message"
+                  name="serviceArea"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-300">Primary Service Area *</FormLabel>
+                      <FormControl>
+                        <select 
+                          className="flex h-10 w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-white text-base md:text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                          {...field}
+                          defaultValue=""
+                        >
+                          <option value="" disabled>Select your area</option>
+                          {serviceAreaOptions.map((option) => (
+                            <option key={option} value={option} className="bg-chargetrux-darkblue">
+                              {option}
+                            </option>
+                          ))}
+                        </select>
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="meetingTimes"
+                  render={() => (
+                    <FormItem>
+                      <FormLabel className="text-gray-300">Preferred Meeting Times (Select all that work) *</FormLabel>
+                      <div className="grid grid-cols-2 gap-2">
+                        {meetingTimeOptions.map((time) => (
+                          <FormField
+                            key={time}
+                            control={form.control}
+                            name="meetingTimes"
+                            render={({ field }) => (
+                              <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                                <FormControl>
+                                  <Checkbox
+                                    checked={field.value?.includes(time)}
+                                    onCheckedChange={(checked) => {
+                                      return checked
+                                        ? field.onChange([...field.value, time])
+                                        : field.onChange(field.value?.filter((value) => value !== time))
+                                    }}
+                                    className="data-[state=checked]:bg-chargetrux-green data-[state=checked]:border-chargetrux-green"
+                                  />
+                                </FormControl>
+                                <FormLabel className="text-sm text-gray-300 font-normal">
+                                  {time}
+                                </FormLabel>
+                              </FormItem>
+                            )}
+                          />
+                        ))}
+                      </div>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="meetingType"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-300">Preferred Meeting Type *</FormLabel>
+                      <div className="space-y-2">
+                        {meetingTypeOptions.map((type) => (
+                          <FormField
+                            key={type}
+                            control={form.control}
+                            name="meetingType"
+                            render={({ field: radioField }) => (
+                              <FormItem className="flex items-center space-x-3 space-y-0">
+                                <FormControl>
+                                  <input
+                                    type="radio"
+                                    name="meetingType"
+                                    value={type}
+                                    checked={radioField.value === type}
+                                    onChange={() => radioField.onChange(type)}
+                                    className="h-4 w-4 text-chargetrux-green"
+                                  />
+                                </FormControl>
+                                <FormLabel className="text-sm text-gray-300 font-normal">
+                                  {type}
+                                </FormLabel>
+                              </FormItem>
+                            )}
+                          />
+                        ))}
+                      </div>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="timeline"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-300">Timeline *</FormLabel>
+                      <FormControl>
+                        <select 
+                          className="flex h-10 w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-white text-base md:text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                          {...field}
+                          defaultValue=""
+                        >
+                          <option value="" disabled>When do you need to get started?</option>
+                          {timelineOptions.map((option) => (
+                            <option key={option} value={option} className="bg-chargetrux-darkblue">
+                              {option}
+                            </option>
+                          ))}
+                        </select>
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="additionalComments"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-gray-300">Additional Comments or Requirements</FormLabel>
                       <FormControl>
                         <Textarea 
-                          placeholder="Tell us more about your specific charging needs..."
+                          placeholder="Tell us more about your specific charging needs, fleet composition, or any special requirements..."
                           className="bg-white/5 border-white/10 text-white"
                           rows={4}
                           {...field}
@@ -307,33 +480,12 @@ const Contact = () => {
                   )}
                 />
                 
-                <FormField
-                  control={form.control}
-                  name="newsletter"
-                  render={({ field }) => (
-                    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                      <FormControl>
-                        <Checkbox 
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                          className="data-[state=checked]:bg-chargetrux-green data-[state=checked]:border-chargetrux-green"
-                        />
-                      </FormControl>
-                      <div className="space-y-1 leading-none">
-                        <FormLabel className="text-sm text-gray-300">
-                          Subscribe to our newsletter for EV charging insights and updates
-                        </FormLabel>
-                      </div>
-                    </FormItem>
-                  )}
-                />
-                
                 <Button 
                   type="submit"
                   className="w-full bg-chargetrux-green hover:bg-chargetrux-green/80 text-white font-bold py-3"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Submitting..." : "Submit Request"}
+                  {isSubmitting ? "Submitting..." : "📅 Book My Free Consultation"}
                 </Button>
               </form>
             </Form>
@@ -345,28 +497,6 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-8"
           >
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8">
-              <h2 className="text-2xl font-bold text-white mb-6">
-                Schedule a Consultation
-              </h2>
-              
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <Calendar className="w-6 h-6 text-chargetrux-green mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Book a Meeting</h3>
-                    <p className="text-gray-300 mb-4">Schedule a 30-minute intro call with our fleet specialists to discuss your specific needs.</p>
-                    <Button 
-                      className="bg-chargetrux-blue hover:bg-chargetrux-blue/80"
-                      onClick={handleCalendlyClick}
-                    >
-                      Schedule Now
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8">
               <div className="flex items-start gap-4 mb-6">
                 <MapPin className="w-6 h-6 text-chargetrux-green mt-1" />

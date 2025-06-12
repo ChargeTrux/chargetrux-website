@@ -2,17 +2,8 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import BookMeeting from "./BookMeeting";
 
 const CtaSection = () => {
-  const [isBookMeetingOpen, setIsBookMeetingOpen] = useState(false);
-  
-  const handleCalendlyClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setIsBookMeetingOpen(true);
-  };
-  
   return (
     <div className="py-20 bg-gradient-to-br from-chargetrux-blue to-chargetrux-darkblue text-white">
       <div className="container mx-auto px-4 text-center">
@@ -35,21 +26,11 @@ const CtaSection = () => {
               className="bg-[#00cc66] hover:bg-[#00cc66]/90 text-white font-medium h-14 px-6 text-lg rounded-md"
               asChild
             >
-              <Link to="/contact">Request Custom Quote</Link>
-            </Button>
-            <Button 
-              variant="outline" 
-              className="bg-[#002c77] border-2 border-white text-white hover:bg-[#002c77]/90 h-14 px-6 text-lg rounded-md"
-              onClick={handleCalendlyClick}
-            >
-              Book Intro Call
+              <Link to="/contact">Schedule Free Consultation</Link>
             </Button>
           </div>
         </motion.div>
       </div>
-      
-      {/* BookMeeting Component */}
-      <BookMeeting isOpen={isBookMeetingOpen} onClose={() => setIsBookMeetingOpen(false)} />
     </div>
   );
 };
