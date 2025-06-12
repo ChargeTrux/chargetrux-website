@@ -377,11 +377,12 @@ const Contact = () => {
                               <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                                 <FormControl>
                                   <Checkbox
-                                    checked={field.value?.includes(time)}
+                                    checked={field.value?.includes(time) || false}
                                     onCheckedChange={(checked) => {
+                                      const currentValue = field.value || [];
                                       return checked
-                                        ? field.onChange([...field.value, time])
-                                        : field.onChange(field.value?.filter((value) => value !== time))
+                                        ? field.onChange([...currentValue, time])
+                                        : field.onChange(currentValue.filter((value) => value !== time))
                                     }}
                                     className="data-[state=checked]:bg-chargetrux-green data-[state=checked]:border-chargetrux-green"
                                   />
