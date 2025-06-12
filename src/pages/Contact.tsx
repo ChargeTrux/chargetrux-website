@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -18,6 +17,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
@@ -82,42 +82,35 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Prepare email data
-      const emailData = {
-        to: "specialist@chargetrux.com",
-        subject: "New Fleet Charging Consultation Request",
-        html: `
-          <h2>New Fleet Charging Consultation Request</h2>
-          <p><strong>Full Name:</strong> ${data.fullName}</p>
-          <p><strong>Company:</strong> ${data.companyName}</p>
-          <p><strong>Email:</strong> ${data.email}</p>
-          <p><strong>Phone:</strong> ${data.phone}</p>
-          <p><strong>Fleet Size:</strong> ${data.fleetSize}</p>
-          <p><strong>Charging Frequency:</strong> ${data.chargingFrequency}</p>
-          <p><strong>Service Area:</strong> ${data.serviceArea}</p>
-          <p><strong>Preferred Meeting Times:</strong> ${data.meetingTimes.join(", ")}</p>
-          <p><strong>Meeting Type:</strong> ${data.meetingType}</p>
-          <p><strong>Timeline:</strong> ${data.timeline}</p>
-          ${data.additionalComments ? `<p><strong>Additional Comments:</strong> ${data.additionalComments}</p>` : ""}
-        `
-      };
-
-      // Simulate email sending (you'll need to integrate with an email service)
-      console.log("Email data to send:", emailData);
+      console.log("Submitting form data:", data);
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      toast({
-        title: "Consultation Request Sent",
-        description: "Our fleet specialist will contact you within 24 hours to schedule your consultation.",
+      // Call the edge function to send email and save to database
+      const { data: result, error } = await supabase.functions.invoke('send-contact-email', {
+        body: JSON.stringify(data)
       });
-      
-      form.reset();
-    } catch (error) {
+
+      if (error) {
+        console.error("Supabase function error:", error);
+        throw new Error(error.message || "Failed to submit form");
+      }
+
+      console.log("Form submission result:", result);
+
+      if (result.success) {
+        toast({
+          title: "Consultation Request Sent Successfully! 📧",
+          description: "Our fleet specialist will contact you within 24 hours. Check your email for confirmation.",
+        });
+        
+        form.reset();
+      } else {
+        throw new Error(result.error || "Failed to submit form");
+      }
+    } catch (error: any) {
+      console.error("Form submission error:", error);
       toast({
-        title: "Error",
-        description: "Failed to send consultation request. Please try again.",
+        title: "Error Submitting Form",
+        description: error.message || "Failed to send consultation request. Please try again.",
         variant: "destructive",
       });
     } finally {
