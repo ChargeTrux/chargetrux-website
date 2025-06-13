@@ -47,9 +47,9 @@ const handler = async (req: Request): Promise<Response> => {
     const formData: ContactFormData = await req.json();
     console.log("Received form data:", formData);
 
-    // Create Supabase client
-    const supabaseUrl = "https://lelfjloclbvantovejny.supabase.co";
-    const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxlbGZqbG9jbGJ2YW50b3Zlam55Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk3NjkxMjksImV4cCI6MjA2NTM0NTEyOX0.DTsKKOw-MshrPk05wavTf_zSkXr05TKoQdOgNywKAwE";
+    // Create Supabase client with correct project credentials
+    const supabaseUrl = "https://llkmsdpmybozspqcnjnt.supabase.co";
+    const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxsa21zZHBteWJvenNwcWNuam50Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk4MDE4ODcsImV4cCI6MjA2NTM3Nzg4N30.anb0AO7SAzZ3jGQCHOOBFxUQx6Ri1tM8EZe_JdKlYvE";
     
     const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
