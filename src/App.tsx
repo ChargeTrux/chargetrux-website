@@ -17,7 +17,6 @@ import Pricing from "./pages/Pricing";
 import BlogNews from "./pages/BlogNews";
 import SlideDeck from "./pages/SlideDeck";
 import NotFound from "./pages/NotFound";
-import FloatingScheduleButton from "./components/FloatingScheduleButton";
 
 const queryClient = new QueryClient();
 
@@ -42,7 +41,6 @@ const App = () => (
           <Route path="/slide-deck" element={<SlideDeck />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <FloatingScheduleButton />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
