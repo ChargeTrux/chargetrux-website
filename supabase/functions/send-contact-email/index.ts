@@ -45,16 +45,16 @@ const handler = async (req: Request): Promise<Response> => {
       .from('contact_submissions')
       .insert({
         full_name: formData.fullName,
-        company_name: formData.companyName,
+        company: formData.companyName, // Using 'company' instead of 'company_name'
         email: formData.email,
         phone: formData.phone,
-        fleet_size: formData.fleetSize,
-        charging_frequency: formData.chargingFrequency,
-        service_area: formData.serviceArea,
-        meeting_times: formData.meetingTimes,
-        meeting_type: formData.meetingType,
-        timeline: formData.timeline,
-        additional_comments: formData.additionalComments || null,
+        fleetsize: formData.fleetSize, // Using 'fleetsize' instead of 'fleet_size'
+        chargingfrequency: formData.chargingFrequency, // Using 'chargingfrequency' instead of 'charging_frequency'
+        servicearea: formData.serviceArea, // Using 'servicearea' instead of 'service_area'
+        availability: formData.meetingTimes, // Using 'availability' instead of 'meeting_times'
+        meetingtype: formData.meetingType, // Using 'meetingtype' instead of 'meeting_type'
+        urgency: formData.timeline, // Using 'urgency' instead of 'timeline'
+        comments: formData.additionalComments || null, // Using 'comments' instead of 'additional_comments'
       })
       .select()
       .single();
