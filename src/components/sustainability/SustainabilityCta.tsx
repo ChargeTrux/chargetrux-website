@@ -1,17 +1,16 @@
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Merge } from "lucide-react";
-import { Link } from "react-router-dom";
-import BookMeeting from "../BookMeeting";
+import { Link, useNavigate } from "react-router-dom";
 
 const SustainabilityCta = () => {
-  const [isBookMeetingOpen, setIsBookMeetingOpen] = useState(false);
+  const navigate = useNavigate();
   
   const handleCalendlyClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    setIsBookMeetingOpen(true);
+    navigate('/contact');
   };
   
   return (
@@ -55,9 +54,6 @@ const SustainabilityCta = () => {
           </div>
         </motion.div>
       </div>
-      
-      {/* BookMeeting Component */}
-      <BookMeeting isOpen={isBookMeetingOpen} onClose={() => setIsBookMeetingOpen(false)} />
     </section>
   );
 };

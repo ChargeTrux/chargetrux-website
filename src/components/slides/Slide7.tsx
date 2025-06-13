@@ -2,8 +2,15 @@
 import React from 'react';
 import { MapPin, CheckCircle, Rocket, QrCode } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 const Slide7 = () => {
+  const navigate = useNavigate();
+
+  const handleScheduleNow = () => {
+    navigate('/contact');
+  };
+
   return (
     <div className="slide-container">
       {/* Header */}
@@ -56,7 +63,7 @@ const Slide7 = () => {
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-chargetrux-blue rounded-full"></div>
-                <span className="text-gray-200">Scan QR code for 15-minute consultation</span>
+                <span className="text-gray-200">Fill out our contact form for consultation</span>
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-chargetrux-blue rounded-full"></div>
@@ -67,8 +74,11 @@ const Slide7 = () => {
 
           <div className="bg-chargetrux-green/20 rounded-lg p-6 text-center">
             <QrCode className="w-16 h-16 text-chargetrux-green mx-auto mb-4" />
-            <p className="text-chargetrux-green font-medium mb-2">Scan for Quick Consultation</p>
-            <Button className="bg-chargetrux-green hover:bg-chargetrux-green/90 text-white">
+            <p className="text-chargetrux-green font-medium mb-2">Submit Request via Contact Form</p>
+            <Button 
+              className="bg-chargetrux-green hover:bg-chargetrux-green/90 text-white"
+              onClick={handleScheduleNow}
+            >
               Schedule Now
             </Button>
           </div>

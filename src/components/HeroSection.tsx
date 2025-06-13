@@ -1,17 +1,18 @@
-
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Battery, Zap, MapPin, TrendingUp } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import BookMeeting from "./BookMeeting";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+  
   const [isBookMeetingOpen, setIsBookMeetingOpen] = useState(false);
   
   const handleScheduleDemo = (e: React.MouseEvent) => {
     e.preventDefault();
-    setIsBookMeetingOpen(true);
+    navigate('/contact');
   };
 
   return (
@@ -85,7 +86,6 @@ const HeroSection = () => {
               >
                 Schedule a Demo <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              {/* Fleet Overview PDF button removed */}
             </div>
           </motion.div>
           

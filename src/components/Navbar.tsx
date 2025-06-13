@@ -1,15 +1,14 @@
 
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X } from "lucide-react";
-import BookMeeting from "./BookMeeting";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isBookMeetingOpen, setIsBookMeetingOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +27,7 @@ const Navbar = () => {
 
   const handleScheduleDemo = (e: React.MouseEvent) => {
     e.preventDefault();
-    setIsBookMeetingOpen(true);
+    navigate('/contact');
   };
 
   const navLinks = [
@@ -176,9 +175,6 @@ const Navbar = () => {
           </div>
         </div>
       )}
-
-      {/* BookMeeting Component */}
-      <BookMeeting isOpen={isBookMeetingOpen} onClose={() => setIsBookMeetingOpen(false)} />
     </nav>
   );
 };
