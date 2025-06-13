@@ -26,7 +26,7 @@ const CtaSection = () => {
               className="bg-[#00cc66] hover:bg-[#00cc66]/90 text-white font-medium h-14 px-6 text-lg rounded-md"
               asChild
             >
-              <Link to="/contact">Schedule Free Consultation</Link>
+              <Link to="/contact">Schedule a Demo</Link>
             </Button>
           </div>
         </motion.div>
