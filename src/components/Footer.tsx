@@ -18,7 +18,12 @@ const Footer = () => {
             <p className="text-gray-300 mb-6">
               Mobile Level 3 charging solutions for commercial fleets. Delivered where and when you need it.
             </p>
-            
+            <Button 
+              className="bg-[#00cc66] hover:bg-[#00cc66]/90 text-white font-medium h-12 px-6 rounded-full"
+              asChild
+            >
+              <Link to="/contact">Schedule a Demo</Link>
+            </Button>
           </div>
           
           {/* Quick Links */}
