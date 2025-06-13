@@ -3,7 +3,13 @@ import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { Resend } from "npm:resend@2.0.0";
 
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+// Initialize Resend with proper error handling
+const resendApiKey = Deno.env.get("RESEND_API_KEY");
+if (!resendApiKey) {
+  console.error("RESEND_API_KEY environment variable is not set");
+}
+
+const resend = resendApiKey ? new Resend(resendApiKey) : null;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -31,6 +37,13 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
+    console.log("Processing contact form submission...");
+    
+    // Check if Resend is available
+    if (!resend) {
+      throw new Error("Email service is not configured. Please contact support.");
+    }
+
     const formData: ContactFormData = await req.json();
     console.log("Received form data:", formData);
 
@@ -41,6 +54,7 @@ const handler = async (req: Request): Promise<Response> => {
     const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
     // Store the form submission in the database
+    console.log("Saving to database...");
     const { data: submission, error: dbError } = await supabase
       .from('contact_submissions')
       .insert({
@@ -67,6 +81,7 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Form submission saved to database:", submission);
 
     // Send email to specialist
+    console.log("Sending specialist email...");
     const emailResponse = await resend.emails.send({
       from: "ChargeTrux Contact Form <onboarding@resend.dev>",
       to: ["specialist@chargetrux.com"],
@@ -117,9 +132,10 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    console.log("Specialist email sent successfully:", emailResponse);
 
     // Send confirmation email to the customer
+    console.log("Sending confirmation email...");
     const confirmationResponse = await resend.emails.send({
       from: "ChargeTrux <onboarding@resend.dev>",
       to: [formData.email],
