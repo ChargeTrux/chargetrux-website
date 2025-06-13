@@ -12,48 +12,72 @@ export type Database = {
       contact_submissions: {
         Row: {
           additional_comments: string | null
-          charging_frequency: string
-          company_name: string
+          availability: string[]
+          charging_frequency: string | null
+          chargingfrequency: string
+          comments: string | null
+          company: string
+          company_name: string | null
           created_at: string
           email: string
-          fleet_size: string
+          fleet_size: string | null
+          fleetsize: string
           full_name: string
           id: string
-          meeting_times: string[]
-          meeting_type: string
+          meeting_times: string[] | null
+          meeting_type: string | null
+          meetingtype: string
           phone: string
-          service_area: string
-          timeline: string
+          service_area: string | null
+          servicearea: string
+          timeline: string | null
+          urgency: string
         }
         Insert: {
           additional_comments?: string | null
-          charging_frequency: string
-          company_name: string
+          availability: string[]
+          charging_frequency?: string | null
+          chargingfrequency: string
+          comments?: string | null
+          company: string
+          company_name?: string | null
           created_at?: string
           email: string
-          fleet_size: string
+          fleet_size?: string | null
+          fleetsize: string
           full_name: string
           id?: string
-          meeting_times: string[]
-          meeting_type: string
+          meeting_times?: string[] | null
+          meeting_type?: string | null
+          meetingtype: string
           phone: string
-          service_area: string
-          timeline: string
+          service_area?: string | null
+          servicearea: string
+          timeline?: string | null
+          urgency: string
         }
         Update: {
           additional_comments?: string | null
-          charging_frequency?: string
-          company_name?: string
+          availability?: string[]
+          charging_frequency?: string | null
+          chargingfrequency?: string
+          comments?: string | null
+          company?: string
+          company_name?: string | null
           created_at?: string
           email?: string
-          fleet_size?: string
+          fleet_size?: string | null
+          fleetsize?: string
           full_name?: string
           id?: string
-          meeting_times?: string[]
-          meeting_type?: string
+          meeting_times?: string[] | null
+          meeting_type?: string | null
+          meetingtype?: string
           phone?: string
-          service_area?: string
-          timeline?: string
+          service_area?: string | null
+          servicearea?: string
+          timeline?: string | null
+          urgency?: string
         }
         Relationships: []
       }
