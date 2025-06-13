@@ -84,7 +84,7 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Sending specialist email...");
     const emailResponse = await resend.emails.send({
       from: "ChargeTrux Contact Form <onboarding@resend.dev>",
-      to: ["specialist@chargetrux.com"],
+      to: ["specialists@chargetrux.com"],
       subject: `New Fleet Charging Consultation Request from ${formData.fullName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

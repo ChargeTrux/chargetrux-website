@@ -289,9 +289,8 @@ const Contact = () => {
                         <select 
                           className="flex h-10 w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-white text-base md:text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                           {...field}
-                          defaultValue=""
                         >
-                          <option value="" disabled>Select fleet size</option>
+                          <option value="">Select fleet size</option>
                           {fleetSizeOptions.map((option) => (
                             <option key={option} value={option} className="bg-chargetrux-darkblue">
                               {option}
@@ -314,9 +313,8 @@ const Contact = () => {
                         <select 
                           className="flex h-10 w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-white text-base md:text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                           {...field}
-                          defaultValue=""
                         >
-                          <option value="" disabled>Select charging frequency</option>
+                          <option value="">Select charging frequency</option>
                           {chargingFrequencyOptions.map((option) => (
                             <option key={option} value={option} className="bg-chargetrux-darkblue">
                               {option}
@@ -339,9 +337,8 @@ const Contact = () => {
                         <select 
                           className="flex h-10 w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-white text-base md:text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                           {...field}
-                          defaultValue=""
                         >
-                          <option value="" disabled>Select your area</option>
+                          <option value="">Select your area</option>
                           {serviceAreaOptions.map((option) => (
                             <option key={option} value={option} className="bg-chargetrux-darkblue">
                               {option}
@@ -440,9 +437,8 @@ const Contact = () => {
                         <select 
                           className="flex h-10 w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-white text-base md:text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                           {...field}
-                          defaultValue=""
                         >
-                          <option value="" disabled>When do you need to get started?</option>
+                          <option value="">When do you need to get started?</option>
                           {timelineOptions.map((option) => (
                             <option key={option} value={option} className="bg-chargetrux-darkblue">
                               {option}
